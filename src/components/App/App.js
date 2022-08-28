@@ -9,12 +9,10 @@ import './App.css';
 const App = () => {
 
 const [cities, setCities] = useState([])
-const [cityNames, setCityNames] = useState([])
 const [filteredNames, setFilteredNames] = useState([])
 
 useEffect(() => {
   setCities(data)
-  setCityNames(data.map(city => city.name))
 },[filteredNames])
 
 const filterNames = (query) => {
