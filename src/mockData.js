@@ -1,6 +1,6 @@
 export const data = [
   {
-    name: "City 1",
+    name: "City1",
     full_name: "N/A",
     summary: {
       continent: "N/A",
@@ -66,7 +66,7 @@ export const data = [
     },
   },
   {
-    name: "City 2",
+    name: "City2",
     full_name: "N/A",
     summary: {
       continent: "N/A",
@@ -132,7 +132,7 @@ export const data = [
     },
   },
   {
-    name: "City 3",
+    name: "City3",
     full_name: "N/A",
     summary: {
       continent: "N/A",
