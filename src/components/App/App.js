@@ -2,20 +2,33 @@
 import { useContext, useEffect, useState } from 'react';
 import data from '../../mockData';
 import CitiesContainer from '../CitiesContainer/CitiesContainer';
+import SearchBar from '../Favorites/SearchBar/SearchBar';
 import './App.css';
 
 
-function App() {
+const App = () => {
 
 const [cities, setCities] = useState([])
+const [cityNames, setCityNames] = useState([])
+const [filteredNames, setFilteredNames] = useState([])
 
 useEffect(() => {
   setCities(data)
-},[])
+  setCityNames(data.map(city => city.name))
+},[filteredNames])
+
+const filterNames = (query) => {
+  console.log('queryfromtheapp', query)
+  setFilteredNames(cities.filter(city => city.name.includes(query)))
+
+}
 
   return (
    <>
-   <CitiesContainer cities={cities}/>
+   <SearchBar filterNames={filterNames} cities={cities}/>
+   
+   {filteredNames.length === 0 ? <CitiesContainer cities={cities}/> :  <CitiesContainer filteredNames={filteredNames}/>}
+   {console.log('filteredNames', filteredNames)}
    </>
   );
 }

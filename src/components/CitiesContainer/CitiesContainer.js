@@ -1,9 +1,17 @@
 import React from "react";
 import CityCard from "../CityCard/CityCard";
 
-const CitiesContainer = ({cities}) => {
+const CitiesContainer = ({cities, filteredNames}) => {
 
-let cityMap = cities.map(city => {
+  let variable;
+
+if(cities) {
+  variable = cities
+} else {
+  variable = filteredNames
+}
+
+let cityMap = variable.map(city => {
   return (
     <CityCard 
     city={city}
