@@ -27,22 +27,22 @@ const App = () => {
 
   return (
     <>
-      <SearchBar filterNames={filterNames} cities={cities} />
+      <Route
+        exact
+        path="/info/:city_name"
+        render={() => <CityInfo city={city} />}
+      />
 
-      <Route 
-      exact path='/info/:city_name'
-      render={() => (
-          <CityInfo city={city} />
-          )}
-        />
+      {/* {console.log("filteredNames", filteredNames)} */}
 
-
-      {filteredNames.length === 0 ? (
-        <CitiesContainer cities={cities} findCity={findCity} />
-      ) : (
-        <CitiesContainer filteredNames={filteredNames} findCity={findCity}/>
-      )}
-      {console.log("filteredNames", filteredNames)}
+      <Route exact path="/">
+        <SearchBar filterNames={filterNames} cities={cities} />
+        {filteredNames.length === 0 ? (
+          <CitiesContainer cities={cities} findCity={findCity} />
+        ) : (
+          <CitiesContainer filteredNames={filteredNames} findCity={findCity} />
+        )}
+      </Route>
     </>
   );
 };
