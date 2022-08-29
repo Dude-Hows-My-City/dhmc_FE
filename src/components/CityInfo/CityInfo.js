@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CityInfo = ({city}) => {
+export const CityInfo = ({city}) => {
 
 
 
@@ -8,9 +8,10 @@ const CityInfo = ({city}) => {
 <>
     <div className="city-info-container">
       <div className="city-name">
-
+        <p>I'm a freaking CityInfo component!!!!</p>
+        <p>{city.name}</p>
       </div>
-      
+
     </div>
 </>
   )

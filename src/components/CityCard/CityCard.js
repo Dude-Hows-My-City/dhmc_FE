@@ -2,14 +2,14 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 
-const CityCard = ({city}) => {
+const CityCard = ({city, findCity}) => {
 
 
   return(
 
 
       <>
-      <div className="city-card-container">
+      <div onClick={() => findCity(city.name)} className="city-card-container">
       
       <h1>{city.name}</h1>
       <img src={city.details.image_web_url}></img>

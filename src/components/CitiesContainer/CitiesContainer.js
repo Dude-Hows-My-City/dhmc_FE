@@ -2,7 +2,7 @@ import React from "react";
 import CityCard from "../CityCard/CityCard";
 import { NavLink } from "react-router-dom";
 
-const CitiesContainer = ({cities, filteredNames}) => {
+const CitiesContainer = ({cities, filteredNames, findCity}) => {
 
   let variable;
 
@@ -21,6 +21,7 @@ let cityMap = variable.map(city => {
     >
     <CityCard 
     city={city}
+    findCity={findCity}
     />
     </NavLink>
   )
