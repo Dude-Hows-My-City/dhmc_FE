@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const StyledCityCard = styled.section`
   //   border: solid 30px red;
 
+  .favorite-button,
   .image-label {
     position: relative;
   }

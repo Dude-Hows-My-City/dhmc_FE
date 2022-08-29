@@ -12,12 +12,10 @@ const CityCard = ({ city, findCity }) => {
           alt={`${city.name}'s skyline`}
         ></img>
         <p className="image-label"> {city.name} </p>
+        <button className="favorite-button">⭐️</button>
       </div>
     </StyledCityCard>
   );
 };
-
-//parent =   position: relative;
-//child = position: absolute;
 
 export default CityCard;
