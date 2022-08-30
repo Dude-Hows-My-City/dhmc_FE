@@ -6,13 +6,14 @@ const CityCard = ({ city, findCity }) => {
   return (
     <StyledCityCard>
       <div onClick={() => findCity(city.name)} className="city-card-container">
+        <button className="favorite-button">⭐️</button>
         <img
           className="city-image"
           src={city.details.image_web_url}
           alt={`${city.name}'s skyline`}
         ></img>
         <p className="image-label"> {city.name} </p>
-        <button className="favorite-button">⭐️</button>
+        {/* <button className="select-city-button"></button> */}
       </div>
     </StyledCityCard>
   );
