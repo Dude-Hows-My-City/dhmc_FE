@@ -2,39 +2,28 @@ import React from "react";
 import CityCard from "../CityCard/CityCard";
 import { NavLink } from "react-router-dom";
 
-const CitiesContainer = ({cities, filteredNames, findCity}) => {
+const CitiesContainer = ({ cities, filteredNames, findCity }) => {
+  let searchItem;
 
-  let variable;
+  if (cities) {
+    searchItem = cities;
+  } else {
+    searchItem = filteredNames;
+  }
 
-if(cities) {
-  variable = cities
-} else {
-  variable = filteredNames
-}
+  let cityMap = searchItem.map((city) => {
+    return (
+      <NavLink
+        to={`/info/${city.name}`}
+        key={city.name}
+        style={{ textDecoration: "none" }}
+      >
+        <CityCard city={city} findCity={findCity} />
+      </NavLink>
+    );
+  });
 
-let cityMap = variable.map(city => {
-  return (
-    <NavLink 
-    to={`/info/${city.name}`}
-    key={city.name}
-    style={{textDecoration: 'none'}}
-    >
-    <CityCard 
-    city={city}
-    findCity={findCity}
-    />
-    </NavLink>
-  )
-})
-  
-  return (
-    <>
-    {cityMap}
-    </>
-  
-  )
-  
-}
-
+  return <>{cityMap}</>;
+};
 
 export default CitiesContainer;

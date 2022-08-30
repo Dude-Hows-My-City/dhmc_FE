@@ -5,6 +5,7 @@ import SearchBar from "../Favorites/SearchBar/SearchBar";
 import { CityInfo } from "../CityInfo/CityInfo";
 import "./App.css";
 import { Route } from "react-router-dom";
+import Header from "../Header";
 
 const App = () => {
   const [cities, setCities] = useState([]);
@@ -27,22 +28,21 @@ const App = () => {
 
   return (
     <>
-      <SearchBar filterNames={filterNames} cities={cities} />
+      <Header />
+      <Route
+        exact
+        path="/info/:city_name"
+        render={() => <CityInfo city={city} />}
+      />
 
-      <Route 
-      exact path='/info/:city_name'
-      render={() => (
-          <CityInfo city={city} />
-          )}
-        />
-
-
-      {filteredNames.length === 0 ? (
-        <CitiesContainer cities={cities} findCity={findCity} />
-      ) : (
-        <CitiesContainer filteredNames={filteredNames} findCity={findCity}/>
-      )}
-      {console.log("filteredNames", filteredNames)}
+      <Route exact path="/">
+        <SearchBar filterNames={filterNames} cities={cities} />
+        {filteredNames.length === 0 ? (
+          <CitiesContainer cities={cities} findCity={findCity} />
+        ) : (
+          <CitiesContainer filteredNames={filteredNames} findCity={findCity} />
+        )}
+      </Route>
     </>
   );
 };
