@@ -6,6 +6,7 @@ import { CityInfo } from "../CityInfo/CityInfo";
 import "./App.css";
 import { Route } from "react-router-dom";
 import Header from "../Header";
+import { getCities, getCity } from "../../apiCalls";
 
 const App = () => {
   const [cities, setCities] = useState([]);
@@ -13,16 +14,16 @@ const App = () => {
   const [city, setCity] = useState({});
 
   useEffect(() => {
-    setCities(data);
+    getCities()
+    .then(data => setCities(data.data))
   }, [filteredNames]);
 
   const filterNames = (query) => {
-    console.log("queryfromtheapp", query);
     setFilteredNames(cities.filter((city) => city.name.includes(query)));
   };
 
   const findCity = (cityName) => {
-    let foundCity = cities.find((city) => city.name === cityName);
+    let foundCity = cities.find((city) => city.attributes.name === cityName);
     setCity(foundCity);
   };
 
@@ -32,7 +33,9 @@ const App = () => {
       <Route
         exact
         path="/info/:city_name"
-        render={() => <CityInfo city={city} />}
+        render={({ match }) => {
+        return <CityInfo cityName={match.params.city_name} city={city} setCity={setCity} cities={cities} setCities={setCities}/> 
+        }}
       />
 
       <Route exact path="/">
