@@ -14,8 +14,8 @@ const CitiesContainer = ({ cities, filteredNames, findCity }) => {
   let cityMap = searchItem.map((city) => {
     return (
       <NavLink
-        to={`/info/${city.name}`}
-        key={city.name}
+        to={`/info/${city.attributes.name}`}
+        key={city.id}
         style={{ textDecoration: "none" }}
       >
         <CityCard city={city} findCity={findCity} />

@@ -2,10 +2,9 @@ import React from "react";
 import { StyledCityCard } from "../styles/CityCard.styled";
 
 const CityCard = ({ city, findCity }) => {
-  console.log(city)
   return (
     <StyledCityCard>
-      <div onClick={() => findCity(city.name)} className="city-card-container">
+      <div onClick={() => findCity(city.attributes.name)} className="city-card-container">
         <button className="favorite-button">⭐️</button>
         <img
           className="city-image"
