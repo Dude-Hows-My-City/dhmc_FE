@@ -6,6 +6,7 @@ import { CityInfo } from "../CityInfo/CityInfo";
 import "./App.css";
 import { Route } from "react-router-dom";
 import Header from "../Header";
+import { getCities } from "../../apiCalls";
 
 const App = () => {
   const [cities, setCities] = useState([]);
@@ -13,11 +14,11 @@ const App = () => {
   const [city, setCity] = useState({});
 
   useEffect(() => {
-    setCities(data);
+    getCities()
+    .then(data => setCities(data.data))
   }, [filteredNames]);
 
   const filterNames = (query) => {
-    console.log("queryfromtheapp", query);
     setFilteredNames(cities.filter((city) => city.name.includes(query)));
   };
 
@@ -25,6 +26,9 @@ const App = () => {
     let foundCity = cities.find((city) => city.name === cityName);
     setCity(foundCity);
   };
+
+// https://dude-hows-my-city-be.herokuapp.com/api/v1
+// endpoints: /cities    /cities/{id}
 
   return (
     <>
