@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const StyledQuality = styled.section`
-  .quality-scores {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  text-align: center;
+  margin-left: 5%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  align-content: center;
 `;

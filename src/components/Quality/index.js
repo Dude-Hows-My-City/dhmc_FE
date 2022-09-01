@@ -1,11 +1,11 @@
 import { StyledQuality } from "../styles/Quality.styled";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Progress from "../Progress";
+import Progress from "../Progress/Progress";
 
 const Quality = ({ city }) => {
   console.log(city);
   return (
-    <>
+    <StyledQuality>
       <h2>Quality Scores</h2>
       <Progress
         score={city.attributes.scores.housing}
@@ -92,7 +92,7 @@ const Quality = ({ city }) => {
         city={city}
         name="Outdoors"
       />
-    </>
+    </StyledQuality>
   );
 };
 
