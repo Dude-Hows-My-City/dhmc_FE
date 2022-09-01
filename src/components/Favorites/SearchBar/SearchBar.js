@@ -15,6 +15,7 @@ const SearchBar = ({filterNames}) => {
   return(
     <input 
     type="text"
+    data-cy="search-bar"
     value={query}
     onChange={e => handleChange(e)}
     />
