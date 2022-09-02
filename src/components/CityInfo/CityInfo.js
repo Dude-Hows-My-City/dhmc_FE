@@ -13,10 +13,10 @@ export const CityInfo = ({ city, cityName, setCity, cities, setCities }) => {
 
   return (
     <StyledCityInfo>
-      <div className="city-info-container">
-        <div className="city-name">
-          <h2>{city.attributes.name}</h2>
-          <img src={city.attributes.details.image_mobile_url} />
+      <div data-cy="city-info-container" className="city-info-container">
+        <div data-cy="city-info-name-wrapper" className="city-name">
+          <h2 data-cy="city-info-name">{city.attributes.name}</h2>
+          <img data-cy="city-info-image" src={city.attributes.details.image_mobile_url} />
           <Quality city={city} />
           <Housing city={city} />
         </div>
