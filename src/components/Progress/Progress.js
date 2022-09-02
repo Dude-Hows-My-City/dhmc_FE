@@ -4,7 +4,7 @@ import { StyledProgress } from "../styles/Progress.styled";
 const Progress = ({ score, city, name }) => {
   return (
     <StyledProgress>
-      <div className="progress-bar">
+      <div data-cy="progess-bar" className="progress-bar">
         <p>{name}</p>
         <ProgressBar
           now={score}
