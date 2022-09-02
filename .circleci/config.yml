@@ -6,7 +6,12 @@ orbs:
 workflows:
   build:
     jobs:
-      - cypress/run
+      - cypress/install:
+      build: 'npm run build'
+      - cypress/run:
+      requires: 
+      - cypress/install
+      start: 'npm start'
 jobs:
   build_and_test:
     executor: node/default
@@ -14,9 +19,6 @@ jobs:
       - checkout
       - node/install-packages:
           pkg-manager: npm
-      - run: 
-          name: Run server
-          command: npm start
       - run:
           name: Run tests
           command: npm run cy:run
