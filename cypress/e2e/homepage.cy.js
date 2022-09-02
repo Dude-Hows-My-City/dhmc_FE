@@ -17,15 +17,10 @@ describe("Homepage", () => {
   });
 
   
-  it("Should take user to CityInfo page on city click", () => {
-    cy.intercept('GET','https://dude-hows-my-city-be.herokuapp.com/api/v1/cities/1', { fixture: 'city' })
-    cy.get('[data-cy="city-image"]').first().click()
-    .url().should('include', '/info/Aarhus')
-  });
+  // it("Should take user to CityInfo page on city click", () => {
+  //   cy.intercept('GET','https://dude-hows-my-city-be.herokuapp.com/api/v1/cities/1', { fixture: 'city' })
+  //   cy.get('[data-cy="city-image"]').first().click()
+  //   .url().should('include', '/info/Aarhus')
+  // });
 
-  it.skip("Should dynamically search through cities", () => {
-    it("Should confirm that true is equal to true", () => {
-      expect(true).to.equal(true);
-    });
-  });
 });
