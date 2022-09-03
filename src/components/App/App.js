@@ -1,5 +1,4 @@
-import { useContext, useEffect, useState } from "react";
-import data from "../../mockData";
+import { useEffect, useState } from "react";
 import CitiesContainer from "../CitiesContainer/CitiesContainer";
 import SearchBar from "../Favorites/SearchBar/SearchBar";
 import { CityInfo } from "../CityInfo/CityInfo";
@@ -15,6 +14,9 @@ const App = () => {
   const [city, setCity] = useState({});
   const [city1, setCity1] = useState({});
   const [city2, setCity2] = useState({});
+  const [cityData1, setCityData1] = useState({});
+  const [cityData2, setCityData2] = useState({});
+  
 
   useEffect(() => {
     getCities()
@@ -35,14 +37,20 @@ const App = () => {
 
       let foundCity = cities.find((city) => city.attributes.name === cityName);
       setCity1(foundCity)
+      let cityId = cities.find((locale) => locale.attributes.name === cityName);
+      getCity(cityId.id).then((data) => setCityData1(data.data));
     } else {
       let foundCity = cities.find((city) => city.attributes.name === cityName);
       setCity2(foundCity)
+      let cityId = cities.find((locale) => locale.attributes.name === cityName);
+      getCity(cityId.id).then((data) => setCityData2(data.data));
     }
     
   }
 console.log('city1 in app AR', city1)
 console.log('city2 in app AR', city2)
+console.log('cityData1 in app AR', cityData1)
+console.log('cityData2 in app AR', cityData2)
   return (
     <>
       <Header />
@@ -63,10 +71,13 @@ console.log('city2 in app AR', city2)
         )}
       </Route>
         
-      <Route exact path="/comparison/:city1_city2">
-        <ComparisonPage />
+        { Object.keys(city2).length !== 0 &&
+
+          <Route exact path="/comparison/:city1_city2">
+        <ComparisonPage city1={city1} city2={city2}/>
 
       </Route>
+      }
 
     </>
   );

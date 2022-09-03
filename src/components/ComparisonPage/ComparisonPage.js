@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { getCity } from "../../apiCalls";
 
 export const ComparisonPage = ({city1, city2}) => {
 
