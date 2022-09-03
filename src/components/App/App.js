@@ -7,11 +7,14 @@ import "./App.css";
 import { Route } from "react-router-dom";
 import Header from "../Header";
 import { getCities, getCity } from "../../apiCalls";
+import { ComparisonPage } from "../ComparisonPage/ComparisonPage";
 
 const App = () => {
   const [cities, setCities] = useState([]);
   const [filteredNames, setFilteredNames] = useState([]);
   const [city, setCity] = useState({});
+  const [city1, setCity1] = useState({});
+  const [city2, setCity2] = useState({});
 
   useEffect(() => {
     getCities()
@@ -46,6 +49,12 @@ const App = () => {
           <CitiesContainer filteredNames={filteredNames} findCity={findCity} />
         )}
       </Route>
+        
+      <Route exact path="/comparison/:city1_city2">
+        <ComparisonPage />
+
+      </Route>
+
     </>
   );
 };

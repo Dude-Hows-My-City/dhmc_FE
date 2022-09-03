@@ -13,13 +13,11 @@ const CitiesContainer = ({ cities, filteredNames, findCity }) => {
 
   let cityMap = searchItem.map((city) => {
     return (
-      <NavLink
-        to={`/info/${city.attributes.name}`}
+   
+        <CityCard city={city} findCity={findCity} 
         key={city.id}
-        style={{ textDecoration: "none" }}
-      >
-        <CityCard city={city} findCity={findCity} />
-      </NavLink>
+        />
+
     );
   });
 

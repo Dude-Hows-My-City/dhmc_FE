@@ -1,5 +1,12 @@
 import { useState, useEffect } from "react";
 
-const ComparisonPage = ({cityLeft, cityRight}) => {
+
+export const ComparisonPage = ({city1, city2}) => {
+
+  return (
+
+    <h1>I'm a comparison page!!!</h1>
+
+  )
 
 }
