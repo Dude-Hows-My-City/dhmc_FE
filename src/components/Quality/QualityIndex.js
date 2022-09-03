@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Progress from "../Progress/Progress";
 
 const Quality = ({ city }) => {
-  console.log(city);
+  console.log('city in quality', city);
   return (
     <StyledQuality>
       <h2 data-cy="quality-scores">Quality Scores</h2>

@@ -58,16 +58,16 @@ console.log('cityData2 in app AR', cityData2)
         exact
         path="/info/:city_name"
         render={({ match }) => {
-        return <CityInfo cityName={match.params.city_name} city={city} setCity={setCity} cities={cities} setCities={setCities}/> 
+        return <CityInfo cityName={match.params.city_name} city={city} city1={city1} city2={city2}setCity={setCity} cities={cities} setCities={setCities}/> 
         }}
       />
 
       <Route exact path="/">
         <SearchBar filterNames={filterNames} cities={cities} />
         {filteredNames.length === 0 ? (
-          <CitiesContainer cities={cities} findCity={findCity} compareCity={compareCity} city1={city1} city2={city2}/>
+          <CitiesContainer cities={cities} findCity={findCity} compareCity={compareCity} city1={city1} city2={city2} cityData1={cityData1} cityData2={cityData2}/>
         ) : (
-          <CitiesContainer filteredNames={filteredNames} findCity={findCity} compareCity={compareCity} city1={city1} city2={city2} />
+          <CitiesContainer filteredNames={filteredNames} findCity={findCity} compareCity={compareCity} city1={city1} city2={city2} cityData1={cityData1} cityData2={cityData2} />
         )}
       </Route>
         
@@ -77,7 +77,7 @@ console.log('cityData2 in app AR', cityData2)
         <ComparisonPage city={city} city1={city1} city2={city2} cityData1={cityData1} cityData2={cityData2}/>
 
       </Route>
-      {/* // } */}
+       {/* } */}
 
     </>
   );

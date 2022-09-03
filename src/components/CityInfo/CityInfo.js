@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { getCities, getCity } from "../../apiCalls";
-import Quality from "../Quality/index";
-import Housing from "../Housing/index";
+import Quality from "../Quality/QualityIndex";
+import Housing from "../Housing/HousingIndex";
 import { StyledCityInfo } from "../styles/CityInfo.styled";
 
-export const CityInfo = ({ city, cityName, setCity, cities, setCities }) => {
+export const CityInfo = ({ city, city1, cityName, setCity, cities, setCities }) => {
   useEffect(() => {
-    let cityId = cities.find((locale) => locale.attributes.name === cityName);
+    // let cityId = cities.find((locale) => locale.attributes.name === cityName);
 
-    getCity(cityId.id).then((data) => setCity(data.data));
+    // getCity(cityId.id).then((data) => setCity(data.data));
   }, []);
 
   return (
@@ -21,6 +21,7 @@ export const CityInfo = ({ city, cityName, setCity, cities, setCities }) => {
           <Housing city={city} />
         </div>
       </div>
+     
     </StyledCityInfo>
   );
 };
