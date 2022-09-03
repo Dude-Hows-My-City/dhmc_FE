@@ -42,12 +42,12 @@ const CityCard = ({ city, findCity, compareCity, city1, city2, cityData1, cityDa
         onClick={() => findCity(city.attributes.name)}
 
         ></img>
-      </NavLink>
-
         <p data-cy="city-name" className="image-label">
           {" "}
           {city.attributes.name}{" "}
         </p>
+      </NavLink>
+
         
 
         <NavLink
