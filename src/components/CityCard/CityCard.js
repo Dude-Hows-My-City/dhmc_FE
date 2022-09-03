@@ -10,9 +10,13 @@ const CityCard = ({ city, findCity }) => {
     // e.preventDefault();
     setChecked(true);
     console.log("Ive been checked");
+    console.log("checkbox e value", e);
+    console.log(e.target.id)
+
   };
 
   console.log('checked state city card', checked)
+  // console.log('city from city card', city)
   return (
     <StyledCityCard>
 
@@ -43,9 +47,11 @@ const CityCard = ({ city, findCity }) => {
           {" "}
           {city.attributes.name}{" "}
         </p>
-        <div>
+        <div className="checkbox">
           <label>
             <input
+              id={city.attributes.name}
+              // name={city.attributes.name}
               type="checkbox"
               checked={checked}
               onChange={(e) => handleChange(e)}
