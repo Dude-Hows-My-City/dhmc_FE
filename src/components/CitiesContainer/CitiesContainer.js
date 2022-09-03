@@ -2,7 +2,7 @@ import React from "react";
 import CityCard from "../CityCard/CityCard";
 import { NavLink } from "react-router-dom";
 
-const CitiesContainer = ({ cities, filteredNames, findCity }) => {
+const CitiesContainer = ({ cities, filteredNames, findCity, compareCity }) => {
   let searchItem;
 
   if (cities) {
@@ -14,7 +14,7 @@ const CitiesContainer = ({ cities, filteredNames, findCity }) => {
   let cityMap = searchItem.map((city) => {
     return (
    
-        <CityCard city={city} findCity={findCity} 
+        <CityCard city={city} findCity={findCity} compareCity={compareCity}
         key={city.id}
         />
 

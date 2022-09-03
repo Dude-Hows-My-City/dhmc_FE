@@ -30,6 +30,19 @@ const App = () => {
     setCity(foundCity);
   };
 
+  const compareCity = (cityName) => {
+    if (Object.keys(city1).length === 0) {
+
+      let foundCity = cities.find((city) => city.attributes.name === cityName);
+      setCity1(foundCity)
+    } else {
+      let foundCity = cities.find((city) => city.attributes.name === cityName);
+      setCity2(foundCity)
+    }
+    
+  }
+console.log('city1 in app AR', city1)
+console.log('city2 in app AR', city2)
   return (
     <>
       <Header />
@@ -44,9 +57,9 @@ const App = () => {
       <Route exact path="/">
         <SearchBar filterNames={filterNames} cities={cities} />
         {filteredNames.length === 0 ? (
-          <CitiesContainer cities={cities} findCity={findCity} />
+          <CitiesContainer cities={cities} findCity={findCity} compareCity={compareCity}/>
         ) : (
-          <CitiesContainer filteredNames={filteredNames} findCity={findCity} />
+          <CitiesContainer filteredNames={filteredNames} findCity={findCity} compareCity={compareCity} />
         )}
       </Route>
         

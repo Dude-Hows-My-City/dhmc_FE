@@ -3,7 +3,7 @@ import { StyledCityCard } from "../styles/CityCard.styled";
 import { useState } from "react";
 import { NavLink } from "react-router-dom"
 
-const CityCard = ({ city, findCity }) => {
+const CityCard = ({ city, findCity, compareCity }) => {
   const [checked, setChecked] = useState(false);
 
   const handleChange = (e) => {
@@ -12,6 +12,7 @@ const CityCard = ({ city, findCity }) => {
     console.log("Ive been checked");
     console.log("checkbox e value", e);
     console.log(e.target.id)
+    compareCity(e.target.id)
 
   };
 
