@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Quality from "../Quality/QualityIndex";
 import Housing from "../Housing/HousingIndex";
-import { StyledCityInfo } from "../styles/CityInfo.styled";
+import { StyledComparisonPage } from "../styles/ComparisonPage.styled";
 import { CityInfo } from "../CityInfo/CityInfo";
 
 export const ComparisonPage = ({
@@ -18,14 +18,16 @@ export const ComparisonPage = ({
   return (
     // <CityInfo  city={city1} cityData={cityData1}/>
     
-    <StyledCityInfo>
+    <StyledComparisonPage>
+    <section className="comparison-page">
+
     <div data-cy="city-info-container" className="city-info-container">
       <div data-cy="city-info-name-wrapper" className="city-name">
         <h2 data-cy="city-info-name">{city1.attributes.name}</h2>
         <img
           data-cy="city-info-image"
           src={city1.attributes.details.image_mobile_url}
-        />
+          />
         <Quality city={city1} />
         <Housing city={city1} />
       </div>
@@ -36,12 +38,13 @@ export const ComparisonPage = ({
         <img
           data-cy="city-info-image"
           src={city1.attributes.details.image_mobile_url}
-        />
+          />
         <Quality city={city1} />
         <Housing city={city1} />
       </div>
     </div>
-     </StyledCityInfo>
+          </section>
+     </StyledComparisonPage>
     // {/* <CityInfo  city={city1} cityData={cityData2}/> */}
   );
 };
