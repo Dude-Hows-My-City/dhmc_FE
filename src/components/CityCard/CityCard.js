@@ -3,7 +3,7 @@ import { StyledCityCard } from "../styles/CityCard.styled";
 import { useState } from "react";
 import { NavLink } from "react-router-dom"
 
-const CityCard = ({ city, findCity, compareCity }) => {
+const CityCard = ({ city, findCity, compareCity, city1, city2 }) => {
   const [checked, setChecked] = useState(false);
 
   const handleChange = (e) => {
@@ -48,6 +48,10 @@ const CityCard = ({ city, findCity, compareCity }) => {
           {" "}
           {city.attributes.name}{" "}
         </p>
+        <NavLink
+        to={`/comparison`}
+        style={{ textDecoration: "none" }}
+      >
         <div className="checkbox">
           <label>
             <input
@@ -60,6 +64,8 @@ const CityCard = ({ city, findCity, compareCity }) => {
             Compare
           </label>
         </div>
+      </NavLink>
+
       </div>
     </StyledCityCard>
   );

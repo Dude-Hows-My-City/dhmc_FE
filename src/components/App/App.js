@@ -65,15 +65,15 @@ console.log('cityData2 in app AR', cityData2)
       <Route exact path="/">
         <SearchBar filterNames={filterNames} cities={cities} />
         {filteredNames.length === 0 ? (
-          <CitiesContainer cities={cities} findCity={findCity} compareCity={compareCity}/>
+          <CitiesContainer cities={cities} findCity={findCity} compareCity={compareCity} city1={city1} city2={city2}/>
         ) : (
-          <CitiesContainer filteredNames={filteredNames} findCity={findCity} compareCity={compareCity} />
+          <CitiesContainer filteredNames={filteredNames} findCity={findCity} compareCity={compareCity} city1={city1} city2={city2} />
         )}
       </Route>
         
         { Object.keys(cityData2).length !== 0 &&
 
-          <Route exact path="/comparison/:city1_city2">
+          <Route exact path="/comparison/">
         <ComparisonPage city1={city1} city2={city2} cityData1={cityData1} cityData2={cityData2}/>
 
       </Route>
