@@ -48,6 +48,7 @@ const CityCard = ({ city, findCity, compareCity, city1, city2 }) => {
           {" "}
           {city.attributes.name}{" "}
         </p>
+        
         <NavLink
         to={`/comparison`}
         style={{ textDecoration: "none" }}

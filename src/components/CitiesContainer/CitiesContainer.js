@@ -1,6 +1,6 @@
 import React from "react";
 import CityCard from "../CityCard/CityCard";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 const CitiesContainer = ({ cities, filteredNames, findCity, compareCity, city1, city2 }) => {
   let searchItem;

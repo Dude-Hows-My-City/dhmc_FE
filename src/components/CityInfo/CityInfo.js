@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getCities, getCity } from "../../apiCalls";
-import Quality from "../Quality/QualityIndex";
+import Quality from "../Quality/index";
 import Housing from "../Housing/index";
 import { StyledCityInfo } from "../styles/CityInfo.styled";
 
