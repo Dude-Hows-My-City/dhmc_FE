@@ -21,7 +21,7 @@ const App = () => {
   useEffect(() => {
     getCities()
     .then(data => setCities(data.data))
-  }, [filteredNames]);
+  }, [filteredNames, cityData2]);
 
   const filterNames = (query) => {
     setFilteredNames(cities.filter((city) => city.name.includes(query)));
@@ -71,10 +71,10 @@ console.log('cityData2 in app AR', cityData2)
         )}
       </Route>
         
-        { Object.keys(city2).length !== 0 &&
+        { Object.keys(cityData2).length !== 0 &&
 
           <Route exact path="/comparison/:city1_city2">
-        <ComparisonPage city1={city1} city2={city2}/>
+        <ComparisonPage city1={city1} city2={city2} cityData1={cityData1} cityData2={cityData2}/>
 
       </Route>
       }
