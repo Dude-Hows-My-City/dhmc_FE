@@ -94,7 +94,7 @@ console.log('selectedCities in app AR', selectedCities)
         {/* { Object.keys(cityData2).length !== 0 && */}
 
           <Route exact path="/comparison/">
-        <ComparisonPage city={city} city1={city1} city2={city2} cityData1={cityData1} cityData2={cityData2}/>
+        <ComparisonPage selectedCities={selectedCities} city={city} city1={city1} city2={city2} cityData1={cityData1} cityData2={cityData2}/>
 
       </Route>
        {/* } */}

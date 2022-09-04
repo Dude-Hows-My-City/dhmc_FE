@@ -10,41 +10,44 @@ export const ComparisonPage = ({
   city2,
   cityData1,
   cityData2,
+  selectedCities
 }) => {
-  console.log("city1 in comparison", city1);
-  console.log("city1 in comparison", city1);
+  console.log("city1 in comparison", selectedCities[0]);
+  console.log("selectedCities[0] in comparison", selectedCities[0]);
   console.log("cityDaata1 in comparison", cityData1);
   console.log("cityDaata1 in comparison", cityData2);
   return (
-    // <CityInfo  city={city1} cityData={cityData1}/>
+    // <CityInfo  city={selectedCities[0]} cityData={cityData1}/>
     
     <StyledComparisonPage>
     <section className="comparison-page">
 
     <div data-cy="city-info-container" className="city-info-container">
       <div data-cy="city-info-name-wrapper" className="city-name">
-        <h2 data-cy="city-info-name">{city1.attributes.name}</h2>
+        <h2 data-cy="city-info-name">{selectedCities[0].attributes.name}</h2>
         <img
           data-cy="city-info-image"
-          src={city1.attributes.details.image_mobile_url}
+          src={selectedCities[0].attributes.details.image_mobile_url}
           />
-        <Quality city={city1} />
-        <Housing city={city1} />
+        <Quality city={selectedCities[0]} />
+        <Housing city={selectedCities[0]} />
       </div>
     </div>
+
+
     <div data-cy="city-info-container" className="city-info-container">
       <div data-cy="city-info-name-wrapper" className="city-name">
-        <h2 data-cy="city-info-name">{city1.attributes.name}</h2>
+        <h2 data-cy="city-info-name">{selectedCities[1].attributes.name}</h2>
         <img
           data-cy="city-info-image"
-          src={city1.attributes.details.image_mobile_url}
+          src={selectedCities[1].attributes.details.image_mobile_url}
           />
-        <Quality city={city1} />
-        <Housing city={city1} />
+        <Quality city={selectedCities[1]} />
+        <Housing city={selectedCities[1]} />
       </div>
     </div>
           </section>
      </StyledComparisonPage>
-    // {/* <CityInfo  city={city1} cityData={cityData2}/> */}
+    // {/* <CityInfo  city={selectedCities[0]} cityData={cityData2}/> */}
   );
 };
