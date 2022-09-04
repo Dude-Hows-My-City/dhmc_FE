@@ -33,13 +33,13 @@ export const SelectedToCompare = ({cities, city1, city2, findCity, compareCity }
     <>
       
     {cities.length === 0 ?
-    <p>Select Some Cities to Compare!</p>
+    <p>Please Select Some Cities to Compare!</p>
     : 
       <div className="selected-container">
       <p>Your Selected Cities</p>
       {cityMap}
       {cities.length === 1 ?
-      <p>Please Select One More to Compare</p>
+      <p>Nice! Now Select One More to Compare</p>
       : 
       cities.length === 2 ? <p>Let's Do this!</p>
       :

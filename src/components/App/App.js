@@ -26,7 +26,7 @@ const App = () => {
   }, [city, filteredNames, city1, city2, cityData2, selectedCities]);
 
   const filterNames = (query) => {
-    setFilteredNames(cities.filter((city) => city.name.includes(query)));
+    setFilteredNames(cities.filter((city) => city.attributes.name.toLowerCase().includes(query.toLowerCase())));
   };
 
   const findCity = (cityName) => {
