@@ -4,30 +4,39 @@ import CityCard from "../CityCard/CityCard";
 import { NavLink } from "react-router-dom"
 
 
-export const SelectedToCompare = ({ city1, city2 }) => {
+export const SelectedToCompare = ({cities, city1, city2, findCity, compareCity }) => {
   console.log("city1 in Selected", city1);
   console.log("city1 in Selected", city2);
+  console.log("selectedCitties in Selected", cities);
+  console.log("city1 keys length in Selected", Object.keys(city1).length);
+
+  useEffect(() => {
+
+
+  }, [city1, city2, cities])
+
+
+  let cityMap = cities.map((city) => {
+    return (
+   
+        // <CityCard city={city}
+        <CityCard city={city} city1={city1} city2={city2} findCity={findCity} compareCity={compareCity}
+        key={city.id}
+        />
+
+    );
+  });
 
   return (
-    <>
-     { Object.keys(city1).length !== 0 || Object.keys(city2).length !== 0 &&
-    <StyledSelectedToCompare>
-
-
-    <h1>I'm selected to compare</h1>
-    
-     <CityCard city1={city1}/>
-    <CityCard city2={city2}/>
-    <NavLink
+  <>
+  
+  {cityMap}
+  <NavLink
         to={`/comparison`}
         style={{ textDecoration: "none" }}
       >
         <button className="button-compare">Compare Selected</button>
       </NavLink>
-    </StyledSelectedToCompare>
-}
-    </>
-
-
-  );
+  </>
+  )
 };
