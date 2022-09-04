@@ -52,10 +52,7 @@ const CityCard = ({ city, findCity, compareCity, city1, city2, cityData1, cityDa
 
         
 
-        <NavLink
-        to={`/comparison`}
-        style={{ textDecoration: "none" }}
-      >
+      
         <div className="checkbox">
           <label>
             <input
@@ -68,7 +65,6 @@ const CityCard = ({ city, findCity, compareCity, city1, city2, cityData1, cityDa
             Compare
           </label>
         </div>
-      </NavLink>
 
       </div>
     </StyledCityCard>
