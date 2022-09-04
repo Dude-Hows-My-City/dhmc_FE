@@ -22,7 +22,7 @@ const App = () => {
   useEffect(() => {
     getCities()
     .then(data => setCities(data.data))
-  }, [city, filteredNames, cityData2]);
+  }, [city, filteredNames, city1, city2, cityData2]);
 
   const filterNames = (query) => {
     setFilteredNames(cities.filter((city) => city.name.includes(query)));
