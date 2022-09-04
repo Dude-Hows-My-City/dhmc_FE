@@ -19,11 +19,12 @@ export const SelectedToCompare = ({cities, city1, city2, findCity, compareCity }
   let cityMap = cities.map((city) => {
     return (
    
-        // <CityCard city={city}
+      <>
         <CityCard city={city} city1={city1} city2={city2} findCity={findCity} compareCity={compareCity}
         key={city.id}
         />
-
+        <button>Delete</button>
+        </>
     );
   });
 

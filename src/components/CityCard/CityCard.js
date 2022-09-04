@@ -3,7 +3,7 @@ import { StyledCityCard } from "../styles/CityCard.styled";
 import { useState } from "react";
 import { NavLink } from "react-router-dom"
 
-const CityCard = ({ city, findCity, compareCity, city1, city2, cityData1, cityData2 }) => {
+const CityCard = ({ city, findCity, compareCity, selectedCities, city1, city2, cityData1, cityData2 }) => {
   const [checked, setChecked] = useState(false);
 
   const handleChange = (e) => {
@@ -52,7 +52,7 @@ const CityCard = ({ city, findCity, compareCity, city1, city2, cityData1, cityDa
 
         
 
-      
+      {!selectedCities || selectedCities.length < 2  &&
         <div className="checkbox">
           <label>
             <input
@@ -61,11 +61,12 @@ const CityCard = ({ city, findCity, compareCity, city1, city2, cityData1, cityDa
               type="checkbox"
               checked={checked}
               onChange={(e) => handleChange(e)}
-            />
+              />
             Compare
           </label>
         </div>
 
+            }
       </div>
     </StyledCityCard>
   );
