@@ -84,15 +84,23 @@ const App = () => {
     );
     let returnedUpdatedCities = [...updatedCities, deletedCity];
     let returnedCities = [...cities, deletedCity];
+    // let filteredNames = [...citiesAlways.includes(query)]
+    let filteredNamess = [...filteredNames,  deletedCity]
     setUpdatedCities(returnedUpdatedCities.sort((a, b) => a.id - b.id));
     setCities(returnedCities.sort((a, b) => a.id - b.id));
+    query &&
+    setFilteredNames(filteredNamess.sort((a, b) => a.id - b.id))
   };
 
 
   console.log('filteredNames App AR', filteredNames);
+  console.log('query App AR', query);
   return (
     <>
-      <Header />
+
+
+
+<Header />
       <Route
         exact
         path="/info/:city_name"
@@ -104,8 +112,7 @@ const App = () => {
             />
           );
         }}
-      />
-
+      />                    
       <Route exact path="/">
         <SearchBar filterNames={filterNames} cities={cities} />
         <SelectedToCompare
@@ -130,6 +137,7 @@ const App = () => {
             findCity={findCity}
             compareCity={compareCity}
             selectedCities={selectedCities}
+            query={query}
           />
         )}
       </Route>

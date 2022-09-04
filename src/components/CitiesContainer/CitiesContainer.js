@@ -8,10 +8,11 @@ const CitiesContainer = ({
   findCity,
   compareCity,
   selectedCities,
+  query
 }) => {
-  useEffect(() => {}, [cities, filteredNames]);
+  useEffect(() => {}, [cities, filteredNames, query]);
   let searchItem;
-  if (cities) {
+  if (cities && !query) {
     searchItem = cities;
   } else {
     searchItem = filteredNames;
