@@ -80,7 +80,7 @@ const App = () => {
   const deleteCompared = (id) => {
     let deletedCity = citiesAlways.find((city) => city.id === id)
     console.log('deleted city in DeletedCompared', deletedCity)
-      setSelectedCities(selectedCities.find((city) => city.id !== deletedCity.id))
+      setSelectedCities(selectedCities.filter((city) => city.id !== deletedCity.id))
     
     console.log('delteCompared App city data ', id)
 
