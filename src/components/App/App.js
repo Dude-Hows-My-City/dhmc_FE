@@ -19,8 +19,10 @@ const App = () => {
   const [cityData2, setCityData2] = useState({});
   const [selectedCities, setSelectedCities] = useState([]);
   const [updatedCities, setUpdatedCities] = useState([]);
+  const [citiesAlways, setCitiesAlways] = useState([])
 
   useEffect(() => {
+    getCities().then((data) => setCitiesAlways(data.data));
     if (updatedCities.length < 1) {
       getCities().then((data) => setCities(data.data));
     } else {
@@ -46,7 +48,7 @@ const App = () => {
 
   const findCity = (cityName) => {
     console.log("findCity in app", cityName);
-    let foundCity = cities.find((city) => city.attributes.name === cityName);
+    let foundCity = citiesAlways.find((city) => city.attributes.name === cityName);
     setCity(foundCity);
   };
 
@@ -76,7 +78,7 @@ const App = () => {
     // getCity(cityId.id).then((data) => setCityData1(data.data));
   };
 
-  
+
 
   console.log("city in app AR", city);
   console.log("city1 in app AR", city1);
