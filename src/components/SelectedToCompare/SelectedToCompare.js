@@ -35,7 +35,7 @@ export const SelectedToCompare = ({cities, city1, city2, findCity, compareCity }
         to={`/comparison`}
         style={{ textDecoration: "none" }}
       >
-        <button className="button-compare">Compare Selected</button>
+        <button  disabled={cities.length !== 2} className="button-compare">Compare Selected</button>
       </NavLink>
   </>
   )
