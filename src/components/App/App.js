@@ -77,11 +77,14 @@ const App = () => {
     // getCity(cityId.id).then((data) => setCityData1(data.data));
   };
 
-  // const deleteCompared = (id) => {
-  //   let deletedCity = 
-  //   console.log('delteCompared App city data ', id)
+  const deleteCompared = (id) => {
+    let deletedCity = citiesAlways.find((city) => city.id === id)
+    console.log('deleted city in DeletedCompared', deletedCity)
+      setSelectedCities(selectedCities.find((city) => city.id !== deletedCity.id))
+    
+    console.log('delteCompared App city data ', id)
 
-  // }
+  }
 
   console.log("city in app AR", city);
   console.log("city1 in app AR", city1);
