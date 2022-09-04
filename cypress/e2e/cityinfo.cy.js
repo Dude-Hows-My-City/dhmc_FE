@@ -5,7 +5,7 @@ describe("City Info", () => {
     cy.intercept('GET','https://dude-hows-my-city-be.herokuapp.com/api/v1/cities', { fixture: 'cities' })
     cy.intercept('GET','https://dude-hows-my-city-be.herokuapp.com/api/v1/cities/1', { fixture: 'city' })
     cy.visit('http://localhost:3000')
-    cy.get('[data-cy="city-image"]').first().click()
+    cy.get('[data-cy="city-name"]').first().click()
   });
 
   it("Should render all relevant elements to the page", () => {
