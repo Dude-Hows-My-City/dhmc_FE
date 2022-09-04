@@ -34,17 +34,16 @@ const CityCard = ({ city, findCity, compareCity, city1, city2, cityData1, cityDa
         <NavLink
         to={`/info/${city.attributes.name}`}
         style={{ textDecoration: "none" }}
+        onClick={() => findCity(city.attributes.name)}
       >
         <img
           className="city-image"
           data-cy="city-image"
           src={city.attributes.details.image_web_url}
           alt={`${city.attributes.name}'s skyline`}
-        onClick={() => findCity(city.attributes.name)}
         ></img>
 
         <p data-cy="city-name" className="image-label"
-        onClick={() => findCity(city.attributes.name)}
         >
           {" "}
           {city.attributes.name}{" "}
