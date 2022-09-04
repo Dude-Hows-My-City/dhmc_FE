@@ -55,7 +55,6 @@ const App = () => {
   const compareCity = (cityName) => {
     if (updatedCities.length === 0) {
       let foundCity = cities.find((city) => city.attributes.name === cityName);
-      // setCity1(foundCity)
       setSelectedCities([...selectedCities, foundCity]);
       let newCities = cities.filter(
         (city) => city.attributes.name !== cityName
@@ -78,7 +77,11 @@ const App = () => {
     // getCity(cityId.id).then((data) => setCityData1(data.data));
   };
 
+  // const deleteCompared = (id) => {
+  //   let deletedCity = 
+  //   console.log('delteCompared App city data ', id)
 
+  // }
 
   console.log("city in app AR", city);
   console.log("city1 in app AR", city1);
@@ -122,6 +125,7 @@ const App = () => {
           cities={selectedCities}
           findCity={findCity}
           compareCity={compareCity}
+          deleteCompared={deleteCompared}
         />
 
         {filteredNames.length === 0 ? (
