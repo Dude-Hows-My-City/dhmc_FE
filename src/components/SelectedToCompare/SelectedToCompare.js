@@ -5,21 +5,14 @@ import { NavLink } from "react-router-dom";
 
 export const SelectedToCompare = ({
   cities,
-  city1,
-  city2,
   findCity,
   compareCity,
-  deleteCompared
+  deleteCompared,
 }) => {
-  console.log("city1 in Selected", city1);
-  console.log("city1 in Selected", city2);
-  console.log("selectedCitties in Selected", cities);
-  console.log("city1 keys length in Selected", Object.keys(city1).length);
-
-  useEffect(() => {}, [city1, city2, cities]);
+  useEffect(() => {}, [cities]);
 
   const onSubmit = (e) => {
-   deleteCompared(e.target.value);
+    deleteCompared(e.target.value);
   };
 
   let cityMap = cities.map((city) => {
@@ -27,8 +20,6 @@ export const SelectedToCompare = ({
       <div className="comparison-card-container">
         <CityCard
           city={city}
-          city1={city1}
-          city2={city2}
           findCity={findCity}
           compareCity={compareCity}
           key={city.id}
@@ -43,7 +34,6 @@ export const SelectedToCompare = ({
       </div>
     );
   });
-  console.log();
   return (
     <StyledSelectedToCompare>
       <div className="selected-to-compare-container">
