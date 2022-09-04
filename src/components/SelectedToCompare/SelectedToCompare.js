@@ -8,12 +8,12 @@ export const SelectedToCompare = ({ city1, city2 }) => {
 
   return (
     <>
-     { Object.keys(city1).length !== 0 &&
+     { Object.keys(city1).length !== 0 || Object.keys(city2).length !== 0 &&
     <StyledSelectedToCompare>
     <h1>I'm selected to compare</h1>
     
      <CityCard city1={city1}/>
-    {/* <CityCard city2={city2}/>  */}
+    <CityCard city2={city2}/>
     </StyledSelectedToCompare>
 }
     </>
