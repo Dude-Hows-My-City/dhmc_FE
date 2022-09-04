@@ -13,7 +13,8 @@ export const StyledCityCard = styled.section`
   .city-card-container {
     position: relative;
     margin: 0.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 0;
+    margin-top: 2vh;
     height: 11vh;
   }
 
