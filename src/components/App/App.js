@@ -103,7 +103,7 @@ const App = () => {
               testedCity1={selectedCities[1]}
               testedCity0={selectedCities[0]}
 
-              city1={city1}
+              newCity={city}
               city2={city2}
               setCity={setCity}
               cities={cities}
