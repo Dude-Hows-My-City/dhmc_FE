@@ -1,25 +1,30 @@
-import React from "react";
+import React, { useEffect } from "react";
 import CityCard from "../CityCard/CityCard";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
-const CitiesContainer = ({ cities, filteredNames, findCity }) => {
+const CitiesContainer = ({
+  cities,
+  filteredNames,
+  findCity,
+  compareCity,
+  selectedCities,
+}) => {
+  useEffect(() => {}, [cities, filteredNames]);
   let searchItem;
-
   if (cities) {
     searchItem = cities;
   } else {
     searchItem = filteredNames;
   }
-
   let cityMap = searchItem.map((city) => {
     return (
-      <NavLink
-        to={`/info/${city.attributes.name}`}
+      <CityCard
+        selectedCities={selectedCities}
+        city={city}
+        findCity={findCity}
+        compareCity={compareCity}
         key={city.id}
-        style={{ textDecoration: "none" }}
-      >
-        <CityCard city={city} findCity={findCity} />
-      </NavLink>
+      />
     );
   });
 

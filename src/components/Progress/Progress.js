@@ -1,6 +1,7 @@
 import React from "react";
 import { ProgressBar } from "react-bootstrap";
 import { StyledProgress } from "../styles/Progress.styled";
+
 const Progress = ({ score, city, name }) => {
   return (
     <StyledProgress>
