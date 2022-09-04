@@ -152,7 +152,11 @@ const App = () => {
             cityData2={cityData2}
             selectedCities={selectedCities}
           />
-        ) : (
+        ) 
+        : 
+          filteredNames.length === 0 && query ? 
+            <p>Your Search Did Not Bring Any Results</p>
+            :
           <CitiesContainer
             filteredNames={filteredNames}
             findCity={findCity}
@@ -163,7 +167,8 @@ const App = () => {
             cityData2={cityData2}
             selectedCities={selectedCities}
           />
-        )}
+          }
+        
       </Route>
 
       <Route exact path="/comparison/">
