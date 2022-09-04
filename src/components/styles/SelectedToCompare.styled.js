@@ -12,20 +12,20 @@ export const StyledSelectedToCompare = styled.section`
   // background-color: black;
 }
 
-.selected-container {
-  position: fixed;
-  top: 0;
-  // height: 24vh;
-  z-index: 3;
-  width: 100%;
-  // opacity: 11;
-  background-color: white;
-  // display: flex;
-  // justify-content: space-evenly;
-  // align-items: center;
-  // flex-direction: column;
-  // align-items: center;
-}
+// .selected-container {
+//   position: fixed;
+//   top: 0;
+//   // height: 24vh;
+//   z-index: 3;
+//   width: 100%;
+//   // opacity: 11;
+//   background-color: white;
+//   // display: flex;
+//   // justify-content: space-evenly;
+//   // align-items: center;
+//   // flex-direction: column;
+//   // align-items: center;
+// }
 
 
 `;
