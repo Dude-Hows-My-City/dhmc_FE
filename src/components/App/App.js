@@ -84,8 +84,10 @@ const App = () => {
     let deletedCity = citiesAlways.find((city) => city.id === id)
     console.log('deleted city in DeletedCompared', deletedCity)
       setSelectedCities(selectedCities.filter((city) => city.id !== deletedCity.id))
-    setUpdatedCities([...updatedCities, deletedCity])
-    setCities([...cities, deletedCity])
+      let returnedUpdatedCities =  [...updatedCities, deletedCity]
+    let returnedCities = [...cities, deletedCity]  
+    setUpdatedCities(returnedUpdatedCities.sort((a,b) => a.id - b.id))
+    setCities(returnedCities.sort((a,b) => a.id - b.id))
     console.log('delteCompared App city data ', id)
     console.log("updatedCities deleteC", updatedCities);
     console.log('cities in app deleteC', cities);
