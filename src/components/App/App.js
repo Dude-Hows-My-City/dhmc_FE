@@ -7,6 +7,7 @@ import { Route } from "react-router-dom";
 import Header from "../Header";
 import { getCities, getCity } from "../../apiCalls";
 import { ComparisonPage } from "../ComparisonPage/ComparisonPage";
+import { SelectedToCompare } from "../SelectedToCompare/SelectedToCompare";
 
 const App = () => {
   const [cities, setCities] = useState([]);
@@ -66,6 +67,7 @@ console.log('cityData2 in app AR', cityData2)
 
       <Route exact path="/">
         <SearchBar filterNames={filterNames} cities={cities} />
+        <SelectedToCompare city1={city1} city2={city2}/>
         {filteredNames.length === 0 ? (
           <CitiesContainer cities={cities} findCity={findCity} compareCity={compareCity} city1={city1} city2={city2} cityData1={cityData1} cityData2={cityData2}/>
         ) : (
