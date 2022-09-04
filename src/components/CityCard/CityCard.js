@@ -48,6 +48,7 @@ const CityCard = ({
                 <input
                   id={city.attributes.name}
                   type="checkbox"
+                  data-cy="checkbox"
                   checked={checked}
                   onChange={(e) => handleChange(e)}
                 />

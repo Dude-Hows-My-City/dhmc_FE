@@ -14,10 +14,14 @@ describe("Homepage", () => {
     .get('[data-cy="favorite-button"]').should('have.length', 3)
     .get('[data-cy="city-image"]').should('have.length', 3)
     .get('[data-cy="city-name"]').should('have.length', 3)
+    .get('[data-cy="checkbox"]').should('have.length', 3)
   });
 
-  it.skip('Should skip', () => {
-    expect(true)
+  it('Should render searched cities dynamically', () => {
+    cy.get('[data-cy="search-bar"]').type('Albuquerque')
+    .get('[data-cy="city-card"]').should('have.length', 1)
+    .get('[data-cy="city-name"]').should('have.length', 1).contains('Albuquerque')
+    .get('[data-cy="city-image"]').should('have.length', 1)
   })
 
   // it("Should take user to CityInfo page on city click", () => {

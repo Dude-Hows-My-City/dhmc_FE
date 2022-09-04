@@ -28,6 +28,7 @@ export const SelectedToCompare = ({
           onClick={(e) => onSubmit(e)}
           value={`${city.id}`}
           className="button-delete"
+          data-cy="delete-button"
         >
           Remove From Comparison
         </button>
@@ -51,7 +52,7 @@ export const SelectedToCompare = ({
               <p></p>
             )}
             <NavLink to={`/comparison`} style={{ textDecoration: "none" }}>
-              <button disabled={cities.length !== 2} className="button-compare">
+              <button disabled={cities.length !== 2} className="button-compare" data-cy="compare-button">
                 Let's Do This!
               </button>
             </NavLink>
