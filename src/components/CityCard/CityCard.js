@@ -30,6 +30,7 @@ const CityCard = ({ city, findCity, compareCity, city1, city2, cityData1, cityDa
         <button data-cy="favorite-button" className="favorite-button">
           ⭐️
         </button>
+
         <NavLink
         to={`/info/${city.attributes.name}`}
         style={{ textDecoration: "none" }}
@@ -40,9 +41,11 @@ const CityCard = ({ city, findCity, compareCity, city1, city2, cityData1, cityDa
           src={city.attributes.details.image_web_url}
           alt={`${city.attributes.name}'s skyline`}
         onClick={() => findCity(city.attributes.name)}
-
         ></img>
-        <p data-cy="city-name" className="image-label">
+
+        <p data-cy="city-name" className="image-label"
+        onClick={() => findCity(city.attributes.name)}
+        >
           {" "}
           {city.attributes.name}{" "}
         </p>

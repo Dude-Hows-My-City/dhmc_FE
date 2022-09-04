@@ -21,13 +21,14 @@ const App = () => {
   useEffect(() => {
     getCities()
     .then(data => setCities(data.data))
-  }, [filteredNames, cityData2]);
+  }, [city, filteredNames, cityData2]);
 
   const filterNames = (query) => {
     setFilteredNames(cities.filter((city) => city.name.includes(query)));
   };
 
   const findCity = (cityName) => {
+    console.log('findCity in app', cityName)
     let foundCity = cities.find((city) => city.attributes.name === cityName);
     setCity(foundCity);
   };
@@ -47,6 +48,7 @@ const App = () => {
     }
     
   }
+console.log('city in app AR', city)
 console.log('city1 in app AR', city1)
 console.log('city2 in app AR', city2)
 console.log('cityData1 in app AR', cityData1)

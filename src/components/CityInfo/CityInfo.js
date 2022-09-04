@@ -9,10 +9,16 @@ export const CityInfo = ({ city, city1, cityName, setCity, cities, setCities }) 
     // let cityId = cities.find((locale) => locale.attributes.name === cityName);
 
     // getCity(cityId.id).then((data) => setCity(data.data));
-  }, []);
+  }, [city]);
 
+  console.log('cityInfo city AR', city)
+
+  
   return (
-    <StyledCityInfo>
+    <> 
+    { Object.keys(city).length !== 0 &&
+
+(<StyledCityInfo>
       <div data-cy="city-info-container" className="city-info-container">
         <div data-cy="city-info-name-wrapper" className="city-name">
           <h2 data-cy="city-info-name">{city.attributes.name}</h2>
@@ -22,6 +28,8 @@ export const CityInfo = ({ city, city1, cityName, setCity, cities, setCities }) 
         </div>
       </div>
      
-    </StyledCityInfo>
+    </StyledCityInfo>)
+    }
+    </>
   );
 };
