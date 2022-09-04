@@ -76,6 +76,8 @@ const App = () => {
     // getCity(cityId.id).then((data) => setCityData1(data.data));
   };
 
+  
+
   console.log("city in app AR", city);
   console.log("city1 in app AR", city1);
   console.log("city2 in app AR", city2);
@@ -95,12 +97,16 @@ const App = () => {
           return (
             <CityInfo
               cityName={match.params.city_name}
-              city={city}
+              testedCity={city}
+              testedCity1={selectedCities[1]}
+              testedCity0={selectedCities[0]}
+
               city1={city1}
               city2={city2}
               setCity={setCity}
               cities={cities}
               setCities={setCities}
+              selectedCities={selectedCities}
             />
           );
         }}
