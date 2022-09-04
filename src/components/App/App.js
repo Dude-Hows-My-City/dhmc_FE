@@ -20,6 +20,7 @@ const App = () => {
   const [selectedCities, setSelectedCities] = useState([]);
   const [updatedCities, setUpdatedCities] = useState([]);
   const [citiesAlways, setCitiesAlways] = useState([])
+  const [query, setQuery] = useState('')
 
   useEffect(() => {
     getCities().then((data) => setCitiesAlways(data.data));
@@ -40,6 +41,7 @@ const App = () => {
   ]);
 
   const filterNames = (query) => {
+    setQuery(query)
     setFilteredNames(
       cities.filter((city) =>
         city.attributes.name.toLowerCase().includes(query.toLowerCase())
@@ -97,7 +99,7 @@ const App = () => {
   console.log("city in app AR", city);
   console.log("city1 in app AR", city1);
   console.log("city2 in app AR", city2);
-  console.log("cityData1 in app AR", cityData1);
+  console.log("filteredNames in app AR", filteredNames);
   console.log("cityData2 in app AR", cityData2);
   console.log("selectedCities in app AR", selectedCities);
   console.log("updatedCities in app AR", updatedCities);
@@ -139,7 +141,7 @@ const App = () => {
           deleteCompared={deleteCompared}
         />
 
-        {filteredNames.length === 0 ? (
+        {filteredNames.length === 0 && !query ? (
           <CitiesContainer
             cities={cities}
             findCity={findCity}

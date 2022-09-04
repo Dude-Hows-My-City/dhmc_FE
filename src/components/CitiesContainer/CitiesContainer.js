@@ -2,11 +2,16 @@ import React, { useEffect } from "react";
 import CityCard from "../CityCard/CityCard";
 // import { NavLink } from "react-router-dom";
 
-const CitiesContainer = ({ cities, filteredNames, findCity, compareCity, city1, city2, selectedCities }) => {
-  
-  useEffect(() => {
-
-  }, [cities])
+const CitiesContainer = ({
+  cities,
+  filteredNames,
+  findCity,
+  compareCity,
+  city1,
+  city2,
+  selectedCities,
+}) => {
+  useEffect(() => {}, [cities, filteredNames]);
   let searchItem;
 
   if (cities) {
@@ -17,11 +22,15 @@ const CitiesContainer = ({ cities, filteredNames, findCity, compareCity, city1, 
 
   let cityMap = searchItem.map((city) => {
     return (
-   
-        <CityCard selectedCities={selectedCities} city={city} city1={city1} city2={city2} findCity={findCity} compareCity={compareCity}
+      <CityCard
+        selectedCities={selectedCities}
+        city={city}
+        city1={city1}
+        city2={city2}
+        findCity={findCity}
+        compareCity={compareCity}
         key={city.id}
-        />
-
+      />
     );
   });
 
