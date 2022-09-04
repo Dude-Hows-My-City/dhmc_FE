@@ -28,15 +28,31 @@ export const SelectedToCompare = ({cities, city1, city2, findCity, compareCity }
   });
 
   return (
-  <>
-  
-  {cityMap}
-  <NavLink
-        to={`/comparison`}
-        style={{ textDecoration: "none" }}
+
+    
+    <>
+      
+    {cities.length === 0 ?
+    <p>Select Some Cities to Compare!</p>
+    : 
+      <div className="selected-container">
+      <p>Your Selected Cities</p>
+      {cityMap}
+      {cities.length === 1 ?
+      <p>Please Select One More to Compare</p>
+      : 
+      cities.length === 2 ? <p>Let's Do this!</p>
+      :
+      <p>You Have Too Many, Try Removing Some!</p>
+      }
+      <NavLink
+      to={`/comparison`}
+      style={{ textDecoration: "none" }}
       >
-        <button  disabled={cities.length !== 2} className="button-compare">Compare Selected</button>
+      <button  disabled={cities.length !== 2} className="button-compare">Compare Selected</button>
       </NavLink>
-  </>
-  )
-};
+      </div>
+    }
+      </>
+      )
+    };
