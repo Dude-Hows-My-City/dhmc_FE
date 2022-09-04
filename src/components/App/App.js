@@ -49,6 +49,13 @@ const App = () => {
   };
 
   const compareCity = (cityName) => {
+    if (filteredNames.length !== 0 && query ) {
+
+      let newFilteredCities = filteredNames.filter(
+        (city) => city.attributes.name !== cityName
+      )
+      setFilteredNames(newFilteredCities)
+    }
     if (updatedCities.length === 0) {
       let foundCity = cities.find((city) => city.attributes.name === cityName);
       setSelectedCities([...selectedCities, foundCity]);
@@ -81,6 +88,8 @@ const App = () => {
     setCities(returnedCities.sort((a, b) => a.id - b.id));
   };
 
+
+  console.log('filteredNames App AR', filteredNames);
   return (
     <>
       <Header />
