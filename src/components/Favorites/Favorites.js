@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CityCard from "../CityCard/CityCard";
 // import { NavLink } from "react-router-dom";
+import { StyledCityCardTest } from "../styles/CityCard.styledTest";
+
 
 export const Favorites = ({
   cities,
@@ -16,6 +18,7 @@ export const Favorites = ({
   
   let cityMap = favorites.map((city) => {
     return (
+      <StyledCityCardTest>
       <CityCard
         selectedCities={selectedCities}
         city={city}
@@ -23,6 +26,8 @@ export const Favorites = ({
         compareCity={compareCity}
         key={city.id}
       />
+      </ StyledCityCardTest>
+
     );
   });
 
