@@ -1,368 +1,271 @@
 {
   "data": [
-  {
-  "id": "1",
-  "type": "city",
-  "attributes": {
-  "name": "Aarhus",
-  "full_name": "Aarhus, Denmark",
-  "summary": {
-  "continent": "Europe",
-  "summary": "<p>Aarhus, Denmark, is among the top cities with a <b>free business environment</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>safety</b>, <b>healthcare</b> and <b>environmental quality</b>.\n    \n\n    \n</p>\n\n"
-  },
-  "scores": {
-  "housing": 6.13,
-  "cost_of_living": 4.02,
-  "startups": 2.83,
-  "venture_capital": 2.51,
-  "travel_connectivity": 3.54,
-  "commute": 6.31,
-  "business_freedom": 9.94,
-  "safety": 9.62,
-  "health_care": 9.13,
-  "education": 5.37,
-  "environmental_quality": 7.63,
-  "economy": 4.89,
-  "taxation": 5.07,
-  "internet_access": 8.37,
-  "leisure_and_culture": 3.19,
-  "tolerance": 9.74,
-  "outdoors": 4.13,
-  "teleport_city_score": 65.09
-  },
-  "details": {
-  "image_photographer": "Calvin Smith",
-  "image_web_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/aarhus_web-1462c370b8.jpg",
-  "image_mobile_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/aarhus-67c2f42848.jpg",
-  "population_size_in_millions": 0.2502,
-  "average_costs": {
-  "consumer_price_index": 0.4015,
-  "apples_per_kg": 2.9,
-  "bread": 0.87,
-  "cappuccino": 5.6,
-  "cinema": 17,
-  "fitness_club": 37,
-  "import_beer": 1.7,
-  "public_transport": 62,
-  "lunch_meal": 15,
-  "taxi": 13,
-  "restaurant_price_index": 97.32
-  },
-  "culture": {
-  "art_galleries": 51,
-  "movie_theaters": 17,
-  "comedy_clubs": 12,
-  "concert_venues": 95,
-  "historical_sites": 13,
-  "museums": 18,
-  "performing_arts_venues": 56,
-  "sports_venues": 21,
-  "zoos": 2
-  },
-  "housing": {
-  "large_apartment": 1700,
-  "medium_apartment": 1300,
-  "small_apartment": 840
-  }
-  },
-  "salaries": {
-  "account_manager": 54368,
-  "accountant": 73755.52,
-  "administrative_assitant": 62762.85,
-  "architect": 97607.28,
-  "attorney": 63642.41,
-  "business_analyst": 61267.29,
-  "business_development": 78989.63,
-  "c_level_executive": 57751.15,
-  "cashier": 63075.57,
-  "chef": 44090.01,
-  "chemical_engineer": 83469.07,
-  "civil_engineer": 68784.19,
-  "content_marketing": 36104.05,
-  "copywriter": 49774.12,
-  "customer_support": 33975.33,
-  "data_analyst": 60259.69,
-  "data_scientist": 63227.33,
-  "dentist": 118741.64,
-  "electrical_engineer": 55313.12,
-  "executive_assistant": 36619.27,
-  "fashion_designer": 93932.37,
-  "finance_manager": 76056.34,
-  "financial_analyst": 106273.34,
-  "graphic_designer": 44147.55,
-  "hardware_engineer": 71176.5,
-  "human_resources_manager": 43270.64,
-  "it_manager": 81535.4,
-  "industrial_designer": 62463.39,
-  "interior_designer": 40602.38,
-  "lecturer": 40754.84,
-  "marketing_manager": 46747.17,
-  "mechanical_engineer": 56796.36,
-  "mobile_developer": 93582.69,
-  "nurse": 44119.07,
-  "office_manager": 69290.74,
-  "operations_manager": 42087.59,
-  "pharmacist": 71880.44,
-  "physician": 54539.76,
-  "postdoctoral_researcher": 59455.12,
-  "product_manager": 68398.62,
-  "project_manager": 64373.85,
-  "qa_engineer": 47092.75,
-  "receptionist": 112167.87,
-  "research_scientist": 57721.08,
-  "sales_manager": 48356.07,
-  "software_engineer": 59061.69,
-  "systems_administrator": 45060.78,
-  "teacher": 34667.72,
-  "ux_designer": 56659.25,
-  "waiter": 20431.28,
-  "web_designer": 47304.94,
-  "web_developer": 42867.45
-  }
-  }
-  },
-  {
-  "id": "2",
-  "type": "city",
-  "attributes": {
-  "name": "Adelaide",
-  "full_name": "Adelaide, Australia",
-  "summary": {
-  "continent": "Oceania",
-  "summary": "<p>Adelaide, Australia, is among the top cities with a <b>free business environment</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>safety</b>, <b>healthcare</b> and <b>environmental quality</b>.\n    \n\n    \n</p>\n\n"
-  },
-  "scores": {
-  "housing": 6.31,
-  "cost_of_living": 4.69,
-  "startups": 3.14,
-  "venture_capital": 2.64,
-  "travel_connectivity": 1.78,
-  "commute": 5.34,
-  "business_freedom": 9.4,
-  "safety": 7.93,
-  "health_care": 9.15,
-  "education": 5.14,
-  "environmental_quality": 8.33,
-  "economy": 6.07,
-  "taxation": 4.59,
-  "internet_access": 4.34,
-  "leisure_and_culture": 4.33,
-  "tolerance": 7.82,
-  "outdoors": 5.53,
-  "teleport_city_score": 61.2
-  },
-  "details": {
-  "image_photographer": "Stebbing",
-  "image_web_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/adelaide_web-e462ed5b74.jpg",
-  "image_mobile_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/adelaide-3b1b936db3.jpg",
-  "population_size_in_millions": 1.7087,
-  "average_costs": {
-  "consumer_price_index": 74.87,
-  "apples_per_kg": 3.1,
-  "bread": 1.4,
-  "cappuccino": 3.4,
-  "cinema": 14,
-  "fitness_club": 50,
-  "import_beer": 4.3,
-  "public_transport": 80,
-  "lunch_meal": 13,
-  "taxi": 8.3,
-  "restaurant_price_index": 74.87
-  },
-  "culture": {
-  "art_galleries": 82,
-  "movie_theaters": 72,
-  "comedy_clubs": 39,
-  "concert_venues": 89,
-  "historical_sites": 47,
-  "museums": 37,
-  "performing_arts_venues": 95,
-  "sports_venues": 91,
-  "zoos": 3
-  },
-  "housing": {
-  "large_apartment": 1500,
-  "medium_apartment": 1200,
-  "small_apartment": 1000
-  }
-  },
-  "salaries": {
-  "account_manager": 45441.68,
-  "accountant": 52221.29,
-  "administrative_assitant": 35755.86,
-  "architect": 47798.89,
-  "attorney": 62341.56,
-  "business_analyst": 54860.43,
-  "business_development": 59406.62,
-  "c_level_executive": 119832.66,
-  "cashier": 25092.29,
-  "chef": 48823.4,
-  "chemical_engineer": 57649.57,
-  "civil_engineer": 48453.13,
-  "content_marketing": 55250.83,
-  "copywriter": 43219.48,
-  "customer_support": 42470.04,
-  "data_analyst": 55156.39,
-  "data_scientist": 57841.37,
-  "dentist": 106050.3,
-  "electrical_engineer": 62446.4,
-  "executive_assistant": 46272.31,
-  "fashion_designer": 40865.01,
-  "finance_manager": 94702.49,
-  "financial_analyst": 69786.52,
-  "graphic_designer": 39236.01,
-  "hardware_engineer": 69389.9,
-  "human_resources_manager": 63218.34,
-  "it_manager": 63579.61,
-  "industrial_designer": 56467.1,
-  "interior_designer": 39611.18,
-  "lecturer": 45223.71,
-  "marketing_manager": 48491.66,
-  "mechanical_engineer": 56025.32,
-  "mobile_developer": 94174.6,
-  "nurse": 48958.56,
-  "office_manager": 42873.02,
-  "operations_manager": 59458.86,
-  "pharmacist": 44139.38,
-  "physician": 77654.21,
-  "postdoctoral_researcher": 50491.23,
-  "product_manager": 59816.88,
-  "project_manager": 62385.48,
-  "qa_engineer": 58106,
-  "receptionist": 31937.45,
-  "research_scientist": 41204.99,
-  "sales_manager": 52464.74,
-  "software_engineer": 54280.54,
-  "systems_administrator": 57523.73,
-  "teacher": 45508.83,
-  "ux_designer": 57395.19,
-  "waiter": 24167.53,
-  "web_designer": 46893.4,
-  "web_developer": 43867.67
-  }
-  }
-  },
-  {
-  "id": "3",
-  "type": "city",
-  "attributes": {
-  "name": "Albuquerque",
-  "full_name": "Albuquerque, New Mexico",
-  "summary": {
-  "continent": "North America",
-  "summary": "<p>Albuquerque, New Mexico, is among the top cities with a <b>free business environment</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>housing</b>, <b>healthcare</b> and <b>environmental quality</b>.\n    \n\n    \n</p>\n\n"
-  },
-  "scores": {
-  "housing": 7.26,
-  "cost_of_living": 6.06,
-  "startups": 3.77,
-  "venture_capital": 1.49,
-  "travel_connectivity": 1.46,
-  "commute": 5.06,
-  "business_freedom": 8.67,
-  "safety": 1.34,
-  "health_care": 8.51,
-  "education": 4.15,
-  "environmental_quality": 7.32,
-  "economy": 6.51,
-  "taxation": 4.35,
-  "internet_access": 5.4,
-  "leisure_and_culture": 4.89,
-  "tolerance": 7.03,
-  "outdoors": 3.52,
-  "teleport_city_score": 51.51
-  },
-  "details": {
-  "image_photographer": "Christopher Holden",
-  "image_web_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/albuquerque_web-3079b54e59.jpg",
-  "image_mobile_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/albuquerque-f730c0301f.jpg",
-  "population_size_in_millions": 0.6308,
-  "average_costs": {
-  "consumer_price_index": 62.51,
-  "apples_per_kg": 2.8,
-  "bread": 0.89,
-  "cappuccino": 4.5,
-  "cinema": 11,
-  "fitness_club": 52,
-  "import_beer": 2.9,
-  "public_transport": 37,
-  "lunch_meal": 12,
-  "taxi": 9.2,
-  "restaurant_price_index": 62.51
-  },
-  "culture": {
-  "art_galleries": 127,
-  "movie_theaters": 59,
-  "comedy_clubs": 12,
-  "concert_venues": 99,
-  "historical_sites": 30,
-  "museums": 35,
-  "performing_arts_venues": 101,
-  "sports_venues": 10,
-  "zoos": 2
-  },
-  "housing": {
-  "large_apartment": 1200,
-  "medium_apartment": 950,
-  "small_apartment": 760
-  }
-  },
-  "salaries": {
-  "account_manager": 45868.47,
-  "accountant": 41259.83,
-  "administrative_assitant": 25425.1,
-  "architect": 48935.29,
-  "attorney": 77744.42,
-  "business_analyst": 48135.13,
-  "business_development": 62827.3,
-  "c_level_executive": 125588.91,
-  "cashier": 24273.33,
-  "chef": 26041,
-  "chemical_engineer": 61843.62,
-  "civil_engineer": 47716.13,
-  "content_marketing": 35238.43,
-  "copywriter": 34583.13,
-  "customer_support": 27000,
-  "data_analyst": 40316.07,
-  "data_scientist": 66340.16,
-  "dentist": 97623.74,
-  "electrical_engineer": 70759.53,
-  "executive_assistant": 35640.93,
-  "fashion_designer": 31410.13,
-  "finance_manager": 74640.17,
-  "financial_analyst": 57522.32,
-  "graphic_designer": 32658.21,
-  "hardware_engineer": 48847.33,
-  "human_resources_manager": 43616.08,
-  "it_manager": 58536.69,
-  "industrial_designer": 42605.55,
-  "interior_designer": 35846.5,
-  "lecturer": 73073.49,
-  "marketing_manager": 62838.28,
-  "mechanical_engineer": 55055.17,
-  "mobile_developer": 58364.58,
-  "nurse": 46573.7,
-  "office_manager": 46799.47,
-  "operations_manager": 56966.11,
-  "pharmacist": 84933.95,
-  "physician": 98316.25,
-  "postdoctoral_researcher": 54596.85,
-  "product_manager": 68182.5,
-  "project_manager": 55356.39,
-  "qa_engineer": 42979.87,
-  "receptionist": 20524.24,
-  "research_scientist": 45325.62,
-  "sales_manager": 47461.7,
-  "software_engineer": 66418.95,
-  "systems_administrator": 65505.12,
-  "teacher": 35532.47,
-  "ux_designer": 56118.7,
-  "waiter": 19147.08,
-  "web_designer": 46045.21,
-  "web_developer": 46212.07
-  }
-  }
-}]
+    {
+      "id": "1",
+      "type": "city",
+      "attributes": {
+        "name": "Aarhus",
+        "full_name": "Aarhus, Denmark",
+        "summary": {
+          "continent": "Europe",
+          "summary": "<p>Aarhus, Denmark, is among the top cities with a <b>free business environment</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>safety</b>, <b>healthcare</b> and <b>environmental quality</b>.\n    \n\n    \n</p>\n\n"
+        },
+        "scores": {
+          "housing": 6.13,
+          "cost_of_living": 4.02,
+          "startups": 2.83,
+          "venture_capital": 2.51,
+          "travel_connectivity": 3.54,
+          "commute": 6.31,
+          "business_freedom": 9.94,
+          "safety": 9.62,
+          "health_care": 9.13,
+          "education": 5.37,
+          "environmental_quality": 7.63,
+          "economy": 4.89,
+          "taxation": 5.07,
+          "internet_access": 8.37,
+          "leisure_and_culture": 3.19,
+          "tolerance": 9.74,
+          "outdoors": 4.13,
+          "teleport_city_score": 65.09
+        },
+        "details": {
+          "image_photographer": "Calvin Smith",
+          "image_web_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/aarhus_web-1462c370b8.jpg",
+          "image_mobile_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/aarhus-67c2f42848.jpg",
+          "population_size_in_millions": 0.2502,
+          "average_costs": {
+            "consumer_price_index": 0.4015,
+            "apples_per_kg": 2.9,
+            "bread": 0.87,
+            "cappuccino": 5.6,
+            "cinema": 17,
+            "fitness_club": 37,
+            "import_beer": 1.7,
+            "public_transport": 62,
+            "lunch_meal": 15,
+            "taxi": 13,
+            "restaurant_price_index": 97.32
+          },
+          "culture": {
+            "art_galleries": 51,
+            "movie_theaters": 17,
+            "comedy_clubs": 12,
+            "concert_venues": 95,
+            "historical_sites": 13,
+            "museums": 18,
+            "performing_arts_venues": 56,
+            "sports_venues": 21,
+            "zoos": 2
+          },
+          "housing": {
+            "large_apartment": 1700,
+            "medium_apartment": 1300,
+            "small_apartment": 840
+          }
+        },
+        "salaries": [
+          {
+            "job_title": "account_manager",
+            "median_pay": 54368
+          },
+          {
+            "job_title": "accountant",
+            "median_pay": 73755.52
+          },
+          {
+            "job_title": "administrative_assitant",
+            "median_pay": 62762.85
+          },
+          {
+            "job_title": "architect",
+            "median_pay": 97607.28
+          },
+          {
+            "job_title": "attorney",
+            "median_pay": 63642.41
+          }
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "type": "city",
+      "attributes": {
+        "name": "Adelaide",
+        "full_name": "Adelaide, Australia",
+        "summary": {
+          "continent": "Oceania",
+          "summary": "<p>Adelaide, Australia, is among the top cities with a <b>free business environment</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>safety</b>, <b>healthcare</b> and <b>environmental quality</b>.\n    \n\n    \n</p>\n\n"
+        },
+        "scores": {
+          "housing": 6.31,
+          "cost_of_living": 4.69,
+          "startups": 3.14,
+          "venture_capital": 2.64,
+          "travel_connectivity": 1.78,
+          "commute": 5.34,
+          "business_freedom": 9.4,
+          "safety": 7.93,
+          "health_care": 9.15,
+          "education": 5.14,
+          "environmental_quality": 8.33,
+          "economy": 6.07,
+          "taxation": 4.59,
+          "internet_access": 4.34,
+          "leisure_and_culture": 4.33,
+          "tolerance": 7.82,
+          "outdoors": 5.53,
+          "teleport_city_score": 61.2
+        },
+        "details": {
+          "image_photographer": "Stebbing",
+          "image_web_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/adelaide_web-e462ed5b74.jpg",
+          "image_mobile_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/adelaide-3b1b936db3.jpg",
+          "population_size_in_millions": 1.7087,
+          "average_costs": {
+            "consumer_price_index": 74.87,
+            "apples_per_kg": 3.1,
+            "bread": 1.4,
+            "cappuccino": 3.4,
+            "cinema": 14,
+            "fitness_club": 50,
+            "import_beer": 4.3,
+            "public_transport": 80,
+            "lunch_meal": 13,
+            "taxi": 8.3,
+            "restaurant_price_index": 74.87
+          },
+          "culture": {
+            "art_galleries": 82,
+            "movie_theaters": 72,
+            "comedy_clubs": 39,
+            "concert_venues": 89,
+            "historical_sites": 47,
+            "museums": 37,
+            "performing_arts_venues": 95,
+            "sports_venues": 91,
+            "zoos": 3
+          },
+          "housing": {
+            "large_apartment": 1500,
+            "medium_apartment": 1200,
+            "small_apartment": 1000
+          }
+        },
+        "salaries": [
+          {
+            "job_title": "account_manager",
+            "median_pay": 54368
+          },
+          {
+            "job_title": "accountant",
+            "median_pay": 73755.52
+          },
+          {
+            "job_title": "administrative_assitant",
+            "median_pay": 62762.85
+          },
+          {
+            "job_title": "architect",
+            "median_pay": 97607.28
+          },
+          {
+            "job_title": "attorney",
+            "median_pay": 63642.41
+          }
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "type": "city",
+      "attributes": {
+        "name": "Albuquerque",
+        "full_name": "Albuquerque, New Mexico",
+        "summary": {
+          "continent": "North America",
+          "summary": "<p>Albuquerque, New Mexico, is among the top cities with a <b>free business environment</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>housing</b>, <b>healthcare</b> and <b>environmental quality</b>.\n    \n\n    \n</p>\n\n"
+        },
+        "scores": {
+          "housing": 7.26,
+          "cost_of_living": 6.06,
+          "startups": 3.77,
+          "venture_capital": 1.49,
+          "travel_connectivity": 1.46,
+          "commute": 5.06,
+          "business_freedom": 8.67,
+          "safety": 1.34,
+          "health_care": 8.51,
+          "education": 4.15,
+          "environmental_quality": 7.32,
+          "economy": 6.51,
+          "taxation": 4.35,
+          "internet_access": 5.4,
+          "leisure_and_culture": 4.89,
+          "tolerance": 7.03,
+          "outdoors": 3.52,
+          "teleport_city_score": 51.51
+        },
+        "details": {
+          "image_photographer": "Christopher Holden",
+          "image_web_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/albuquerque_web-3079b54e59.jpg",
+          "image_mobile_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/albuquerque-f730c0301f.jpg",
+          "population_size_in_millions": 0.6308,
+          "average_costs": {
+            "consumer_price_index": 62.51,
+            "apples_per_kg": 2.8,
+            "bread": 0.89,
+            "cappuccino": 4.5,
+            "cinema": 11,
+            "fitness_club": 52,
+            "import_beer": 2.9,
+            "public_transport": 37,
+            "lunch_meal": 12,
+            "taxi": 9.2,
+            "restaurant_price_index": 62.51
+          },
+          "culture": {
+            "art_galleries": 127,
+            "movie_theaters": 59,
+            "comedy_clubs": 12,
+            "concert_venues": 99,
+            "historical_sites": 30,
+            "museums": 35,
+            "performing_arts_venues": 101,
+            "sports_venues": 10,
+            "zoos": 2
+          },
+          "housing": {
+            "large_apartment": 1200,
+            "medium_apartment": 950,
+            "small_apartment": 760
+          }
+        },
+        "salaries": [
+          {
+            "job_title": "account_manager",
+            "median_pay": 54368
+          },
+          {
+            "job_title": "accountant",
+            "median_pay": 73755.52
+          },
+          {
+            "job_title": "administrative_assitant",
+            "median_pay": 62762.85
+          },
+          {
+            "job_title": "architect",
+            "median_pay": 97607.28
+          },
+          {
+            "job_title": "attorney",
+            "median_pay": 63642.41
+          }
+        ]
+      }
+    }
+  ]
 }
-
-  
