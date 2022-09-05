@@ -3,10 +3,9 @@ import { getCities, getCity } from "../../apiCalls";
 import Quality from "../Quality/QualityIndex";
 import Housing from "../Housing/HousingIndex";
 import { StyledCityInfo } from "../styles/CityInfo.styled";
+import Salary from "../Salary";
 
-export const CityInfo = ({
-  testedCity,
-}) => {
+export const CityInfo = ({ testedCity }) => {
   useEffect(() => {
     // getCity(cityId.id).then((data) => setCity(data.data));
   }, [testedCity]);
@@ -24,6 +23,7 @@ export const CityInfo = ({
               />
               <Quality city={testedCity} />
               <Housing city={testedCity} />
+              <Salary city={testedCity} />
             </div>
           </div>
         </StyledCityInfo>
