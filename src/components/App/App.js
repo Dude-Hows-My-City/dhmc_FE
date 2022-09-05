@@ -19,6 +19,7 @@ const App = () => {
   const [citiesAlways, setCitiesAlways] = useState([]);
   const [query, setQuery] = useState("");
   const [user, setUser] = useState('')
+  const [userName, setUserName] = useState('')
 
   useEffect(() => {
     getCities().then((data) => setCitiesAlways(data.data));
@@ -85,9 +86,8 @@ const App = () => {
 
   return (
     <>
-    {user === '' ? <Login setUser={setUser} user={user}/> : <>
+    {user === '' ? <Login setUser={setUser} user={user} setUserName={setUserName}/> : <>
       <Header />
-      <button onClick={() => postCity(user)}></button>
       <Route
         exact
         path="/info/:city_name"

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Header from "../Header";
 import { postUser } from "../../apiCalls";
-export const Login = ({ setUser, user }) => {
+import { StyledLogin } from "../styles/Login.styled";
+export const Login = ({ setUser, user, setUserName }) => {
 
 const [value, setValue] = useState('')
 
@@ -9,21 +10,23 @@ const log = (e) => {
   e.preventDefault()
   postUser(value)
   .then(data => {
-    console.log('datum',data.data.id)
+    console.log('datum',data)
     setUser(data.data.id)
+    setUserName(data.data.attributes.username)
   })
   .catch(error => console.log('Ah shit here we go again'))
 }
 
   return(
-    <>
+    <StyledLogin>
     <Header />
     {console.log(user)}
-    <form>
+    <form className="form-wrapper">
       <div className="user-input-wrap">
         <label htmlFor="username">Username</label>
       <input 
       type="text"
+      className="username"
       name="username"
       data-cy="username-input"
       value={value}
@@ -37,7 +40,7 @@ const log = (e) => {
       />
       </div>
     </form>
-    </>
+    </StyledLogin>
   )
 }
 
