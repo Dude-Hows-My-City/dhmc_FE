@@ -12,105 +12,128 @@ import arena from "../../images/arena.png";
 const Culture = ({ city, selectedCities }) => {
   return selectedCities === undefined ? (
     <StyledCulture>
-      <h2>Culture</h2>
+      <h2 data-cy="culture-header">Culture</h2>
       <div className="culture-element">
         <h4>
           Art Galleries
           <img
+            data-cy="culture-icon"
             className="culture-icon"
             src={artGallery}
             alt="Mona Lisa to symbolize art galleries"
           />
         </h4>
-        <p>{city.attributes.details.culture.art_galleries}</p>
+        <p data-cy="venue-value">
+          {city.attributes.details.culture.art_galleries}
+        </p>
       </div>
       <div className="culture-element">
         <h4>
           Comedy Clubs
           <img
+            data-cy="culture-icon"
             className="culture-icon"
             src={comedyClub}
             alt="Microphone to symbolize comedy clubs"
           />
         </h4>
-        <p>{city.attributes.details.culture.comedy_clubs}</p>
+        <p data-cy="venue-value">
+          {city.attributes.details.culture.comedy_clubs}
+        </p>
       </div>
       <div className="culture-element">
         <h4>
           Concert Venues
           <img
+            data-cy="culture-icon"
             className="culture-icon"
             src={concert}
             alt="Concert hall to symbolize venues"
           />
         </h4>
-        <p>{city.attributes.details.culture.concert_venues}</p>
+        <p data-cy="venue-value">
+          {city.attributes.details.culture.concert_venues}
+        </p>
       </div>
       <div className="culture-element">
         <h4>
           Historical Sites
           <img
+            data-cy="culture-icon"
             className="culture-icon"
             src={historicSite}
             alt="Leaning tower of Pisa to symbolize historical sites"
           />
         </h4>
-        <p>{city.attributes.details.culture.historical_sites}</p>
+        <p data-cy="venue-value">
+          {city.attributes.details.culture.historical_sites}
+        </p>
       </div>
       <div className="culture-element">
         <h4>
           Movie Theaters
           <img
+            data-cy="culture-icon"
             className="culture-icon"
             src={movies}
             alt="Cinema to symbolize movie theaters"
           />
         </h4>
-        <p>{city.attributes.details.culture.movie_theaters}</p>
+        <p data-cy="venue-value">
+          {city.attributes.details.culture.movie_theaters}
+        </p>
       </div>
       <div className="culture-element">
         <h4>
           Museums
           <img
+            data-cy="culture-icon"
             className="culture-icon"
             src={museum}
             alt="Museum to symbolize venues"
           />
         </h4>
-        <p>{city.attributes.details.culture.museums}</p>
+        <p data-cy="venue-value">{city.attributes.details.culture.museums}</p>
       </div>
       <div className="culture-element">
         <h4>
           Performing Arts Venues
           <img
+            data-cy="culture-icon"
             className="culture-icon"
             src={theater}
             alt="Stage to symbolize performing arts venues"
           />
         </h4>
-        <p>{city.attributes.details.culture.performing_arts_venues}</p>
+        <p data-cy="venue-value">
+          {city.attributes.details.culture.performing_arts_venues}
+        </p>
       </div>
       <div className="culture-element">
         <h4>
           Sports Venues
           <img
+            data-cy="culture-icon"
             className="culture-icon"
             src={arena}
             alt="Arena to symbolize stadiums"
           />
         </h4>
-        <p>{city.attributes.details.culture.sports_venues}</p>
+        <p data-cy="venue-value">
+          {city.attributes.details.culture.sports_venues}
+        </p>
       </div>
       <div className="culture-element">
         <h4>
           Zoos
           <img
+            data-cy="culture-icon"
             className="culture-icon"
             src={zoo}
             alt="Zoo entrance to symbolize venues"
           />
         </h4>
-        <p>{city.attributes.details.culture.zoos}</p>
+        <p data-cy="venue-value">{city.attributes.details.culture.zoos}</p>
       </div>
     </StyledCulture>
   ) : (

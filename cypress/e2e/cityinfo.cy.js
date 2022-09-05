@@ -14,7 +14,7 @@ describe("City Info", () => {
     cy.get('[data-cy="city-name"]').first().click();
   });
 
-  it("Should render all relevant elements to the page", () => {
+  it("Should render all City Info elements to the page", () => {
     cy.get('[data-cy="header"]')
       .get('[data-cy="city-info-container"]')
       .get('[data-cy="city-info-name-wrapper"]')
@@ -53,6 +53,14 @@ describe("City Info", () => {
       .get('[data-cy="salary-dropdown"]')
       .get('[data-cy="job-title"]')
       .get('[data-cy="pay-header"]')
-      .get('[data-cy="median-pay"]');
+      .get('[data-cy="median-pay"]')
+      .get('[data-cy="culture-header"]')
+      .get('[data-cy="culture-icon"]')
+      .should("have.length", 9)
+      .get('[data-cy="venue-value"]')
+      .should("have.length", 9);
   });
+
+  // it("Should render all Quality elements to the page", () => {
+  // });
 });
