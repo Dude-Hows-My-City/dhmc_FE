@@ -10,13 +10,16 @@ describe("City Info", () => {
 
   });
 
-  it("Should render all relevant elements to the page", () => {
+  it("Should render all City Info elements to the page", () => {
     cy.get('[data-cy="header"]')
       .get('[data-cy="city-info-container"]')
       .get('[data-cy="city-info-name-wrapper"]')
       .get('[data-cy="city-info-name"]')
-      .get('[data-cy="city-info-image"]')
-      .get('[data-cy="quality-scores"]')
+      .get('[data-cy="city-info-image"]');
+  });
+
+  it("Should render all Quality elements to the page", () => {
+    cy.get('[data-cy="quality-scores"]')
       .get('[data-cy="progress-bars"]')
       .get(':nth-child(1) > [data-cy="progess-bar"]')
       .get(':nth-child(2) > [data-cy="progess-bar"]')
@@ -34,8 +37,11 @@ describe("City Info", () => {
       .get(':nth-child(14) > [data-cy="progess-bar"]')
       .get(':nth-child(15) > [data-cy="progess-bar"]')
       .get(':nth-child(16) > [data-cy="progess-bar"]')
-      .get(':nth-child(17) > [data-cy="progess-bar"]')
-      .get('[data-cy="housing-header"]')
+      .get(':nth-child(17) > [data-cy="progess-bar"]');
+  });
+
+  it("Should render all Housing elements to the page", () => {
+    cy.get('[data-cy="housing-header"]')
       .get('[data-cy="apartments-container"]')
       .get('[data-cy="apt-small"]')
       .get('[data-cy="apt-small-num"]')
@@ -44,11 +50,22 @@ describe("City Info", () => {
       .get('[data-cy="apt-medium-num"]')
       .get('[data-cy="apt-large"]')
       .get('[data-cy="apt-large-head"]')
-      .get('[data-cy="apt-large-num"]')
-      .get('[data-cy="salary-header"]')
+      .get('[data-cy="apt-large-num"]');
+  });
+
+  it("Should render all Salary elements to the page", () => {
+    cy.get('[data-cy="salary-header"]')
       .get('[data-cy="salary-dropdown"]')
       .get('[data-cy="job-title"]')
       .get('[data-cy="pay-header"]')
       .get('[data-cy="median-pay"]');
+  });
+
+  it("Should render all Culture elements to the page", () => {
+    cy.get('[data-cy="culture-header"]')
+      .get('[data-cy="culture-icon"]')
+      .should("have.length", 9)
+      .get('[data-cy="venue-value"]')
+      .should("have.length", 9);
   });
 });
