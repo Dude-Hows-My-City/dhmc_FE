@@ -21,7 +21,7 @@ const log = (e) => {
     <Header />
     <form className="form-wrapper">
       <div className="user-input-wrap">
-        <label htmlFor="username">Username</label>
+        <label data-cy="username-label" htmlFor="username">Username</label>
       <input 
       type="text"
       className="username"
@@ -33,7 +33,7 @@ const log = (e) => {
       />
       </div>
       <div className="login-button">
-      <input type="submit" 
+      <input data-cy="login-button" type="submit" 
       onClick={(e) => log(e)}
       />
       </div>
