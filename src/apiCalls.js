@@ -6,7 +6,6 @@ export const getCities = () => {
       }
       return res.json()
     })
-  // .then(data => console.log(data))
 }
 
 export const getCity = (id) => {

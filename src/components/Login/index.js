@@ -10,17 +10,15 @@ const log = (e) => {
   e.preventDefault()
   postUser(value)
   .then(data => {
-    console.log('datum',data)
     setUser(data.data.id)
     setUserName(data.data.attributes.username)
   })
-  .catch(error => console.log('Ah shit here we go again'))
+  .catch(error => console.log(`Problem: ${error.message}`))
 }
 
   return(
     <StyledLogin>
     <Header />
-    {console.log(user)}
     <form className="form-wrapper">
       <div className="user-input-wrap">
         <label htmlFor="username">Username</label>
