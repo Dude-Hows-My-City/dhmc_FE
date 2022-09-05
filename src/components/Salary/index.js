@@ -10,14 +10,18 @@ const Salary = ({ city, selectedCities }) => {
   //   console.log(selectedCities === undefined);
   return selectedCities === undefined ? (
     <StyledSalary>
-      <h2>Salaries</h2>
-      <select value={selectedJob} onChange={handleChange}>
+      <h2 data-cy="salary-header">Salaries</h2>
+      <select
+        data-cy="salary-dropdown"
+        value={selectedJob}
+        onChange={handleChange}
+      >
         <option>--Choose A Job--</option>
         {/* map over salaries array here */}
       </select>
-      <h3>Selected Job Title Here</h3>
-      <h4>Average Pay</h4>
-      <p>median value here</p>
+      <h3 data-cy="job-title">Selected Job Title Here</h3>
+      <h4 data-cy="pay-header">Average Pay</h4>
+      <p data-cy="median-pay">median value here</p>
     </StyledSalary>
   ) : (
     <StyledSalary>

@@ -1,15 +1,21 @@
 describe("City Info", () => {
-
-
   beforeEach(() => {
-    cy.intercept('GET','https://dude-hows-my-city-be.herokuapp.com/api/v1/cities', { fixture: 'cities' })
-    cy.intercept('GET','https://dude-hows-my-city-be.herokuapp.com/api/v1/cities/1', { fixture: 'city' })
-    cy.visit('http://localhost:3000')
-    cy.get('[data-cy="city-name"]').first().click()
+    cy.intercept(
+      "GET",
+      "https://dude-hows-my-city-be.herokuapp.com/api/v1/cities",
+      { fixture: "cities" }
+    );
+    cy.intercept(
+      "GET",
+      "https://dude-hows-my-city-be.herokuapp.com/api/v1/cities/1",
+      { fixture: "city" }
+    );
+    cy.visit("http://localhost:3000");
+    cy.get('[data-cy="city-name"]').first().click();
   });
 
   it("Should render all relevant elements to the page", () => {
-   cy.get('[data-cy="header"]')
+    cy.get('[data-cy="header"]')
       .get('[data-cy="city-info-container"]')
       .get('[data-cy="city-info-name-wrapper"]')
       .get('[data-cy="city-info-name"]')
@@ -43,6 +49,10 @@ describe("City Info", () => {
       .get('[data-cy="apt-large"]')
       .get('[data-cy="apt-large-head"]')
       .get('[data-cy="apt-large-num"]')
+      .get('[data-cy="salary-header"]')
+      .get('[data-cy="salary-dropdown"]')
+      .get('[data-cy="job-title"]')
+      .get('[data-cy="pay-header"]')
+      .get('[data-cy="median-pay"]');
   });
-
 });
