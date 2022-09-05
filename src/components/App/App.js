@@ -8,6 +8,7 @@ import Header from "../Header";
 import { getCities, getCity } from "../../apiCalls";
 import { ComparisonPage } from "../ComparisonPage/ComparisonPage";
 import { SelectedToCompare } from "../SelectedToCompare/SelectedToCompare";
+import { Login } from "../Login";
 
 const App = () => {
   const [cities, setCities] = useState([]);
@@ -17,6 +18,7 @@ const App = () => {
   const [updatedCities, setUpdatedCities] = useState([]);
   const [citiesAlways, setCitiesAlways] = useState([]);
   const [query, setQuery] = useState("");
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
     getCities().then((data) => setCitiesAlways(data.data));
@@ -83,6 +85,7 @@ const App = () => {
 
   return (
     <>
+    {user === null ? <Login setUser={setUser}/> : <>
       <Header />
       <Route
         exact
@@ -131,6 +134,8 @@ const App = () => {
           city={city}
         />
       </Route>
+      </>
+}
     </>
   );
 };

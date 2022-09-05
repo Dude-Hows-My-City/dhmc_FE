@@ -19,3 +19,63 @@ export const getCity = (id) => {
   })
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export const postUser = (username) => {
+  console.log('user',username)
+return fetch(`https://dude-hows-my-city-be.herokuapp.com/api/v1/users?username=${username}`, {
+  method: 'POST',
+  headers:{'Content-Type':'application/json'}
+})
+  .then(res => {
+    console.log(res)
+   return res.json()
+  })
+
+}
