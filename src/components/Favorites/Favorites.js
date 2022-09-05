@@ -31,7 +31,6 @@ export const Favorites = ({
 
     <section>
 
-    <h1>I'm your favorite!</h1>
     {cityMap}
     </section>
   )

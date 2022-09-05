@@ -4,7 +4,7 @@ import SearchBar from "../Favorites/SearchBar/SearchBar";
 import { CityInfo } from "../CityInfo/CityInfo";
 import "./App.css";
 import { Route } from "react-router-dom";
-import Header from "../Header";
+import Nav from "../Nav/Nav";
 import { getCities, getCity, postCity, getFavorites } from "../../apiCalls";
 import { ComparisonPage } from "../ComparisonPage/ComparisonPage";
 import { SelectedToCompare } from "../SelectedToCompare/SelectedToCompare";
@@ -114,6 +114,8 @@ const App = () => {
 
 
 const findFavCity = (e) => {
+  let fav = citiesAlways.find(ciity => ciity.id === e)
+    setFavorites([...favorites, fav])
   postCity(e)
   .then(data => {
     console.log('Data from findFavCity in App', data)
@@ -130,6 +132,7 @@ const findFavCity = (e) => {
 // })
 // }
   console.log('filteredNames App AR', filteredNames);
+  console.log('Favorites App AR', favorites);
   console.log('query App AR', query);
 
   return (
@@ -137,7 +140,9 @@ const findFavCity = (e) => {
 
 
 
-<Header />
+<Nav />
+
+
       <Route
         exact
         path="/info/:city_name"
