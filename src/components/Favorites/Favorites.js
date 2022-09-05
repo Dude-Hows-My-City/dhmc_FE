@@ -12,22 +12,27 @@ export const Favorites = ({
   query
 }) => {
 
-  // useEffect(() => {}, [cities, filteredNames, query, favorites]);
+  useEffect(() => {}, [cities, filteredNames, query, favorites]);
   
-  // let cityMap = searchItem.map((city) => {
-  //   return (
-  //     <CityCard
-  //       selectedCities={selectedCities}
-  //       city={city}
-  //       findCity={findCity}
-  //       compareCity={compareCity}
-  //       key={city.id}
-  //     />
-  //   );
-  // });
+  let cityMap = favorites.map((city) => {
+    return (
+      <CityCard
+        selectedCities={selectedCities}
+        city={city}
+        findCity={findCity}
+        compareCity={compareCity}
+        key={city.id}
+      />
+    );
+  });
 
-  // return <>{cityMap}</>;
+
   return (
+
+    <section>
+
     <h1>I'm your favorite!</h1>
+    {cityMap}
+    </section>
   )
 };

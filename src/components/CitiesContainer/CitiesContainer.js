@@ -8,7 +8,8 @@ const CitiesContainer = ({
   findCity,
   compareCity,
   selectedCities,
-  query
+  query,
+  findFavCity
 }) => {
   useEffect(() => {}, [cities, filteredNames, query]);
   let searchItem;
@@ -25,6 +26,7 @@ const CitiesContainer = ({
         findCity={findCity}
         compareCity={compareCity}
         key={city.id}
+        findFavCity={findFavCity}
       />
     );
   });
