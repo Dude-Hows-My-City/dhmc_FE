@@ -20,7 +20,21 @@ export const getCity = (id) => {
 
 }
 
-
+export const postCity = () => {
+  // console.log('ID from api calls', user)
+return fetch(`https://dude-hows-my-city-be.herokuapp.com/api/v1/favorites`, {
+  method: 'DELETE',
+  headers:{'Content-Type':'application/json'},
+  body: JSON.stringify({
+    user_id : 12,
+    city_id : 40
+})
+})
+  .then(res => {
+    console.log('post',res)
+   return res.json()
+  })
+}
 
 
 

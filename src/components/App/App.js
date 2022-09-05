@@ -5,7 +5,7 @@ import { CityInfo } from "../CityInfo/CityInfo";
 import "./App.css";
 import { Route } from "react-router-dom";
 import Header from "../Header";
-import { getCities, getCity } from "../../apiCalls";
+import { getCities, getCity, postCity } from "../../apiCalls";
 import { ComparisonPage } from "../ComparisonPage/ComparisonPage";
 import { SelectedToCompare } from "../SelectedToCompare/SelectedToCompare";
 import { Login } from "../Login";
@@ -18,7 +18,7 @@ const App = () => {
   const [updatedCities, setUpdatedCities] = useState([]);
   const [citiesAlways, setCitiesAlways] = useState([]);
   const [query, setQuery] = useState("");
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState('')
 
   useEffect(() => {
     getCities().then((data) => setCitiesAlways(data.data));
@@ -85,8 +85,9 @@ const App = () => {
 
   return (
     <>
-    {user === null ? <Login setUser={setUser}/> : <>
+    {user === '' ? <Login setUser={setUser} user={user}/> : <>
       <Header />
+      <button onClick={() => postCity(user)}></button>
       <Route
         exact
         path="/info/:city_name"
