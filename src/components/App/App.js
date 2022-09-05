@@ -5,9 +5,11 @@ import { CityInfo } from "../CityInfo/CityInfo";
 import "./App.css";
 import { Route } from "react-router-dom";
 import Header from "../Header";
-import { getCities, getCity } from "../../apiCalls";
+import { getCities, getCity, postCity, getFavorites } from "../../apiCalls";
 import { ComparisonPage } from "../ComparisonPage/ComparisonPage";
 import { SelectedToCompare } from "../SelectedToCompare/SelectedToCompare";
+import { Favorites } from "../Favorites/Favorites";
+
 
 const App = () => {
   const [cities, setCities] = useState([]);
@@ -17,14 +19,18 @@ const App = () => {
   const [updatedCities, setUpdatedCities] = useState([]);
   const [citiesAlways, setCitiesAlways] = useState([]);
   const [query, setQuery] = useState("");
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
+    getFavorites().then((data) => console.log('Favorites Data', data))
     getCities().then((data) => setCitiesAlways(data.data));
     if (updatedCities.length < 1) {
       getCities().then((data) => setCities(data.data));
     } else {
       return;
     }
+
+
   }, [
     city,
     filteredNames,
@@ -92,9 +98,40 @@ const App = () => {
     setFilteredNames(filteredNamess.sort((a, b) => a.id - b.id))
   };
 
+  // const findFavCity = (id) => {
 
+  //   postCity(id).then(data => {
+  //     console.log(data)
+  //   })
+  //   .catch(error => console.log('Ah shit here we go again'))
+  
+  //   let fav = citiesAlways.find(ciity => ciity.id === id)
+  //   setFavorites([...favorites, fav])
+    // const postCity = (id) => {
+      // e.preventDefault()
+
+  // }
+
+
+const findFavCity = (e) => {
+  postCity(e)
+  .then(data => {
+    console.log('Data from findFavCity in App', data)
+  })
+  .catch(error => console.log('ERROR'))
+}
+
+// const findFavCity = (e) => {
+//   // setUrls([...urls, newUrl])
+// console.log('newUrl in App', e)
+// postCity(e).then(data => {
+//   console.log('Post newUrl from the app', data)
+//   console.log('Urls from the app', e)
+// })
+// }
   console.log('filteredNames App AR', filteredNames);
   console.log('query App AR', query);
+
   return (
     <>
 
@@ -128,6 +165,7 @@ const App = () => {
             findCity={findCity}
             compareCity={compareCity}
             selectedCities={selectedCities}
+            findFavCity={findFavCity}
           />
         ) : filteredNames.length === 0 && query ? (
           <p>Your Search Did Not Bring Any Results</p>
@@ -146,6 +184,15 @@ const App = () => {
         <ComparisonPage
           selectedCities={selectedCities}
           city={city}
+        />
+      </Route>
+
+      <Route exact path="/favorites/">
+        <Favorites
+          selectedCities={selectedCities}
+          city={city}
+          favorites={favorites}
+          findFavCity={findFavCity}
         />
       </Route>
     </>
