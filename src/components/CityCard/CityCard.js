@@ -8,20 +8,38 @@ const CityCard = ({
   findCity,
   compareCity,
   selectedCities,
+  findFavCity
 }) => {
   const [checked, setChecked] = useState(false);
+
+  const handleSubmit = (e) => {
+    console.log(e.target.id)
+    e.preventDefault()
+    findFavCity(e.target.id)
+  }
 
   const handleChange = (e) => {
     setChecked(true);
     compareCity(e.target.id);
+    // findFavCity(e.target.id)
   };
 
   return (
     <StyledCityCard>
       <div data-cy="city-card" className="city-card-container" key={city.id}>
-        <button data-cy="favorite-button" className="favorite-button">
+
+        {/* <NavLink
+          to={`/favorites/`}
+          style={{ textDecoration: "none" }}
+          > */}
+        <button
+         id={city.id}
+         data-cy="favorite-button" 
+           onClick={(e) => handleSubmit(e)}
+         className="favorite-button">
           ⭐️
         </button>
+        {/* </NavLink> */}
 
         <NavLink
           to={`/info/${city.attributes.name}`}
