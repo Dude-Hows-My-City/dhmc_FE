@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 export const StyledHousing = styled.section`
+  border-radius: 1em;
+  margin-left: 5%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
   align-content: center;
-  width: 90%;
 
   .small,
   .medium,
