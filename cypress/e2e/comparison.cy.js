@@ -4,7 +4,10 @@ describe("Comparison", () => {
   beforeEach(() => {
     cy.intercept('GET','https://dude-hows-my-city-be.herokuapp.com/api/v1/cities', { fixture: 'cities' })
     cy.intercept('GET','https://dude-hows-my-city-be.herokuapp.com/api/v1/cities/1', { fixture: 'city' })
+    cy.intercept('POST', 'https://dude-hows-my-city-be.herokuapp.com/api/v1/users?username=test', {fixture: 'user'})
     cy.visit('http://localhost:3000')
+    cy.get('[data-cy="username-input"]').type('test')
+    cy.get('[data-cy="login-button"]').click()
   });
 
   it("Should allow a user to check 2 cities", () => {
