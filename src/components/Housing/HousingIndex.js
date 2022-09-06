@@ -2,7 +2,6 @@ import CityCard from "../CityCard/CityCard";
 import { StyledHousing } from "../styles/Housing.styled";
 
 const Housing = ({ city }) => {
-  //   console.log(city.attributes);
   return (
     <StyledHousing>
       <h2 data-cy="housing-header">Housing</h2>

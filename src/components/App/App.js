@@ -15,6 +15,9 @@ import {
 import { ComparisonPage } from "../ComparisonPage/ComparisonPage";
 import { SelectedToCompare } from "../SelectedToCompare/SelectedToCompare";
 import { Favorites } from "../Favorites/Favorites";
+import { getCities, getCity, postCity } from "../../apiCalls";
+import { Login } from "../Login";
+
 
 const App = () => {
   const [cities, setCities] = useState([]);
@@ -27,6 +30,8 @@ const App = () => {
   const [favorites, setFavorites] = useState([]);
   const [checkedFav, setCheckedFav] = useState(false);
   const [checkedCitiesId, setCheckedCitiesId] = useState([]);
+  const [user, setUser] = useState('')
+  const [userName, setUserName] = useState('')
 
   useEffect(() => {
     getFavorites().then((data) => setFavorites(data.data));
@@ -148,7 +153,7 @@ const App = () => {
   return (
     <>
       <Nav favorites={favorites} clearSelected={clearSelected} />
-
+    {user === '' ? <Login setUser={setUser} user={user} setUserName={setUserName}/> : <>
       <Route
         exact
         path="/info/:city_name"
@@ -209,6 +214,8 @@ const App = () => {
           // setFavorites={setFavorites()}
         />
       </Route>
+      </>
+}
     </>
   );
 };
