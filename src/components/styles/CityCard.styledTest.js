@@ -13,7 +13,15 @@ export const StyledCityCardTest = styled.section`
     position: absolute;
     bottom: 0;
     right: 4rem;
-    z-index: 1;
+    z-index: 2;
+  }
+
+
+  .favorite-checkbox {
+    position: absolute;
+    bottom: 0;
+    right: 4rem;
+    z-index: -2;
   }
 
   .city-card-container {

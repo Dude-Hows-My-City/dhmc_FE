@@ -10,9 +10,13 @@ const CitiesContainer = ({
   selectedCities,
   query,
   findFavCity,
-  removeFavorite
+  removeFavorite,
+  favorites
 }) => {
-  useEffect(() => {}, [cities, filteredNames, query]);
+  useEffect(() => {}, [cities, filteredNames, query, favorites]);
+
+  
+
   let searchItem;
   if (cities && !query) {
     searchItem = cities;

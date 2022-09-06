@@ -9,7 +9,7 @@ const CityCard = ({
   compareCity,
   selectedCities,
   findFavCity,
-  removeFavorite
+  removeFavorite,
 }) => {
   const [checked, setChecked] = useState(false);
 
@@ -28,7 +28,7 @@ const CityCard = ({
   };
 
   const handleChange = (e) => {
-    setChecked(true);
+    // setChecked(true);
     compareCity(e.target.id);
     // findFavCity(e.target.id)
   };
@@ -36,31 +36,40 @@ const CityCard = ({
   return (
     <StyledCityCard>
       <div data-cy="city-card" className="city-card-container" key={city.id}>
-        {/* <NavLink
-          to={`/favorites/`}
-          style={{ textDecoration: "none" }}
-          > */}
-        <button
+        {/* <button
           id={city.id}
           data-cy="favorite-button"
           onClick={(e) => handleSubmit(e)}
           className="favorite-button"
         >
           ⭐️
-        </button>
-        {/* </NavLink> */}
+        </button> */}
+
+        <div className="favorite-checkbox">
+          <label>
+            <input
+              id={`favorite_${city.attributes.name}`}
+              type="checkbox"
+              data-cy="checkbox"
+              checked={checked}
+              // onChange={(e) => handleChange(e)}
+            />
+            I'm your Fav!
+          </label>
+        </div>
 
         <button
-            id={city.id}
-            data-cy="delete-button"
-            onClick={(e) => handleDelete(e)}
-            className="delete-button"
+          id={city.id}
+          data-cy="delete-button"
+          onClick={(e) => handleDelete(e)}
+          className="delete-button"
         >
           DELETE
         </button>
 
         <NavLink
           to={`/info/${city.attributes.name}`}
+          key={city.id}
           style={{ textDecoration: "none" }}
           onClick={() => findCity(city.attributes.name)}
         >
@@ -85,7 +94,7 @@ const CityCard = ({
                   id={city.attributes.name}
                   type="checkbox"
                   data-cy="checkbox"
-                  checked={checked}
+                  // checked={checked}
                   onChange={(e) => handleChange(e)}
                 />
                 Compare

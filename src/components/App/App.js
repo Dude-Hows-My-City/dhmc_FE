@@ -105,7 +105,6 @@ const App = () => {
   const clearSelected = () => {
     console.log('selected cities before clear', selectedCities)
     if(selectedCities.length > 0) {
-      
       setSelectedCities([])
       console.log('selected cities after clear', selectedCities)
     }
@@ -114,9 +113,7 @@ const App = () => {
 
   const removeFavorite = (id) => {
     let removedFavs = favorites.filter(a => a.id !== id)
-
     setFavorites(removedFavs)
-
     deleteFavorite(id)
   .then(data => {
     console.log('Data from findFavCity in App', data)
@@ -127,24 +124,18 @@ const App = () => {
 }
 
 const findFavCity = (id) => {
-  //  favorites.map(fav => fav.id !== id)
   let foundFav = favorites.find(a => a.id === id)
   if (foundFav === undefined) {
     console.log('foundfav', foundFav)
     let fav = citiesAlways.find(ciity => ciity.id === id)
-    
     postCity(id)
     .then(data => {
       console.log('Data from findFavCity in App', data.data)
     })
     .catch(error => console.log('ERROR', error))
     setFavorites([...favorites, fav])
-  // getFavorites().then((data) => setFavorites(data.data))
 
    }
-
-    // getFavorites().then((data) => setFavorites(data.data))
-
 }
 
 

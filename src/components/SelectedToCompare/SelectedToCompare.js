@@ -8,6 +8,7 @@ export const SelectedToCompare = ({
   findCity,
   compareCity,
   deleteCompared,
+  findFavCity
 }) => {
   useEffect(() => {}, [cities]);
 
@@ -23,6 +24,8 @@ export const SelectedToCompare = ({
           findCity={findCity}
           compareCity={compareCity}
           key={city.id}
+          findFavCity={findFavCity}
+
         />
         <button
           onClick={(e) => onSubmit(e)}

@@ -13,7 +13,22 @@ export const StyledCityCard = styled.section`
     position: absolute;
     bottom: 0;
     right: 4rem;
-    z-index: 1;
+    z-index: -1;
+  }
+
+  .favorite-checkbox {
+    position: absolute;
+    bottom: 0;
+    right: 4rem;
+    z-index: 2;
+    // width: 33%;
+    color: white;
+    // -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:white;
+    border-radius:5px;
+    border:2px solid #555;
   }
 
   .city-card-container {
