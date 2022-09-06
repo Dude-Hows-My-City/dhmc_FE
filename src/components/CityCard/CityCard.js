@@ -15,10 +15,10 @@ const CityCard = ({
   favorites,
 }) => {
   const [checked, setChecked] = useState(false);
-
+  const [favoriteList, setFavoriteList] = useState("");
   useEffect(() => {
-
-  }, [checked, checkedCitiesId])
+    setFavoriteList(favorites.map((e) => e.attributes.name));
+  }, [checked, checkedCitiesId]);
 
   const handleSubmit = (e) => {
     // console.log("whole e ", e);
@@ -45,12 +45,11 @@ const CityCard = ({
   const handleFavs = (e) => {
     //  console.log("whole e ", e);
 
-    if(checked === false) {
-
-       console.log(e.target.id);
+    if (checked === false) {
+      console.log(e.target.id);
       setChecked(true);
       // compareCity(e.target.id);
-      findFavCity(e.target.id)
+      findFavCity(e.target.id);
     }
   };
 
@@ -67,17 +66,21 @@ const CityCard = ({
         </button> */}
 
         <div className="favorite-checkbox">
-          <label>
-            <input
-              // id={`favorite_${city.attributes.name}`}
-              id={city.id}
-              type="checkbox"
-              // data-cy="checkbox"
-              checked={checked}
-              onChange={(e) => handleFavs(e)}
-            />
-            I'm your Fav!
-          </label>
+          {!favoriteList.includes(city.attributes.name) ? (
+            <label>
+              <input
+                // id={`favorite_${city.attributes.name}`}
+                id={city.id}
+                type="checkbox"
+                // data-cy="checkbox"
+                checked={checked}
+                onChange={(e) => handleFavs(e)}
+              />
+              I'm your Fav!
+            </label>
+          ) : (
+            <p>⭐️</p>
+          )}
         </div>
 
         <button
@@ -129,7 +132,6 @@ const CityCard = ({
 };
 
 export default CityCard;
-
 
 // import React from "react";
 // import { StyledCityCard } from "../styles/CityCard.styled";
@@ -266,9 +268,6 @@ export default CityCard;
 
 // export default CityCard;
 
-
-
-
 // import React from "react";
 // import { StyledCityCard } from "../styles/CityCard.styled";
 // import { useState } from "react";
@@ -305,16 +304,16 @@ export default CityCard;
 //         id={city.id}
 //         type="checkbox"
 //         // data-cy="checkbox"
-        
+
 //           checked={checked}
-        
+
 //           onChange={(e) => handleFavs(e)}
 //           />
 //           I'm your Fav!
 //           </label>
 //           </div>
 //       )
-    
+
 //   })
 
 //   const handleSubmit = (e) => {
@@ -364,7 +363,7 @@ export default CityCard;
 //           ⭐️
 //         </button> */}
 //   {/* {favorites === undefined ?
-//   (  
+//   (
 //         <div className="favorite-checkbox">
 //           <label>
 //             <input
@@ -372,9 +371,9 @@ export default CityCard;
 //               type="checkbox" */}
 //                {/* data-cy="checkbox"
 //                id={`favorite_${city.attributes.name}`}
-              
+
 //                 checked={unchecked}
-              
+
 //                 onChange={(e) => handleFavs(e)}
 //                 />
 //                 I'm your Fav!
@@ -382,8 +381,8 @@ export default CityCard;
 //                 </div>
 //   )
 //   :
- 
-// (favorites.filter(fav => fav.id === city.id) 
+
+// (favorites.filter(fav => fav.id === city.id)
 
 // )
 

@@ -15,9 +15,7 @@ const CitiesContainer = ({
   checkedCitiesId,
   citiesAlways,
 }) => {
-  useEffect(() => {}, [cities, filteredNames, query, favorites]);
-
-
+  useEffect(() => {}, []);
 
   let searchItem;
   if (cities && !query) {
