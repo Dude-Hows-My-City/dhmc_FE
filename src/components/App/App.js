@@ -4,11 +4,20 @@ import SearchBar from "../Favorites/SearchBar/SearchBar";
 import { CityInfo } from "../CityInfo/CityInfo";
 import "./App.css";
 import { Route } from "react-router-dom";
-import Header from "../Header";
-import { getCities, getCity, postCity } from "../../apiCalls";
+import Nav from "../Nav/Nav";
+import {
+  getCities,
+  getCity,
+  postCity,
+  getFavorites,
+  deleteFavorite,
+} from "../../apiCalls";
 import { ComparisonPage } from "../ComparisonPage/ComparisonPage";
 import { SelectedToCompare } from "../SelectedToCompare/SelectedToCompare";
+import { Favorites } from "../Favorites/Favorites";
+import { getCities, getCity, postCity } from "../../apiCalls";
 import { Login } from "../Login";
+
 
 const App = () => {
   const [cities, setCities] = useState([]);
@@ -18,22 +27,25 @@ const App = () => {
   const [updatedCities, setUpdatedCities] = useState([]);
   const [citiesAlways, setCitiesAlways] = useState([]);
   const [query, setQuery] = useState("");
+  const [favorites, setFavorites] = useState([]);
+  const [checkedFav, setCheckedFav] = useState(false);
+  const [checkedCitiesId, setCheckedCitiesId] = useState([]);
   const [user, setUser] = useState('')
   const [userName, setUserName] = useState('')
 
   useEffect(() => {
+    getFavorites().then((data) => setFavorites(data.data));
+    getFavorites().then((data) => console.log("favs data from UE", data.data));
     getCities().then((data) => setCitiesAlways(data.data));
     if (updatedCities.length < 1) {
       getCities().then((data) => setCities(data.data));
     } else {
       return;
     }
-  }, [
-    city,
-    filteredNames,
-    selectedCities,
-    updatedCities,
-  ]);
+    // checkOnRefresh()
+    console.log("checked cities id", checkedCitiesId);
+    // setCheckedCitiesId()
+  }, [city, filteredNames, selectedCities, updatedCities, checkedFav]);
 
   const filterNames = (query) => {
     setQuery(query);
@@ -52,6 +64,12 @@ const App = () => {
   };
 
   const compareCity = (cityName) => {
+    if (filteredNames.length !== 0 && query) {
+      let newFilteredCities = filteredNames.filter(
+        (city) => city.attributes.name !== cityName
+      );
+      setFilteredNames(newFilteredCities);
+    }
     if (updatedCities.length === 0) {
       let foundCity = cities.find((city) => city.attributes.name === cityName);
       setSelectedCities([...selectedCities, foundCity]);
@@ -80,27 +98,71 @@ const App = () => {
     );
     let returnedUpdatedCities = [...updatedCities, deletedCity];
     let returnedCities = [...cities, deletedCity];
+    let filteredNamess = [...filteredNames, deletedCity];
     setUpdatedCities(returnedUpdatedCities.sort((a, b) => a.id - b.id));
     setCities(returnedCities.sort((a, b) => a.id - b.id));
+    query && setFilteredNames(filteredNamess.sort((a, b) => a.id - b.id));
   };
+
+  const clearSelected = () => {
+    console.log("selected cities before clear", selectedCities);
+    if (selectedCities.length > 0) {
+      setSelectedCities([]);
+      console.log("selected cities after clear", selectedCities);
+    }
+  };
+
+  const removeFavorite = (id) => {
+    let removedFavs = favorites.filter((a) => a.id !== id);
+    setFavorites(removedFavs);
+    deleteFavorite(id)
+      .then((data) => {
+        console.log("Data from findFavCity in App", data);
+      })
+      .catch((error) => console.log("ERROR", error));
+  };
+
+  const findFavCity = (id) => {
+    setCheckedFav(true);
+    let foundFav = favorites.find((a) => a.id === id);
+    if (foundFav === undefined) {
+      console.log("foundfav", foundFav);
+      let fav = citiesAlways.find((ciity) => ciity.id === id);
+      postCity(id)
+        .then((data) => {
+          console.log("Data from findFavCity in App", data.data);
+        })
+        .catch((error) => console.log("ERROR", error));
+      setFavorites([...favorites, fav]);
+    }
+  };
+
+  // const checkOnRefresh = () => {
+  //  if (favorites.length > 0 && citiesAlways.length > 0) {
+  //   let foundIds = favorites.map(fav => fav.id)
+  //   setCheckedCitiesId(foundIds)
+  //  }
+
+  // }
+
+  console.log("filteredNames App AR", filteredNames);
+  console.log("Favorites App AR", favorites);
+  console.log("query App AR", query);
+  // console.log('favorites App AR', query);
 
   return (
     <>
+      <Nav favorites={favorites} clearSelected={clearSelected} />
     {user === '' ? <Login setUser={setUser} user={user} setUserName={setUserName}/> : <>
-      <Header />
       <Route
         exact
         path="/info/:city_name"
         render={({ match }) => {
           return (
-            <CityInfo
-              cityName={match.params.city_name}
-              testedCity={city}
-            />
+            <CityInfo cityName={match.params.city_name} testedCity={city} />
           );
         }}
       />
-
       <Route exact path="/">
         <SearchBar filterNames={filterNames} cities={cities} />
         <SelectedToCompare
@@ -108,6 +170,7 @@ const App = () => {
           findCity={findCity}
           compareCity={compareCity}
           deleteCompared={deleteCompared}
+          findFavCity={findFavCity}
         />
 
         {filteredNames.length === 0 && !query ? (
@@ -116,6 +179,9 @@ const App = () => {
             findCity={findCity}
             compareCity={compareCity}
             selectedCities={selectedCities}
+            findFavCity={findFavCity}
+            citiesAlways={citiesAlways}
+            favorites={favorites}
           />
         ) : filteredNames.length === 0 && query ? (
           <p>Your Search Did Not Bring Any Results</p>
@@ -125,14 +191,27 @@ const App = () => {
             findCity={findCity}
             compareCity={compareCity}
             selectedCities={selectedCities}
+            query={query}
+            removeFavorite={removeFavorite}
+            favorites={favorites}
+            checkedCitiesId={checkedCitiesId}
+            citiesAlways={citiesAlways}
           />
         )}
       </Route>
 
       <Route exact path="/comparison/">
-        <ComparisonPage
+        <ComparisonPage selectedCities={selectedCities} city={city} />
+      </Route>
+
+      <Route exact path="/favorites/">
+        <Favorites
           selectedCities={selectedCities}
           city={city}
+          favorites={favorites}
+          findFavCity={findFavCity}
+          removeFavorite={removeFavorite}
+          // setFavorites={setFavorites()}
         />
       </Route>
       </>

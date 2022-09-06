@@ -2,29 +2,80 @@ import React from "react";
 import { StyledCityCard } from "../styles/CityCard.styled";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 
 const CityCard = ({
   city,
   findCity,
   compareCity,
   selectedCities,
+  findFavCity,
+  removeFavorite,
+  checkedCitiesId,
+  favorites,
 }) => {
   const [checked, setChecked] = useState(false);
+  const [favoriteList, setFavoriteList] = useState("");
+  useEffect(() => {
+    setFavoriteList(favorites.map((e) => e.attributes.name));
+  }, [checked, checkedCitiesId]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    findFavCity(e.target.id);
+  };
+
+  const handleDelete = (e) => {
+    e.preventDefault();
+    removeFavorite(e.target.id);
+  };
 
   const handleChange = (e) => {
-    setChecked(true);
     compareCity(e.target.id);
+  };
+
+  const handleFavs = (e) => {
+    if (checked === false) {
+      console.log(e.target.id);
+      setChecked(true);
+      // compareCity(e.target.id);
+      findFavCity(e.target.id);
+    }
   };
 
   return (
     <StyledCityCard>
       <div data-cy="city-card" className="city-card-container" key={city.id}>
-        <button data-cy="favorite-button" className="favorite-button">
-          ⭐️
+        <div className="favorite-checkbox">
+          {!favoriteList.includes(city.attributes.name) ? (
+            <label>
+              <input
+                // id={`favorite_${city.attributes.name}`}
+                id={city.id}
+                type="checkbox"
+                // data-cy="checkbox"
+                checked={checked}
+                onChange={(e) => handleFavs(e)}
+              />
+              I'm your Fav!
+            </label>
+          ) : (
+            <p>⭐️</p>
+          )}
+        </div>
+
+        <button
+          id={city.id}
+          data-cy="delete-button"
+          onClick={(e) => handleDelete(e)}
+          className="delete-button"
+        >
+          DELETE
         </button>
 
         <NavLink
           to={`/info/${city.attributes.name}`}
+          key={city.id}
           style={{ textDecoration: "none" }}
           onClick={() => findCity(city.attributes.name)}
         >
@@ -49,7 +100,7 @@ const CityCard = ({
                   id={city.attributes.name}
                   type="checkbox"
                   data-cy="checkbox"
-                  checked={checked}
+                  // checked={checked}
                   onChange={(e) => handleChange(e)}
                 />
                 Compare

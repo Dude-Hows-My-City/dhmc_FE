@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import CityCard from "../CityCard/CityCard";
-// import { NavLink } from "react-router-dom";
 
 const CitiesContainer = ({
   cities,
@@ -8,10 +7,17 @@ const CitiesContainer = ({
   findCity,
   compareCity,
   selectedCities,
+  query,
+  findFavCity,
+  removeFavorite,
+  favorites,
+  checkedCitiesId,
+  citiesAlways,
 }) => {
-  useEffect(() => {}, [cities, filteredNames]);
+  useEffect(() => {}, []);
+
   let searchItem;
-  if (cities) {
+  if (cities && !query) {
     searchItem = cities;
   } else {
     searchItem = filteredNames;
@@ -24,6 +30,12 @@ const CitiesContainer = ({
         findCity={findCity}
         compareCity={compareCity}
         key={city.id}
+        findFavCity={findFavCity}
+        removeFavorite={removeFavorite}
+        checkedCitiesId={checkedCitiesId}
+        favorites={favorites}
+        cities={cities}
+        citiesAlways={citiesAlways}
       />
     );
   });

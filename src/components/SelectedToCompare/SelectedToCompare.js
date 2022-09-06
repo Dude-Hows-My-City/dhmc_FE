@@ -8,6 +8,7 @@ export const SelectedToCompare = ({
   findCity,
   compareCity,
   deleteCompared,
+  findFavCity
 }) => {
   useEffect(() => {}, [cities]);
 
@@ -17,12 +18,13 @@ export const SelectedToCompare = ({
 
   let cityMap = cities.map((city) => {
     return (
-      <div className="comparison-card-container">
+      <div className="comparison-card-container" key={city.id}>
         <CityCard
           city={city}
           findCity={findCity}
           compareCity={compareCity}
-          key={city.id}
+          findFavCity={findFavCity}
+
         />
         <button
           onClick={(e) => onSubmit(e)}
@@ -38,9 +40,6 @@ export const SelectedToCompare = ({
   return (
     <StyledSelectedToCompare>
       <div className="selected-to-compare-container">
-        {cities.length === 0 ? (
-          <p>Please Select Some Cities to Compare!</p>
-        ) : (
           <div className="selected-container">
             <p>Your Selected Cities</p>
             {cityMap}
@@ -57,7 +56,7 @@ export const SelectedToCompare = ({
               </button>
             </NavLink>
           </div>
-        )}
+        
       </div>
     </StyledSelectedToCompare>
   );

@@ -1,34 +1,27 @@
 import styled from "styled-components";
 
-export const StyledCityCard = styled.section`
+export const StyledCityCardTest = styled.section`
 
   .favorite-button {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 1;
+    z-index: -1;
   }
 
   .delete-button {
     position: absolute;
     bottom: 0;
     right: 4rem;
-    z-index: -1;
+    z-index: 2;
   }
+
 
   .favorite-checkbox {
     position: absolute;
     bottom: 0;
     right: 4rem;
-    z-index: 2;
-    // width: 33%;
-    color: white;
-    // -webkit-appearance:none;
-    width:30px;
-    height:30px;
-    background:white;
-    border-radius:5px;
-    border:2px solid #555;
+    z-index: -2;
   }
 
   .city-card-container {
@@ -37,6 +30,7 @@ export const StyledCityCard = styled.section`
     margin-bottom: 0;
     margin-top: 2vh;
     height: 11vh;
+    
   }
 
   img {
@@ -54,7 +48,7 @@ export const StyledCityCard = styled.section`
   }
 
   .image-label {
-    // z-index: 1;
+    z-index: 1;
     position: absolute;
     bottom: 1vh;
     text-align: center;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const StyledHeader = styled.section`
+export const StyledNav = styled.section`
   text-align: center;
 `;
