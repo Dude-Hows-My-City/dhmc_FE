@@ -16,9 +16,10 @@ const CityCard = ({
 }) => {
   const [checked, setChecked] = useState(false);
   const [favoriteList, setFavoriteList] = useState("");
+  console.log(favorites, "faves test");
   useEffect(() => {
     setFavoriteList(favorites.map((e) => e.attributes.name));
-  }, [checked, checkedCitiesId]);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
