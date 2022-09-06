@@ -96,7 +96,6 @@ const App = () => {
     );
     let returnedUpdatedCities = [...updatedCities, deletedCity];
     let returnedCities = [...cities, deletedCity];
-    // let filteredNames = [...citiesAlways.includes(query)]
     let filteredNamess = [...filteredNames,  deletedCity]
     setUpdatedCities(returnedUpdatedCities.sort((a, b) => a.id - b.id));
     setCities(returnedCities.sort((a, b) => a.id - b.id));
@@ -127,10 +126,10 @@ const App = () => {
 }
 
 const findFavCity = (id) => {
+  setCheckedFav(true)
   let foundFav = favorites.find(a => a.id === id)
   if (foundFav === undefined) {
     console.log('foundfav', foundFav)
-    setCheckedFav(true)
     let fav = citiesAlways.find(ciity => ciity.id === id)
     postCity(id)
     .then(data => {

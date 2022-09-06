@@ -45,9 +45,6 @@ const CityCard = ({
 
     if(checked === false) {
 
-
-      e.preventDefault();
-  
        console.log(e.target.id);
       setChecked(true);
       // compareCity(e.target.id);
