@@ -9,7 +9,8 @@ const CitiesContainer = ({
   compareCity,
   selectedCities,
   query,
-  findFavCity
+  findFavCity,
+  removeFavorite
 }) => {
   useEffect(() => {}, [cities, filteredNames, query]);
   let searchItem;
@@ -27,6 +28,7 @@ const CitiesContainer = ({
         compareCity={compareCity}
         key={city.id}
         findFavCity={findFavCity}
+        removeFavorite={removeFavorite}
       />
     );
   });

@@ -11,7 +11,9 @@ export const Favorites = ({
   compareCity,
   selectedCities,
   favorites,
-  query
+  query,
+  removeFavorite
+
 }) => {
 
   useEffect(() => {}, [cities, filteredNames, query, favorites]);
@@ -25,6 +27,8 @@ export const Favorites = ({
         findCity={findCity}
         compareCity={compareCity}
         key={city.id}
+        removeFavorite={removeFavorite}
+
       />
       </ StyledCityCardTest>
 

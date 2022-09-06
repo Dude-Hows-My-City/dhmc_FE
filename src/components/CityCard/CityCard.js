@@ -9,22 +9,22 @@ const CityCard = ({
   compareCity,
   selectedCities,
   findFavCity,
-  deleteCity
+  removeFavorite
 }) => {
   const [checked, setChecked] = useState(false);
 
   const handleSubmit = (e) => {
-    console.log("whole e ", e);
+    // console.log("whole e ", e);
     console.log(e.target.id);
     e.preventDefault();
     findFavCity(e.target.id);
   };
 
   const handleDelete = (e) => {
-    console.log("whole e ", e);
+    // console.log("whole e ", e);
     console.log(e.target.id);
     e.preventDefault();
-    deleteCity(e.target.id);
+    removeFavorite(e.target.id);
   };
 
   const handleChange = (e) => {
@@ -52,7 +52,7 @@ const CityCard = ({
 
         <button
             id={city.id}
-            data-cy="favorite-button"
+            data-cy="delete-button"
             onClick={(e) => handleDelete(e)}
             className="delete-button"
         >

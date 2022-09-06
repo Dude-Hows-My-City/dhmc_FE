@@ -55,12 +55,12 @@ return fetch(`https://dude-hows-my-city-be.herokuapp.com/api/v1/favorites`, {
 
 export const deleteFavorite = (id) => {
   console.log('ID from api calls', id)
-return fetch(`https://dude-hows-my-city-be.herokuapp.com/api/v1/favorites/1`, {
+return fetch(`https://dude-hows-my-city-be.herokuapp.com/api/v1/favorites`, {
   method: 'DELETE',
   headers:{'Content-Type':'application/json'},
   body: JSON.stringify({
-    "user_id" : 1,
-    "city_id" : id
+    user_id : 1,
+    city_id : id
 })
 })
   .then(res => {

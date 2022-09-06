@@ -22,7 +22,7 @@ const App = () => {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    getFavorites().then((data) => console.log('Favorites Data from the app', data))
+    getFavorites().then((data) => setFavorites(data.data))
     getCities().then((data) => setCitiesAlways(data.data));
     if (updatedCities.length < 1) {
       getCities().then((data) => setCities(data.data));
@@ -36,6 +36,7 @@ const App = () => {
     filteredNames,
     selectedCities,
     updatedCities,
+    
   ]);
 
   const filterNames = (query) => {
@@ -98,19 +99,7 @@ const App = () => {
     setFilteredNames(filteredNamess.sort((a, b) => a.id - b.id))
   };
 
-  // const findFavCity = (id) => {
-
-  //   postCity(id).then(data => {
-  //     console.log(data)
-  //   })
-  //   .catch(error => console.log('Ah shit here we go again'))
-  
-  //   let fav = citiesAlways.find(ciity => ciity.id === id)
-  //   setFavorites([...favorites, fav])
-    // const postCity = (id) => {
-      // e.preventDefault()
-
-  // }
+ 
   const clearSelected = () => {
     console.log('selected cities before clear', selectedCities)
     if(selectedCities.length > 0) {
@@ -121,27 +110,37 @@ const App = () => {
   }
 
 
+  const removeFavorite = (id) => {
+
+    deleteFavorite(id)
+  .then(data => {
+    console.log('Data from findFavCity in App', data)
+  })
+  .catch(error => console.log('ERROR'))
+
+  getFavorites().then((data) => setFavorites(data.data))
+
+}
+  
+
 const findFavCity = (e) => {
-  let fav = citiesAlways.find(ciity => ciity.id === e)
-    setFavorites([...favorites, fav])
+  // let fav = citiesAlways.find(ciity => ciity.id === e)
+  //   setFavorites([...favorites, fav])
   postCity(e)
   .then(data => {
     console.log('Data from findFavCity in App', data)
   })
   .catch(error => console.log('ERROR'))
+
+    getFavorites().then((data) => setFavorites(data.data))
+
 }
 
-// const findFavCity = (e) => {
-//   // setUrls([...urls, newUrl])
-// console.log('newUrl in App', e)
-// postCity(e).then(data => {
-//   console.log('Post newUrl from the app', data)
-//   console.log('Urls from the app', e)
-// })
-// }
+
   console.log('filteredNames App AR', filteredNames);
   console.log('Favorites App AR', favorites);
   console.log('query App AR', query);
+  // console.log('favorites App AR', query);
 
   return (
     <>
@@ -189,6 +188,7 @@ const findFavCity = (e) => {
             compareCity={compareCity}
             selectedCities={selectedCities}
             query={query}
+            removeFavorite={removeFavorite}
           />
         )}
       </Route>
@@ -206,6 +206,8 @@ const findFavCity = (e) => {
           city={city}
           favorites={favorites}
           findFavCity={findFavCity}
+          removeFavorite={removeFavorite}
+
         />
       </Route>
     </>
