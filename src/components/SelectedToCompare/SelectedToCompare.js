@@ -23,7 +23,6 @@ export const SelectedToCompare = ({
           city={city}
           findCity={findCity}
           compareCity={compareCity}
-          // key={city.id}
           findFavCity={findFavCity}
 
         />

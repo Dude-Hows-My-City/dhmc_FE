@@ -34,7 +34,7 @@ const App = () => {
     } else {
       return;
     }
-    checkOnRefresh()
+    // checkOnRefresh()
     console.log('checked cities id', checkedCitiesId)
     // setCheckedCitiesId()
 
@@ -145,12 +145,13 @@ const findFavCity = (id) => {
    }
 }
 
-  const checkOnRefresh = () => {
-   if (favorites.length > 0 && citiesAlways.length > 0) {
-    setCheckedCitiesId(favorites.map(fav => fav.id))
-   }
+  // const checkOnRefresh = () => {
+  //  if (favorites.length > 0 && citiesAlways.length > 0) {
+  //   let foundIds = favorites.map(fav => fav.id)
+  //   setCheckedCitiesId(foundIds)
+  //  }
 
-  }
+  // }
 
   console.log('filteredNames App AR', filteredNames);
   console.log('Favorites App AR', favorites);
@@ -195,6 +196,8 @@ const findFavCity = (id) => {
             compareCity={compareCity}
             selectedCities={selectedCities}
             findFavCity={findFavCity}
+            citiesAlways={citiesAlways}
+
           />
         ) : filteredNames.length === 0 && query ? (
           <p>Your Search Did Not Bring Any Results</p>
@@ -208,6 +211,7 @@ const findFavCity = (id) => {
             removeFavorite={removeFavorite}
             favorites={favorites}
             checkedCitiesId={checkedCitiesId}
+            citiesAlways={citiesAlways}
           />
         )}
       </Route>
