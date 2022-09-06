@@ -172,6 +172,7 @@ const App = () => {
               compareCity={compareCity}
               deleteCompared={deleteCompared}
               findFavCity={findFavCity}
+              favorites={favorites}
             />
 
             {filteredNames.length === 0 && !query ? (

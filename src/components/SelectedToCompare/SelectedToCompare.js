@@ -8,7 +8,8 @@ export const SelectedToCompare = ({
   findCity,
   compareCity,
   deleteCompared,
-  findFavCity
+  findFavCity,
+  favorites,
 }) => {
   useEffect(() => {}, [cities]);
 
@@ -24,7 +25,7 @@ export const SelectedToCompare = ({
           findCity={findCity}
           compareCity={compareCity}
           findFavCity={findFavCity}
-
+          favorites={favorites}
         />
         <button
           onClick={(e) => onSubmit(e)}
@@ -40,23 +41,26 @@ export const SelectedToCompare = ({
   return (
     <StyledSelectedToCompare>
       <div className="selected-to-compare-container">
-          <div className="selected-container">
-            <p>Your Selected Cities</p>
-            {cityMap}
-            {cities.length === 1 ? (
-              <p>Nice! Now Select One More to Compare</p>
-            ) : cities.length === 2 ? (
-              <p></p>
-            ) : (
-              <p></p>
-            )}
-            <NavLink to={`/comparison`} style={{ textDecoration: "none" }}>
-              <button disabled={cities.length !== 2} className="button-compare" data-cy="compare-button">
-                Let's Do This!
-              </button>
-            </NavLink>
-          </div>
-        
+        <div className="selected-container">
+          <p>Your Selected Cities</p>
+          {cityMap}
+          {cities.length === 1 ? (
+            <p>Nice! Now Select One More to Compare</p>
+          ) : cities.length === 2 ? (
+            <p></p>
+          ) : (
+            <p></p>
+          )}
+          <NavLink to={`/comparison`} style={{ textDecoration: "none" }}>
+            <button
+              disabled={cities.length !== 2}
+              className="button-compare"
+              data-cy="compare-button"
+            >
+              Let's Do This!
+            </button>
+          </NavLink>
+        </div>
       </div>
     </StyledSelectedToCompare>
   );

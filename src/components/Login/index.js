@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Header from "../Header";
 import { postUser } from "../../apiCalls";
 import { StyledLogin } from "../styles/Login.styled";
 export const Login = ({ setUser, user, setUserName }) => {
