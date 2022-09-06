@@ -22,7 +22,7 @@ const App = () => {
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
-    getFavorites().then((data) => console.log('Favorites Data', data))
+    getFavorites().then((data) => console.log('Favorites Data from the app', data))
     getCities().then((data) => setCitiesAlways(data.data));
     if (updatedCities.length < 1) {
       getCities().then((data) => setCities(data.data));
@@ -111,6 +111,14 @@ const App = () => {
       // e.preventDefault()
 
   // }
+  const clearSelected = () => {
+    console.log('selected cities before clear', selectedCities)
+    if(selectedCities.length > 0) {
+      
+      setSelectedCities([])
+      console.log('selected cities after clear', selectedCities)
+    }
+  }
 
 
 const findFavCity = (e) => {
@@ -140,7 +148,7 @@ const findFavCity = (e) => {
 
 
 
-<Nav />
+<Nav favorites={favorites} clearSelected={clearSelected}/>
 
 
       <Route
