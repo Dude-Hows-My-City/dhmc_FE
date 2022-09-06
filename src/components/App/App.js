@@ -15,9 +15,7 @@ import {
 import { ComparisonPage } from "../ComparisonPage/ComparisonPage";
 import { SelectedToCompare } from "../SelectedToCompare/SelectedToCompare";
 import { Favorites } from "../Favorites/Favorites";
-import { getCities, getCity, postCity } from "../../apiCalls";
 import { Login } from "../Login";
-
 
 const App = () => {
   const [cities, setCities] = useState([]);
@@ -30,8 +28,8 @@ const App = () => {
   const [favorites, setFavorites] = useState([]);
   const [checkedFav, setCheckedFav] = useState(false);
   const [checkedCitiesId, setCheckedCitiesId] = useState([]);
-  const [user, setUser] = useState('')
-  const [userName, setUserName] = useState('')
+  const [user, setUser] = useState("");
+  const [userName, setUserName] = useState("");
 
   useEffect(() => {
     getFavorites().then((data) => setFavorites(data.data));
@@ -153,69 +151,72 @@ const App = () => {
   return (
     <>
       <Nav favorites={favorites} clearSelected={clearSelected} />
-    {user === '' ? <Login setUser={setUser} user={user} setUserName={setUserName}/> : <>
-      <Route
-        exact
-        path="/info/:city_name"
-        render={({ match }) => {
-          return (
-            <CityInfo cityName={match.params.city_name} testedCity={city} />
-          );
-        }}
-      />
-      <Route exact path="/">
-        <SearchBar filterNames={filterNames} cities={cities} />
-        <SelectedToCompare
-          cities={selectedCities}
-          findCity={findCity}
-          compareCity={compareCity}
-          deleteCompared={deleteCompared}
-          findFavCity={findFavCity}
-        />
-
-        {filteredNames.length === 0 && !query ? (
-          <CitiesContainer
-            cities={cities}
-            findCity={findCity}
-            compareCity={compareCity}
-            selectedCities={selectedCities}
-            findFavCity={findFavCity}
-            citiesAlways={citiesAlways}
-            favorites={favorites}
+      {user === "" ? (
+        <Login setUser={setUser} user={user} setUserName={setUserName} />
+      ) : (
+        <>
+          <Route
+            exact
+            path="/info/:city_name"
+            render={({ match }) => {
+              return (
+                <CityInfo cityName={match.params.city_name} testedCity={city} />
+              );
+            }}
           />
-        ) : filteredNames.length === 0 && query ? (
-          <p>Your Search Did Not Bring Any Results</p>
-        ) : (
-          <CitiesContainer
-            filteredNames={filteredNames}
-            findCity={findCity}
-            compareCity={compareCity}
-            selectedCities={selectedCities}
-            query={query}
-            removeFavorite={removeFavorite}
-            favorites={favorites}
-            checkedCitiesId={checkedCitiesId}
-            citiesAlways={citiesAlways}
-          />
-        )}
-      </Route>
+          <Route exact path="/">
+            <SearchBar filterNames={filterNames} cities={cities} />
+            <SelectedToCompare
+              cities={selectedCities}
+              findCity={findCity}
+              compareCity={compareCity}
+              deleteCompared={deleteCompared}
+              findFavCity={findFavCity}
+            />
 
-      <Route exact path="/comparison/">
-        <ComparisonPage selectedCities={selectedCities} city={city} />
-      </Route>
+            {filteredNames.length === 0 && !query ? (
+              <CitiesContainer
+                cities={cities}
+                findCity={findCity}
+                compareCity={compareCity}
+                selectedCities={selectedCities}
+                findFavCity={findFavCity}
+                citiesAlways={citiesAlways}
+                favorites={favorites}
+              />
+            ) : filteredNames.length === 0 && query ? (
+              <p>Your Search Did Not Bring Any Results</p>
+            ) : (
+              <CitiesContainer
+                filteredNames={filteredNames}
+                findCity={findCity}
+                compareCity={compareCity}
+                selectedCities={selectedCities}
+                query={query}
+                removeFavorite={removeFavorite}
+                favorites={favorites}
+                checkedCitiesId={checkedCitiesId}
+                citiesAlways={citiesAlways}
+              />
+            )}
+          </Route>
 
-      <Route exact path="/favorites/">
-        <Favorites
-          selectedCities={selectedCities}
-          city={city}
-          favorites={favorites}
-          findFavCity={findFavCity}
-          removeFavorite={removeFavorite}
-          // setFavorites={setFavorites()}
-        />
-      </Route>
-      </>
-}
+          <Route exact path="/comparison/">
+            <ComparisonPage selectedCities={selectedCities} city={city} />
+          </Route>
+
+          <Route exact path="/favorites/">
+            <Favorites
+              selectedCities={selectedCities}
+              city={city}
+              favorites={favorites}
+              findFavCity={findFavCity}
+              removeFavorite={removeFavorite}
+              // setFavorites={setFavorites()}
+            />
+          </Route>
+        </>
+      )}
     </>
   );
 };
