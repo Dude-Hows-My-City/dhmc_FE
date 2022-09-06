@@ -23,6 +23,7 @@ const App = () => {
 
   useEffect(() => {
     getFavorites().then((data) => setFavorites(data.data))
+    getFavorites().then((data) => console.log('favs data from UE', data.data))
     getCities().then((data) => setCitiesAlways(data.data));
     if (updatedCities.length < 1) {
       getCities().then((data) => setCities(data.data));
@@ -36,6 +37,7 @@ const App = () => {
     filteredNames,
     selectedCities,
     updatedCities,
+    
     
   ]);
 
@@ -112,27 +114,26 @@ const App = () => {
 
   const removeFavorite = (id) => {
 
-    deleteFavorite(id)
-  .then(data => {
-    console.log('Data from findFavCity in App', data)
-  })
-  .catch(error => console.log('ERROR'))
-
-  getFavorites().then((data) => setFavorites(data.data))
-
 }
-  
 
-const findFavCity = (e) => {
-  // let fav = citiesAlways.find(ciity => ciity.id === e)
-  //   setFavorites([...favorites, fav])
-  postCity(e)
-  .then(data => {
-    console.log('Data from findFavCity in App', data)
-  })
-  .catch(error => console.log('ERROR'))
+const findFavCity = (id) => {
+  //  favorites.map(fav => fav.id !== id)
+  let foundFav = favorites.find(a => a.id === id)
+  if (foundFav === undefined) {
+    console.log('foundfav', foundFav)
+    let fav = citiesAlways.find(ciity => ciity.id === id)
+    
+    postCity(id)
+    .then(data => {
+      console.log('Data from findFavCity in App', data.data)
+    })
+    .catch(error => console.log('ERROR', error))
+    setFavorites([...favorites, fav])
+  // getFavorites().then((data) => setFavorites(data.data))
 
-    getFavorites().then((data) => setFavorites(data.data))
+   }
+
+    // getFavorites().then((data) => setFavorites(data.data))
 
 }
 
@@ -189,6 +190,7 @@ const findFavCity = (e) => {
             selectedCities={selectedCities}
             query={query}
             removeFavorite={removeFavorite}
+            favorites={favorites}
           />
         )}
       </Route>

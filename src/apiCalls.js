@@ -47,7 +47,7 @@ return fetch(`https://dude-hows-my-city-be.herokuapp.com/api/v1/favorites`, {
 })
   .then(res => {
     console.log(res)
-   return res.json()
+  //  return res.json()
   })
 }
 

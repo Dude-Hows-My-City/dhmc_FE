@@ -27,7 +27,7 @@ export const Favorites = ({
         findCity={findCity}
         compareCity={compareCity}
         key={city.id}
-        removeFavorite={removeFavorite}
+  removeFavorite={removeFavorite}
 
       />
       </ StyledCityCardTest>
