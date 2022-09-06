@@ -18,12 +18,12 @@ export const SelectedToCompare = ({
 
   let cityMap = cities.map((city) => {
     return (
-      <div className="comparison-card-container">
+      <div className="comparison-card-container" key={city.id}>
         <CityCard
           city={city}
           findCity={findCity}
           compareCity={compareCity}
-          key={city.id}
+          // key={city.id}
           findFavCity={findFavCity}
 
         />

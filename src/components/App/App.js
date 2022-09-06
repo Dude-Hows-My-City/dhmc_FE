@@ -20,6 +20,8 @@ const App = () => {
   const [citiesAlways, setCitiesAlways] = useState([]);
   const [query, setQuery] = useState("");
   const [favorites, setFavorites] = useState([]);
+  const [checkedFav, setCheckedFav] = useState(false);
+
 
   useEffect(() => {
     getFavorites().then((data) => setFavorites(data.data))
@@ -37,6 +39,7 @@ const App = () => {
     filteredNames,
     selectedCities,
     updatedCities,
+    checkedFav,
     
     
   ]);
@@ -127,6 +130,7 @@ const findFavCity = (id) => {
   let foundFav = favorites.find(a => a.id === id)
   if (foundFav === undefined) {
     console.log('foundfav', foundFav)
+    setCheckedFav(true)
     let fav = citiesAlways.find(ciity => ciity.id === id)
     postCity(id)
     .then(data => {

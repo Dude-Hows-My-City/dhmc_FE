@@ -20,13 +20,13 @@ export const Favorites = ({
   
   let cityMap = favorites.map((city) => {
     return (
-      <StyledCityCardTest>
+      <StyledCityCardTest  key={city.id} >
       <CityCard
         selectedCities={selectedCities}
         city={city}
         findCity={findCity}
         compareCity={compareCity}
-        key={city.id}
+        // key={city.id}
   removeFavorite={removeFavorite}
 
       />

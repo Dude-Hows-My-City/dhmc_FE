@@ -2,6 +2,7 @@ import React from "react";
 import { StyledCityCard } from "../styles/CityCard.styled";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
 
 const CityCard = ({
   city,
@@ -12,6 +13,10 @@ const CityCard = ({
   removeFavorite,
 }) => {
   const [checked, setChecked] = useState(false);
+
+  useEffect(() => {
+
+  }, [checked])
 
   const handleSubmit = (e) => {
     // console.log("whole e ", e);
@@ -36,11 +41,18 @@ const CityCard = ({
   };
 
   const handleFavs = (e) => {
-     console.log("whole e ", e);
-     console.log(e.target.id);
-    setChecked(true);
-    // compareCity(e.target.id);
-    findFavCity(e.target.id)
+    //  console.log("whole e ", e);
+
+    if(checked === false) {
+
+
+      e.preventDefault();
+  
+       console.log(e.target.id);
+      setChecked(true);
+      // compareCity(e.target.id);
+      findFavCity(e.target.id)
+    }
   };
 
   return (
@@ -59,7 +71,7 @@ const CityCard = ({
           <label>
             <input
               // id={`favorite_${city.attributes.name}`}
-              id={city.attributes.id}
+              id={city.id}
               type="checkbox"
               // data-cy="checkbox"
               checked={checked}
