@@ -28,9 +28,19 @@ const CityCard = ({
   };
 
   const handleChange = (e) => {
-    // setChecked(true);
     compareCity(e.target.id);
+    console.log("whole e ", e);
+    console.log(e.target.id);
     // findFavCity(e.target.id)
+    // setChecked(true);
+  };
+
+  const handleFavs = (e) => {
+     console.log("whole e ", e);
+     console.log(e.target.id);
+    setChecked(true);
+    // compareCity(e.target.id);
+    findFavCity(e.target.id)
   };
 
   return (
@@ -48,11 +58,12 @@ const CityCard = ({
         <div className="favorite-checkbox">
           <label>
             <input
-              id={`favorite_${city.attributes.name}`}
+              // id={`favorite_${city.attributes.name}`}
+              id={city.attributes.id}
               type="checkbox"
-              data-cy="checkbox"
+              // data-cy="checkbox"
               checked={checked}
-              // onChange={(e) => handleChange(e)}
+              onChange={(e) => handleFavs(e)}
             />
             I'm your Fav!
           </label>
