@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
 export const StyledCityCard = styled.section`
-  //   border: solid 30px red;
 
   .favorite-button {
     position: absolute;
-    bottom: 0;
+    top: 0;
     right: 0;
+    z-index: 1;
+  }
+
+  .delete-button {
+    position: absolute;
+    bottom: 0;
+    right: 4rem;
     z-index: 1;
   }
 
@@ -33,7 +39,7 @@ export const StyledCityCard = styled.section`
   }
 
   .image-label {
-    z-index: 1;
+    // z-index: 1;
     position: absolute;
     bottom: 1vh;
     text-align: center;
