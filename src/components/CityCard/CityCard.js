@@ -8,16 +8,24 @@ const CityCard = ({
   findCity,
   compareCity,
   selectedCities,
-  findFavCity
+  findFavCity,
+  deleteCity
 }) => {
   const [checked, setChecked] = useState(false);
 
   const handleSubmit = (e) => {
-    console.log('whole e ', e)
-    console.log(e.target.id)
-    e.preventDefault()
-    findFavCity(e.target.id)
-  }
+    console.log("whole e ", e);
+    console.log(e.target.id);
+    e.preventDefault();
+    findFavCity(e.target.id);
+  };
+
+  const handleDelete = (e) => {
+    console.log("whole e ", e);
+    console.log(e.target.id);
+    e.preventDefault();
+    deleteCity(e.target.id);
+  };
 
   const handleChange = (e) => {
     setChecked(true);
@@ -28,19 +36,28 @@ const CityCard = ({
   return (
     <StyledCityCard>
       <div data-cy="city-card" className="city-card-container" key={city.id}>
-
         {/* <NavLink
           to={`/favorites/`}
           style={{ textDecoration: "none" }}
           > */}
         <button
-         id={city.id}
-         data-cy="favorite-button" 
-           onClick={(e) => handleSubmit(e)}
-         className="favorite-button">
+          id={city.id}
+          data-cy="favorite-button"
+          onClick={(e) => handleSubmit(e)}
+          className="favorite-button"
+        >
           ⭐️
         </button>
         {/* </NavLink> */}
+
+        <button
+            id={city.id}
+            data-cy="favorite-button"
+            onClick={(e) => handleDelete(e)}
+            className="delete-button"
+        >
+          DELETE
+        </button>
 
         <NavLink
           to={`/info/${city.attributes.name}`}

@@ -5,7 +5,7 @@ import { CityInfo } from "../CityInfo/CityInfo";
 import "./App.css";
 import { Route } from "react-router-dom";
 import Nav from "../Nav/Nav";
-import { getCities, getCity, postCity, getFavorites } from "../../apiCalls";
+import { getCities, getCity, postCity, getFavorites, deleteFavorite } from "../../apiCalls";
 import { ComparisonPage } from "../ComparisonPage/ComparisonPage";
 import { SelectedToCompare } from "../SelectedToCompare/SelectedToCompare";
 import { Favorites } from "../Favorites/Favorites";
