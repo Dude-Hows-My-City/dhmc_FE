@@ -16,7 +16,7 @@ const Nav = ({favorites, clearSelected}) => {
 
       {favorites.length > 0  &&
       <NavLink to={`/favorites/`} style={{ textDecoration: "none" }}>
-        <button onClick={clearSelected()}>FAVORITES</button>
+        <button onClick={() => clearSelected()}>FAVORITES</button>
       </NavLink>
 }
     </StyledNav>
