@@ -38,9 +38,6 @@ export const SelectedToCompare = ({
   return (
     <StyledSelectedToCompare>
       <div className="selected-to-compare-container">
-        {cities.length === 0 ? (
-          <p>Please Select Some Cities to Compare!</p>
-        ) : (
           <div className="selected-container">
             <p>Your Selected Cities</p>
             {cityMap}
@@ -57,7 +54,7 @@ export const SelectedToCompare = ({
               </button>
             </NavLink>
           </div>
-        )}
+        
       </div>
     </StyledSelectedToCompare>
   );
