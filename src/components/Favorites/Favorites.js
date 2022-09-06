@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import CityCard from "../CityCard/CityCard";
-// import { NavLink } from "react-router-dom";
 import { StyledCityCardTest } from "../styles/CityCard.styledTest";
 
 export const Favorites = ({
@@ -24,7 +23,7 @@ export const Favorites = ({
           findCity={findCity}
           compareCity={compareCity}
           favorites={favorites}
-          // key={city.id}
+          key={city.id}
           removeFavorite={removeFavorite}
         />
       </StyledCityCardTest>

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import CityCard from "../CityCard/CityCard";
-// import { NavLink } from "react-router-dom";
 
 const CitiesContainer = ({
   cities,
