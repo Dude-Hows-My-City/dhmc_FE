@@ -24,8 +24,6 @@ const App = () => {
   const [checkedCitiesId, setCheckedCitiesId] = useState([]);
 
 
-  
-
 
   useEffect(() => {
     getFavorites().then((data) => setFavorites(data.data))
