@@ -21,6 +21,8 @@ const App = () => {
   const [query, setQuery] = useState("");
   const [favorites, setFavorites] = useState([]);
   const [checkedFav, setCheckedFav] = useState(false);
+  const [checkedCitiesId, setCheckedCitiesId] = useState([]);
+
 
 
   useEffect(() => {
@@ -32,7 +34,9 @@ const App = () => {
     } else {
       return;
     }
-
+    checkOnRefresh()
+    console.log('checked cities id', checkedCitiesId)
+    // setCheckedCitiesId()
 
   }, [
     city,
@@ -141,6 +145,12 @@ const findFavCity = (id) => {
    }
 }
 
+  const checkOnRefresh = () => {
+   if (favorites.length > 0 && citiesAlways.length > 0) {
+    setCheckedCitiesId(favorites.map(fav => fav.id))
+   }
+
+  }
 
   console.log('filteredNames App AR', filteredNames);
   console.log('Favorites App AR', favorites);
@@ -197,6 +207,7 @@ const findFavCity = (id) => {
             query={query}
             removeFavorite={removeFavorite}
             favorites={favorites}
+            checkedCitiesId={checkedCitiesId}
           />
         )}
       </Route>

@@ -11,12 +11,13 @@ const CityCard = ({
   selectedCities,
   findFavCity,
   removeFavorite,
+  checkedCitiesId,
 }) => {
   const [checked, setChecked] = useState(false);
 
   useEffect(() => {
 
-  }, [checked])
+  }, [checked, checkedCitiesId])
 
   const handleSubmit = (e) => {
     // console.log("whole e ", e);
