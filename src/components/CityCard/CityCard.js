@@ -13,6 +13,7 @@ const CityCard = ({
   const [checked, setChecked] = useState(false);
 
   const handleSubmit = (e) => {
+    console.log('whole e ', e)
     console.log(e.target.id)
     e.preventDefault()
     findFavCity(e.target.id)
