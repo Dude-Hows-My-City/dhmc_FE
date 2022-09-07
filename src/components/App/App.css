@@ -1,3 +1,9 @@
+@import url("https://use.typekit.net/tqn4pog.css");
+
+body {
+  font-family: timonium, sans-serif;
+}
+
 .App {
   text-align: center;
 }
