@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
-import { getCities, getCity } from "../../apiCalls";
+import { useEffect } from "react";
+// import { getCities, getCity } from "../../apiCalls";
 import Quality from "../Quality/QualityIndex";
 import Housing from "../Housing/HousingIndex";
 import { StyledCityInfo } from "../styles/CityInfo.styled";
 import Salary from "../Salary";
 import Culture from "../Culture";
 export const CityInfo = ({ testedCity }) => {
-  useEffect(() => {
-    // getCity(cityId.id).then((data) => setCity(data.data));
-  }, [testedCity]);
+  useEffect(() => {}, [testedCity]);
 
   return (
     <>
@@ -22,6 +20,7 @@ export const CityInfo = ({ testedCity }) => {
               <img
                 data-cy="city-info-image"
                 src={testedCity.attributes.details.image_mobile_url}
+                alt={`${testedCity.attributes.name}'s skyline`}
               />
               <Quality city={testedCity} />
               <Housing city={testedCity} />
