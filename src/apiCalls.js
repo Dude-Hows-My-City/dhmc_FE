@@ -9,8 +9,8 @@ export const getCities = () => {
 }
 
 
-export const getFavorites = () => {
-  return fetch('https://dude-hows-my-city-be.herokuapp.com/api/v1/favorites/1')
+export const getFavorites = (user) => {
+  return fetch(`https://dude-hows-my-city-be.herokuapp.com/api/v1/favorites/${user}`)
     .then(res => {
       if(!res.ok) {
         throw new Error()

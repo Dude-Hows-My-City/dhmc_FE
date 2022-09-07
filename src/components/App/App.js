@@ -32,8 +32,14 @@ const App = () => {
   const [userName, setUserName] = useState("");
 
   useEffect(() => {
-    getFavorites().then((data) => setFavorites(data.data));
-    getFavorites().then((data) => console.log("favs data from UE", data.data));
+    if(user) {
+    getFavorites(user).then((data) => {
+        if(data.length > 0) {
+     setFavorites(data.data);
+        }
+    })
+    getFavorites(user).then((data) => console.log("favs data from UE", data.data));
+    }
     getCities().then((data) => setCitiesAlways(data.data));
     if (updatedCities.length < 1) {
       getCities().then((data) => setCities(data.data));
@@ -123,16 +129,19 @@ const App = () => {
   const findFavCity = (id) => {
     setCheckedFav(true);
     let foundFav = favorites.find((a) => a.id === id);
+    console.log('foundfav 128',foundFav)
     if (foundFav === undefined) {
+      console.log('undefined 129')
+    }
       console.log("foundfav", foundFav);
       let fav = citiesAlways.find((ciity) => ciity.id === id);
+      console.log('fav 134',fav)
       postCity(id)
-        .then((data) => {
-          console.log("Data from findFavCity in App", data.data);
-        })
+        // .then((data) => {
+        //   console.log("Data from findFavCity in App", data);
+        // })
         .catch((error) => console.log("ERROR", error));
       setFavorites([...favorites, fav]);
-    }
   };
 
   // const checkOnRefresh = () => {

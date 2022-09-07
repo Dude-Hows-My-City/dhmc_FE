@@ -16,9 +16,11 @@ const CityCard = ({
 }) => {
   const [checked, setChecked] = useState(false);
   const [favoriteList, setFavoriteList] = useState("");
-  console.log(favorites, "faves test");
+  // console.log(favorites, "faves test");
   useEffect(() => {
+    if(favorites.length) {
     setFavoriteList(favorites.map((e) => e.attributes.name));
+    }
   }, []);
 
   const handleSubmit = (e) => {
@@ -54,7 +56,7 @@ const CityCard = ({
                 // id={`favorite_${city.attributes.name}`}
                 id={city.id}
                 type="checkbox"
-                // data-cy="checkbox"
+                data-cy="favorite-button"
                 checked={checked}
                 onChange={(e) => handleFavs(e)}
               />

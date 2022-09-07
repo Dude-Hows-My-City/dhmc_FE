@@ -1,0 +1,370 @@
+{
+  "data": [
+      {
+          "id": "1",
+          "type": "city",
+          "attributes": {
+              "name": "Aarhus",
+              "full_name": "Aarhus, Denmark",
+              "summary": {
+                  "continent": "Europe",
+                  "summary": "<p>Aarhus, Denmark, is among the top cities with a <b>free business environment</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>safety</b>, <b>healthcare</b> and <b>environmental quality</b>.\n    \n\n    \n</p>\n\n"
+              },
+              "scores": {
+                  "housing": 6.13,
+                  "cost_of_living": 4.02,
+                  "startups": 2.83,
+                  "venture_capital": 2.51,
+                  "travel_connectivity": 3.54,
+                  "commute": 6.31,
+                  "business_freedom": 9.94,
+                  "safety": 9.62,
+                  "health_care": 9.13,
+                  "education": 5.37,
+                  "environmental_quality": 7.63,
+                  "economy": 4.89,
+                  "taxation": 5.07,
+                  "internet_access": 8.37,
+                  "leisure_and_culture": 3.19,
+                  "tolerance": 9.74,
+                  "outdoors": 4.13,
+                  "teleport_city_score": 65.09
+              },
+              "details": {
+                  "image_photographer": "Calvin Smith",
+                  "image_web_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/aarhus_web-1462c370b8.jpg",
+                  "image_mobile_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/aarhus-67c2f42848.jpg",
+                  "population_size_in_millions": 0.2502,
+                  "average_costs": {
+                      "consumer_price_index": 0.4015,
+                      "apples_per_kg": 2.9,
+                      "bread": 0.87,
+                      "cappuccino": 5.6,
+                      "cinema": 17.0,
+                      "fitness_club": 37.0,
+                      "import_beer": 1.7,
+                      "public_transport": 62.0,
+                      "lunch_meal": 15.0,
+                      "taxi": 13.0,
+                      "restaurant_price_index": 97.32
+                  },
+                  "culture": {
+                      "art_galleries": 51,
+                      "movie_theaters": 17,
+                      "comedy_clubs": 12,
+                      "concert_venues": 95,
+                      "historical_sites": 13,
+                      "museums": 18,
+                      "performing_arts_venues": 56,
+                      "sports_venues": 21,
+                      "zoos": 2
+                  },
+                  "housing": {
+                      "large_apartment": 1700.0,
+                      "medium_apartment": 1300.0,
+                      "small_apartment": 840.0
+                  }
+              },
+              "salaries": [
+                  {
+                      "job_title": "account_manager",
+                      "median_pay": 54368.0
+                  },
+                  {
+                      "job_title": "accountant",
+                      "median_pay": 73755.52
+                  },
+                  {
+                      "job_title": "administrative_assitant",
+                      "median_pay": 62762.85
+                  },
+                  {
+                      "job_title": "architect",
+                      "median_pay": 97607.28
+                  },
+                  {
+                      "job_title": "attorney",
+                      "median_pay": 63642.41
+                  },
+                  {
+                      "job_title": "business_analyst",
+                      "median_pay": 61267.29
+                  },
+                  {
+                      "job_title": "business_development",
+                      "median_pay": 78989.63
+                  },
+                  {
+                      "job_title": "c_level_executive",
+                      "median_pay": 57751.15
+                  },
+                  {
+                      "job_title": "cashier",
+                      "median_pay": 63075.57
+                  },
+                  {
+                      "job_title": "chef",
+                      "median_pay": 44090.01
+                  },
+                  {
+                      "job_title": "chemical_engineer",
+                      "median_pay": 83469.07
+                  },
+                  {
+                      "job_title": "civil_engineer",
+                      "median_pay": 68784.19
+                  },
+                  {
+                      "job_title": "content_marketing",
+                      "median_pay": 36104.05
+                  },
+                  {
+                      "job_title": "copywriter",
+                      "median_pay": 49774.12
+                  },
+                  {
+                      "job_title": "customer_support",
+                      "median_pay": 33975.33
+                  },
+                  {
+                      "job_title": "data_analyst",
+                      "median_pay": 60259.69
+                  },
+                  {
+                      "job_title": "data_scientist",
+                      "median_pay": 63227.33
+                  },
+                  {
+                      "job_title": "dentist",
+                      "median_pay": 118741.64
+                  },
+                  {
+                      "job_title": "electrical_engineer",
+                      "median_pay": 55313.12
+                  },
+                  {
+                      "job_title": "executive_assistant",
+                      "median_pay": 36619.27
+                  },
+                  {
+                      "job_title": "fashion_designer",
+                      "median_pay": 93932.37
+                  },
+                  {
+                      "job_title": "finance_manager",
+                      "median_pay": 76056.34
+                  },
+                  {
+                      "job_title": "financial_analyst",
+                      "median_pay": 106273.34
+                  },
+                  {
+                      "job_title": "graphic_designer",
+                      "median_pay": 44147.55
+                  },
+                  {
+                      "job_title": "hardware_engineer",
+                      "median_pay": 71176.5
+                  },
+                  {
+                      "job_title": "human_resources_manager",
+                      "median_pay": 43270.64
+                  },
+                  {
+                      "job_title": "it_manager",
+                      "median_pay": 81535.4
+                  },
+                  {
+                      "job_title": "industrial_designer",
+                      "median_pay": 62463.39
+                  },
+                  {
+                      "job_title": "interior_designer",
+                      "median_pay": 40602.38
+                  },
+                  {
+                      "job_title": "lecturer",
+                      "median_pay": 40754.84
+                  },
+                  {
+                      "job_title": "marketing_manager",
+                      "median_pay": 46747.17
+                  },
+                  {
+                      "job_title": "mechanical_engineer",
+                      "median_pay": 56796.36
+                  },
+                  {
+                      "job_title": "mobile_developer",
+                      "median_pay": 93582.69
+                  },
+                  {
+                      "job_title": "nurse",
+                      "median_pay": 44119.07
+                  },
+                  {
+                      "job_title": "office_manager",
+                      "median_pay": 69290.74
+                  },
+                  {
+                      "job_title": "operations_manager",
+                      "median_pay": 42087.59
+                  },
+                  {
+                      "job_title": "pharmacist",
+                      "median_pay": 71880.44
+                  },
+                  {
+                      "job_title": "physician",
+                      "median_pay": 54539.76
+                  },
+                  {
+                      "job_title": "postdoctoral_researcher",
+                      "median_pay": 59455.12
+                  },
+                  {
+                      "job_title": "product_manager",
+                      "median_pay": 68398.62
+                  },
+                  {
+                      "job_title": "project_manager",
+                      "median_pay": 64373.85
+                  },
+                  {
+                      "job_title": "qa_engineer",
+                      "median_pay": 47092.75
+                  },
+                  {
+                      "job_title": "receptionist",
+                      "median_pay": 112167.87
+                  },
+                  {
+                      "job_title": "research_scientist",
+                      "median_pay": 57721.08
+                  },
+                  {
+                      "job_title": "sales_manager",
+                      "median_pay": 48356.07
+                  },
+                  {
+                      "job_title": "software_engineer",
+                      "median_pay": 59061.69
+                  },
+                  {
+                      "job_title": "systems_administrator",
+                      "median_pay": 45060.78
+                  },
+                  {
+                      "job_title": "teacher",
+                      "median_pay": 34667.72
+                  },
+                  {
+                      "job_title": "ux_designer",
+                      "median_pay": 56659.25
+                  },
+                  {
+                      "job_title": "waiter",
+                      "median_pay": 20431.28
+                  },
+                  {
+                      "job_title": "web_designer",
+                      "median_pay": 47304.94
+                  },
+                  {
+                      "job_title": "web_developer",
+                      "median_pay": 42867.45
+                  }
+              ]
+          }
+      },
+      {
+        "id": "3",
+        "type": "city",
+        "attributes": {
+          "name": "Albuquerque",
+          "full_name": "Albuquerque, New Mexico",
+          "summary": {
+            "continent": "North America",
+            "summary": "<p>Albuquerque, New Mexico, is among the top cities with a <b>free business environment</b>.\n\n    \n        According to our city rankings, this is a good place to live with high ratings in <b>housing</b>, <b>healthcare</b> and <b>environmental quality</b>.\n    \n\n    \n</p>\n\n"
+          },
+          "scores": {
+            "housing": 7.26,
+            "cost_of_living": 6.06,
+            "startups": 3.77,
+            "venture_capital": 1.49,
+            "travel_connectivity": 1.46,
+            "commute": 5.06,
+            "business_freedom": 8.67,
+            "safety": 1.34,
+            "health_care": 8.51,
+            "education": 4.15,
+            "environmental_quality": 7.32,
+            "economy": 6.51,
+            "taxation": 4.35,
+            "internet_access": 5.4,
+            "leisure_and_culture": 4.89,
+            "tolerance": 7.03,
+            "outdoors": 3.52,
+            "teleport_city_score": 51.51
+          },
+          "details": {
+            "image_photographer": "Christopher Holden",
+            "image_web_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/albuquerque_web-3079b54e59.jpg",
+            "image_mobile_url": "https://d13k13wj6adfdf.cloudfront.net/urban_areas/albuquerque-f730c0301f.jpg",
+            "population_size_in_millions": 0.6308,
+            "average_costs": {
+              "consumer_price_index": 62.51,
+              "apples_per_kg": 2.8,
+              "bread": 0.89,
+              "cappuccino": 4.5,
+              "cinema": 11,
+              "fitness_club": 52,
+              "import_beer": 2.9,
+              "public_transport": 37,
+              "lunch_meal": 12,
+              "taxi": 9.2,
+              "restaurant_price_index": 62.51
+            },
+            "culture": {
+              "art_galleries": 127,
+              "movie_theaters": 59,
+              "comedy_clubs": 12,
+              "concert_venues": 99,
+              "historical_sites": 30,
+              "museums": 35,
+              "performing_arts_venues": 101,
+              "sports_venues": 10,
+              "zoos": 2
+            },
+            "housing": {
+              "large_apartment": 1200,
+              "medium_apartment": 950,
+              "small_apartment": 760
+            }
+          },
+          "salaries": [
+            {
+              "job_title": "account_manager",
+              "median_pay": 54368
+            },
+            {
+              "job_title": "accountant",
+              "median_pay": 73755.52
+            },
+            {
+              "job_title": "administrative_assitant",
+              "median_pay": 62762.85
+            },
+            {
+              "job_title": "architect",
+              "median_pay": 97607.28
+            },
+            {
+              "job_title": "attorney",
+              "median_pay": 63642.41
+            }
+          ]
+        }
+      }
+    ]
+  }
