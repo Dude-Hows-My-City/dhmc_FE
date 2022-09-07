@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import CitiesContainer from "../CitiesContainer/CitiesContainer";
-import SearchBar from "../Favorites/SearchBar/SearchBar";
+import SearchBar from "../SearchBar/SearchBar";
 import { CityInfo } from "../CityInfo/CityInfo";
 import "./App.css";
 import { Route } from "react-router-dom";
