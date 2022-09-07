@@ -47,7 +47,11 @@ const Salary = ({ city, selectedCities }) => {
           );
         })}
       </select>
-      <button className="search-job-button" onClick={handleClick}>
+      <button
+        data-cy="search-button"
+        className="search-job-button"
+        onClick={handleClick}
+      >
         Search
       </button>
       <h3 data-cy="job-title">

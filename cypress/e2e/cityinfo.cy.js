@@ -1,13 +1,24 @@
 describe("City Info", () => {
   beforeEach(() => {
-    cy.intercept('GET','https://dude-hows-my-city-be.herokuapp.com/api/v1/cities', { fixture: 'cities' })
-    cy.intercept('GET','https://dude-hows-my-city-be.herokuapp.com/api/v1/cities/1', { fixture: 'city' })
-    cy.intercept('POST', 'https://dude-hows-my-city-be.herokuapp.com/api/v1/users?username=test', {fixture: 'user'})
-    cy.visit('http://localhost:3000')
-    cy.get('[data-cy="username-input"]').type('test')
-    cy.get('[data-cy="login-button"]').click()
-    cy.get('[data-cy="city-name"]').first().click()
-
+    cy.intercept(
+      "GET",
+      "https://dude-hows-my-city-be.herokuapp.com/api/v1/cities",
+      { fixture: "cities" }
+    );
+    cy.intercept(
+      "GET",
+      "https://dude-hows-my-city-be.herokuapp.com/api/v1/cities/1",
+      { fixture: "city" }
+    );
+    cy.intercept(
+      "POST",
+      "https://dude-hows-my-city-be.herokuapp.com/api/v1/users?username=test",
+      { fixture: "user" }
+    );
+    cy.visit("http://localhost:3000");
+    cy.get('[data-cy="username-input"]').type("test");
+    cy.get('[data-cy="login-button"]').click();
+    cy.get('[data-cy="city-name"]').first().click();
   });
 
   it("Should render all City Info elements to the page", () => {
@@ -57,8 +68,12 @@ describe("City Info", () => {
     cy.get('[data-cy="salary-header"]')
       .get('[data-cy="salary-dropdown"]')
       .get('[data-cy="job-title"]')
-      .get('[data-cy="pay-header"]')
-      .get('[data-cy="median-pay"]');
+      .get('[data-cy="pay-header"]');
+    // .get("select")
+    // .select("chef")
+    // .get('[data-cy="search-button"]')
+    // .click()
+    // .get('[data-cy="median-pay"]');
   });
 
   it("Should render all Culture elements to the page", () => {
