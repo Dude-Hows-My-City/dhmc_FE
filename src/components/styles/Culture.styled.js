@@ -7,6 +7,7 @@ export const StyledCulture = styled.section`
   margin-bottom: 1em;
   margin-left: 5%;
   padding: 1em;
+  padding-bottom: 0.1em;
   width: 90%;
 
   .culture-element {

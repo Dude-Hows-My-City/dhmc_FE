@@ -17,6 +17,7 @@ export const StyledSelectedToCompare = styled.section`
     border-radius: 0.5em;
     color: limegreen;
     cursor: pointer;
+    margin-bottom: 1em;
     margin-left: 6em;
     margin-top: 0.3em;
   }

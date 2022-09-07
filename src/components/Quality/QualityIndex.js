@@ -34,7 +34,7 @@ const Quality = ({ city }) => {
         <Progress
           score={city.attributes.scores.travel_connectivity}
           city={city}
-          name="Travel Connectivity"
+          name="Public Transport"
           data-cy="travel-bar"
         />
         <Progress
@@ -46,7 +46,7 @@ const Quality = ({ city }) => {
         <Progress
           score={city.attributes.scores.business_freedom}
           city={city}
-          name="Business Freedom"
+          name="Business"
           data-cy="business-bar"
         />
         <Progress
@@ -70,7 +70,7 @@ const Quality = ({ city }) => {
         <Progress
           score={city.attributes.scores.environmental_quality}
           city={city}
-          name="Environmental Quality"
+          name="Environmental"
           data-cy="environment-bar"
         />
         <Progress
@@ -94,7 +94,7 @@ const Quality = ({ city }) => {
         <Progress
           score={city.attributes.scores.leisure_and_culture}
           city={city}
-          name="Leisure and Culture"
+          name="Leisure"
           data-cy="lc-bar"
         />
         <Progress
