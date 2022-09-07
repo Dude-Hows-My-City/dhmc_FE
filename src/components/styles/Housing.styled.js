@@ -31,6 +31,13 @@ export const StyledHousing = styled.section`
     width: 100%;
   }
 
+  .apartments {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .small-apartment,
   .medium-apartment,
   .large-apartment,
