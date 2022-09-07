@@ -2,6 +2,21 @@ import styled from "styled-components";
 
 export const StyledComparisonPage = styled.section`
   text-align: center;
+
+  h2 {
+    font-size: 2em;
+    font-weight: bold;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 2;
+    font-weight: 600;
+  }
+
   img {
     border: solid 0.2em limegreen;
     border-radius: 1em;
@@ -14,7 +29,6 @@ export const StyledComparisonPage = styled.section`
   }
 
   .city-2-image {
-    // border: solid 3px red;
     margin-left: -0.4em;
   }
 
