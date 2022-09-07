@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import CityCard from "../CityCard/CityCard";
-import { StyledCityCardTest } from "../styles/CityCard.styledTest";
 import { StyledFavorites } from "../styles/Favorites.styled";
+import { StyledAltFavorites } from "../styles/AltFavorites.styled";
 import emptyBox from "../../images/empty-box.png";
+
 export const Favorites = ({
   cities,
   filteredNames,
@@ -15,9 +16,14 @@ export const Favorites = ({
 }) => {
   useEffect(() => {}, [cities, filteredNames, query, favorites]);
 
+  const handleDelete = (e) => {
+    e.preventDefault();
+    removeFavorite(e.target.id);
+  };
+
   let cityMap = favorites.map((city) => {
     return (
-      <StyledCityCardTest key={city.id}>
+      <StyledAltFavorites>
         <CityCard
           selectedCities={selectedCities}
           city={city}
@@ -27,7 +33,15 @@ export const Favorites = ({
           key={city.id}
           removeFavorite={removeFavorite}
         />
-      </StyledCityCardTest>
+        <button
+          id={city.id}
+          data-cy="delete-button"
+          onClick={(e) => handleDelete(e)}
+          className="delete-button"
+        >
+          DELETE
+        </button>
+      </StyledAltFavorites>
     );
   });
 

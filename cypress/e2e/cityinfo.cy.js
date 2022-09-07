@@ -18,7 +18,7 @@ describe("City Info", () => {
     cy.visit("http://localhost:3000");
     cy.get('[data-cy="username-input"]').type("test");
     cy.get('[data-cy="login-button"]').click();
-    cy.get('[data-cy="city-name"]').first().click();
+    cy.get('[data-cy="city-card"]').first().click();
   });
 
   it("Should render all City Info elements to the page", () => {

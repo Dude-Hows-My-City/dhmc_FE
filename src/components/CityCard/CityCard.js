@@ -16,10 +16,9 @@ const CityCard = ({
 }) => {
   const [checked, setChecked] = useState(false);
   const [favoriteList, setFavoriteList] = useState("");
-  // console.log(favorites, "faves test");
   useEffect(() => {
-    if(favorites.length) {
-    setFavoriteList(favorites.map((e) => e.attributes.name));
+    if (favorites.length) {
+      setFavoriteList(favorites.map((e) => e.attributes.name));
     }
   }, []);
 
@@ -39,15 +38,17 @@ const CityCard = ({
 
   const handleFavs = (e) => {
     if (checked === false) {
-      console.log(e.target.id);
       setChecked(true);
-      // compareCity(e.target.id);
       findFavCity(e.target.id);
     }
   };
 
   return (
     <StyledCityCard>
+      <p data-cy="city-name" className="image-label">
+        {" "}
+        {city.attributes.full_name}{" "}
+      </p>
       <div data-cy="city-card" className="city-card-container" key={city.id}>
         <div className="favorite-checkbox">
           {!favoriteList.includes(city.attributes.name) ? (
@@ -60,7 +61,7 @@ const CityCard = ({
                 checked={checked}
                 onChange={(e) => handleFavs(e)}
               />
-              I'm your Fav!
+              Favorite
             </label>
           ) : (
             <p>⭐️</p>
@@ -88,11 +89,6 @@ const CityCard = ({
             src={city.attributes.details.image_web_url}
             alt={`${city.attributes.name}'s skyline`}
           ></img>
-
-          <p data-cy="city-name" className="image-label">
-            {" "}
-            {city.attributes.name}{" "}
-          </p>
         </NavLink>
 
         {!selectedCities ||
@@ -103,7 +99,6 @@ const CityCard = ({
                   id={city.attributes.name}
                   type="checkbox"
                   data-cy="checkbox"
-                  // checked={checked}
                   onChange={(e) => handleChange(e)}
                 />
                 Compare

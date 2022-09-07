@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const StyledCityCardTest = styled.section`
-
   .favorite-button {
     position: absolute;
     top: 0;
@@ -16,7 +15,6 @@ export const StyledCityCardTest = styled.section`
     z-index: 2;
   }
 
-
   .favorite-checkbox {
     position: absolute;
     bottom: 0;
@@ -30,7 +28,6 @@ export const StyledCityCardTest = styled.section`
     margin-bottom: 0;
     margin-top: 2vh;
     height: 11vh;
-    
   }
 
   img {
@@ -38,7 +35,6 @@ export const StyledCityCardTest = styled.section`
     width: 100%;
     height: 100%;
     position: absolute;
-
   }
 
   .checkbox {
@@ -55,6 +51,5 @@ export const StyledCityCardTest = styled.section`
     width: 100%;
     font-size: 2rem;
     color: white;
-    
   }
 `;

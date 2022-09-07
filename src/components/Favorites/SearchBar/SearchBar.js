@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { StyledSearchBar } from "../../styles/SearchBar.styled";
 
 const SearchBar = ({ filterNames }) => {
   const [query, setQuery] = useState("");
@@ -9,12 +10,15 @@ const SearchBar = ({ filterNames }) => {
   };
 
   return (
-    <input
-      type="text"
-      data-cy="search-bar"
-      value={query}
-      onChange={(e) => handleChange(e)}
-    />
+    <StyledSearchBar>
+      <input
+        type="text"
+        data-cy="search-bar"
+        value={query}
+        placeholder="Search City Name"
+        onChange={(e) => handleChange(e)}
+      />
+    </StyledSearchBar>
   );
 };
 

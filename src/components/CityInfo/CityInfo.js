@@ -16,7 +16,9 @@ export const CityInfo = ({ testedCity }) => {
         <StyledCityInfo>
           <div data-cy="city-info-container" className="city-info-container">
             <div data-cy="city-info-name-wrapper" className="city-name">
-              <h2 data-cy="city-info-name">{testedCity.attributes.name}</h2>
+              <h2 data-cy="city-info-name">
+                {testedCity.attributes.full_name}
+              </h2>
               <img
                 data-cy="city-info-image"
                 src={testedCity.attributes.details.image_mobile_url}
