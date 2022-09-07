@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import CitiesContainer from "../CitiesContainer/CitiesContainer";
+import CitiesContainer from "../CitiesContainer";
 import SearchBar from "../SearchBar/SearchBar";
 import { CityInfo } from "../CityInfo/CityInfo";
 import "./App.css";

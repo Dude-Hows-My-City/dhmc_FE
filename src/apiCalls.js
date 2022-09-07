@@ -32,7 +32,6 @@ export const getCity = (id) => {
 };
 
 export const postCity = (id) => {
-  console.log("ID from api calls", id);
   return fetch(`https://dude-hows-my-city-be.herokuapp.com/api/v1/favorites`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },

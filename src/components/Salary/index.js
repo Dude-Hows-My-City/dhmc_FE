@@ -41,7 +41,7 @@ const Salary = ({ city, selectedCities }) => {
         <option>--Choose A Job--</option>
         {city.attributes.salaries.map((e) => {
           return (
-            <option value={e.job_title}>
+            <option value={e.job_title} key={e.median_pay}>
               {e.job_title.split("_").join(" ").toUpperCase()}
             </option>
           );
@@ -75,7 +75,7 @@ const Salary = ({ city, selectedCities }) => {
         <option>--Choose A Job--</option>
         {selectedCities[0].attributes.salaries.map((e) => {
           return (
-            <option value={e.job_title}>
+            <option value={e.job_title} key={e.median_pay}>
               {e.job_title.split("_").join(" ").toUpperCase()}
             </option>
           );
