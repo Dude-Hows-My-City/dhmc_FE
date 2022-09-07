@@ -115,11 +115,7 @@ const App = () => {
   const removeFavorite = (id) => {
     let removedFavs = favorites.filter((a) => a.id !== id);
     setFavorites(removedFavs);
-    deleteFavorite(id)
-      .then((data) => {
-        console.log("Data from findFavCity in App", data);
-      })
-      .catch((error) => console.log("ERROR", error));
+    deleteFavorite(id).catch((error) => console.log("ERROR", error));
   };
 
   const findFavCity = (id) => {
