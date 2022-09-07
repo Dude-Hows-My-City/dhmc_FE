@@ -51,33 +51,57 @@ const Housing = ({ city, selectedCities }) => {
         </div>
 
         <div data-cy="small-apartment" className="small-apartment">
-          <p data-cy="apt-small-num-1">
-            {selectedCities[0].attributes.details.housing.small_apartment}
-          </p>
+          {selectedCities[0].attributes.details.housing.small_apartment ? (
+            <p data-cy="apt-small-num-1">
+              {selectedCities[0].attributes.details.housing.small_apartment}
+            </p>
+          ) : (
+            <p>N/A</p>
+          )}
           <h3 data-cy="apt-small-head">Small Apt.</h3>
-          <p data-cy="apt-small-num-2">
-            {selectedCities[1].attributes.details.housing.small_apartment}
-          </p>
+          {selectedCities[1].attributes.details.housing.small_apartment ? (
+            <p data-cy="apt-small-num-2">
+              {selectedCities[1].attributes.details.housing.small_apartment}
+            </p>
+          ) : (
+            <p>N/A</p>
+          )}
         </div>
 
         <div data-cy="medium-apartment" className="medium-apartment">
-          <p data-cy="apt-medium-num-1">
-            {selectedCities[0].attributes.details.housing.medium_apartment}
-          </p>
+          {selectedCities[0].attributes.details.housing.medium_apartment ? (
+            <p data-cy="apt-medium-num-1">
+              {selectedCities[0].attributes.details.housing.medium_apartment}
+            </p>
+          ) : (
+            <p>N/A</p>
+          )}
           <h3 data-cy="apt-medium-head">Medium Apt.</h3>
-          <p data-cy="apt-medium-num-2">
-            {selectedCities[1].attributes.details.housing.medium_apartment}
-          </p>
+          {selectedCities[1].attributes.details.housing.medium_apartment ? (
+            <p data-cy="apt-medium-num-2">
+              {selectedCities[1].attributes.details.housing.medium_apartment}
+            </p>
+          ) : (
+            <p>N/A</p>
+          )}
         </div>
 
         <div data-cy="large-apartment" className="large-apartment">
-          <p data-cy="apt-large-num-1">
-            {selectedCities[0].attributes.details.housing.large_apartment}
-          </p>
+          {selectedCities[0].attributes.details.housing.large_apartment ? (
+            <p data-cy="apt-large-num-1">
+              {selectedCities[0].attributes.details.housing.large_apartment}
+            </p>
+          ) : (
+            <p>N/A</p>
+          )}
           <h3 data-cy="apt-large-head">Large Apt.</h3>
-          <p data-cy="apt-large-num-2">
-            {selectedCities[1].attributes.details.housing.large_apartment}
-          </p>
+          {selectedCities[1].attributes.details.housing.large_apartment ? (
+            <p data-cy="apt-large-num-2">
+              {selectedCities[1].attributes.details.housing.large_apartment}
+            </p>
+          ) : (
+            <p>N/A</p>
+          )}
         </div>
       </div>
     </StyledHousing>
