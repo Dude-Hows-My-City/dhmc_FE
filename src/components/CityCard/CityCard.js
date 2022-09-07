@@ -89,10 +89,6 @@ const CityCard = ({
             src={city.attributes.details.image_web_url}
             alt={`${city.attributes.name}'s skyline`}
           ></img>
-          {/* <p data-cy="city-name" className="image-label">
-            {" "}
-            {city.attributes.name}{" "}
-          </p> */}
         </NavLink>
 
         {!selectedCities ||
@@ -103,7 +99,6 @@ const CityCard = ({
                   id={city.attributes.name}
                   type="checkbox"
                   data-cy="checkbox"
-                  // checked={checked}
                   onChange={(e) => handleChange(e)}
                 />
                 Compare

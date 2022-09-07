@@ -7,6 +7,7 @@ export const StyledNav = styled.section`
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
   height: 8vh;
+  margin-bottom: 1em;
   text-align: center;
 
   button {
@@ -15,7 +16,6 @@ export const StyledNav = styled.section`
     border-radius: 0.5em;
     color: limegreen;
     cursor: pointer;
-    /* margin-bottom: 1em; */
     margin-left: 1em;
   }
 
