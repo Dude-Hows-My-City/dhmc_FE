@@ -13,4 +13,19 @@ export const StyledSalary = styled.section`
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .search-job-button {
+    background-color: #d8dad7;
+    border: solid 0.15em limegreen;
+    border-radius: 0.5em;
+    color: limegreen;
+    cursor: pointer;
+    /* margin-left: 1em; */
+  }
+
+  select {
+    border: solid 0.15em limegreen;
+    border-radius: 0.5em;
+    color: limegreen;
+  }
 `;

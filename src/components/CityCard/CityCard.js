@@ -47,7 +47,7 @@ const CityCard = ({
     <StyledCityCard>
       <p data-cy="city-name" className="image-label">
         {" "}
-        {city.attributes.name}{" "}
+        {city.attributes.full_name}{" "}
       </p>
       <div data-cy="city-card" className="city-card-container" key={city.id}>
         <div className="favorite-checkbox">

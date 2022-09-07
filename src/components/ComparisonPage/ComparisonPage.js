@@ -11,7 +11,7 @@ export const ComparisonPage = ({ selectedCities }) => {
         <div data-cy="city-info-container" className="city-info-container">
           <div data-cy="city-info-name-wrapper" className="city-name">
             <h2 data-cy="city-info-name">
-              {selectedCities[0].attributes.name}
+              {selectedCities[0].attributes.full_name}
             </h2>
             <img
               className="city-1-image"
@@ -24,7 +24,7 @@ export const ComparisonPage = ({ selectedCities }) => {
         <div data-cy="city-info-container" className="city-info-container">
           <div data-cy="city-info-name-wrapper" className="city-name">
             <h2 data-cy="city-info-name">
-              {selectedCities[1].attributes.name}
+              {selectedCities[1].attributes.full_name}
             </h2>
             <img
               className="city-2-image"
