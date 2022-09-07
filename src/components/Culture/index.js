@@ -23,9 +23,13 @@ const Culture = ({ city, selectedCities }) => {
             alt="Mona Lisa to symbolize art galleries"
           />
         </h4>
-        <p data-cy="venue-value">
-          {city.attributes.details.culture.art_galleries}
-        </p>
+        {city.attributes.details.culture.art_galleries ? (
+          <p data-cy="venue-value">
+            {city.attributes.details.culture.art_galleries}
+          </p>
+        ) : (
+          <p>N/A</p>
+        )}
       </div>
       <div className="culture-element">
         <h4>
@@ -37,9 +41,13 @@ const Culture = ({ city, selectedCities }) => {
             alt="Microphone to symbolize comedy clubs"
           />
         </h4>
-        <p data-cy="venue-value">
-          {city.attributes.details.culture.comedy_clubs}
-        </p>
+        {city.attributes.details.culture.comedy_clubs ? (
+          <p data-cy="venue-value">
+            {city.attributes.details.culture.comedy_clubs}
+          </p>
+        ) : (
+          <p>N/A</p>
+        )}
       </div>
       <div className="culture-element">
         <h4>
@@ -51,9 +59,13 @@ const Culture = ({ city, selectedCities }) => {
             alt="Concert hall to symbolize venues"
           />
         </h4>
-        <p data-cy="venue-value">
-          {city.attributes.details.culture.concert_venues}
-        </p>
+        {city.attributes.details.culture.concert_venues ? (
+          <p data-cy="venue-value">
+            {city.attributes.details.culture.concert_venues}
+          </p>
+        ) : (
+          <p>N/A</p>
+        )}
       </div>
       <div className="culture-element">
         <h4>
@@ -65,9 +77,13 @@ const Culture = ({ city, selectedCities }) => {
             alt="Leaning tower of Pisa to symbolize historical sites"
           />
         </h4>
-        <p data-cy="venue-value">
-          {city.attributes.details.culture.historical_sites}
-        </p>
+        {city.attributes.details.culture.historical_sites ? (
+          <p data-cy="venue-value">
+            {city.attributes.details.culture.historical_sites}
+          </p>
+        ) : (
+          <p>N/A</p>
+        )}
       </div>
       <div className="culture-element">
         <h4>
@@ -79,9 +95,13 @@ const Culture = ({ city, selectedCities }) => {
             alt="Cinema to symbolize movie theaters"
           />
         </h4>
-        <p data-cy="venue-value">
-          {city.attributes.details.culture.movie_theaters}
-        </p>
+        {city.attributes.details.culture.movie_theaters ? (
+          <p data-cy="venue-value">
+            {city.attributes.details.culture.movie_theaters}
+          </p>
+        ) : (
+          <p>N/A</p>
+        )}
       </div>
       <div className="culture-element">
         <h4>
@@ -93,7 +113,11 @@ const Culture = ({ city, selectedCities }) => {
             alt="Museum to symbolize venues"
           />
         </h4>
-        <p data-cy="venue-value">{city.attributes.details.culture.museums}</p>
+        {city.attributes.details.culture.museums ? (
+          <p data-cy="venue-value">{city.attributes.details.culture.museums}</p>
+        ) : (
+          <p>N/A</p>
+        )}
       </div>
       <div className="culture-element">
         <h4>
@@ -105,9 +129,13 @@ const Culture = ({ city, selectedCities }) => {
             alt="Stage to symbolize performing arts venues"
           />
         </h4>
-        <p data-cy="venue-value">
-          {city.attributes.details.culture.performing_arts_venues}
-        </p>
+        {city.attributes.details.culture.performing_arts_venues ? (
+          <p data-cy="venue-value">
+            {city.attributes.details.culture.performing_arts_venues}
+          </p>
+        ) : (
+          <p>N/A</p>
+        )}
       </div>
       <div className="culture-element">
         <h4>
@@ -119,9 +147,13 @@ const Culture = ({ city, selectedCities }) => {
             alt="Arena to symbolize stadiums"
           />
         </h4>
-        <p data-cy="venue-value">
-          {city.attributes.details.culture.sports_venues}
-        </p>
+        {city.attributes.details.culture.sports_venues ? (
+          <p data-cy="venue-value">
+            {city.attributes.details.culture.sports_venues}
+          </p>
+        ) : (
+          <p>N/A</p>
+        )}
       </div>
       <div className="culture-element">
         <h4>
@@ -133,7 +165,11 @@ const Culture = ({ city, selectedCities }) => {
             alt="Zoo entrance to symbolize venues"
           />
         </h4>
-        <p data-cy="venue-value">{city.attributes.details.culture.zoos}</p>
+        {city.attributes.details.culture.zoos ? (
+          <p data-cy="venue-value">{city.attributes.details.culture.zoos}</p>
+        ) : (
+          <p>N/A</p>
+        )}
       </div>
     </StyledCulture>
   ) : (
