@@ -33,15 +33,15 @@ export const StyledComparisonPage = styled.section`
   }
 
   .city-name {
+    width: 44vw;
     display: flex;
     flex-direction: column;
-    width: 44vw;
   }
 
   .comparison-page {
+    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0;
   }
 `;
