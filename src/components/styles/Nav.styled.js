@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const StyledNav = styled.section`
-  display: flex;
-  flex-direction: row;
   background-color: #d8dad7;
   border-bottom-left-radius: 1em;
   border-bottom-right-radius: 1em;
-  height: 8vh;
+  height: 10.5vh;
   margin-bottom: 1em;
   text-align: center;
+  display: flex;
+  flex-direction: column;
 
   button {
     background-color: #d8dad7;
@@ -20,11 +20,11 @@ export const StyledNav = styled.section`
   }
 
   h1 {
+    color: limegreen;
     cursor: pointer;
     font-size: 1.7em;
     font-style: italic;
     font-weight: 700;
-    color: limegreen;
     padding-top: 0.5em;
   }
 `;
