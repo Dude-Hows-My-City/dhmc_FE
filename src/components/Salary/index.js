@@ -54,11 +54,14 @@ const Salary = ({ city, selectedCities }) => {
         {selectedJob.split("_").join(" ").toUpperCase()}
       </h3>
       <h4 data-cy="pay-header">Average Pay</h4>
-      <p data-cy="median-pay">${Math.round(salary)}/annual</p>
+      {salary ? (
+        <p data-cy="median-pay">${Math.round(salary)}/annual</p>
+      ) : (
+        <p>N/A</p>
+      )}
     </StyledSalary>
   ) : (
     <StyledSalary>
-      {console.log(selectedCities[0], "<<<<<")}
       <h2 data-cy="salary-header">Salaries</h2>
       <select
         data-cy="salary-dropdown"
@@ -86,8 +89,16 @@ const Salary = ({ city, selectedCities }) => {
         <p>{selectedCities[1].attributes.name}</p>
       </div>
       <div className="both-payouts">
-        <p data-cy="median-pay">${Math.round(salary)}/annual</p>
-        <p data-cy="median-pay">${Math.round(secondSalary)}/annual</p>
+        {salary ? (
+          <p data-cy="median-pay">${Math.round(salary)}/annual</p>
+        ) : (
+          <p>N/A</p>
+        )}
+        {salary ? (
+          <p data-cy="median-pay">${Math.round(secondSalary)}/annual</p>
+        ) : (
+          <p>N/A</p>
+        )}
       </div>
     </StyledSalary>
   );
