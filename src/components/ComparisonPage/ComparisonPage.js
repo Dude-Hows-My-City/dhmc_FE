@@ -14,6 +14,7 @@ export const ComparisonPage = ({ selectedCities }) => {
               {selectedCities[0].attributes.name}
             </h2>
             <img
+              className="city-1-image"
               data-cy="city-info-image"
               src={selectedCities[0].attributes.details.image_mobile_url}
             />
@@ -26,6 +27,7 @@ export const ComparisonPage = ({ selectedCities }) => {
               {selectedCities[1].attributes.name}
             </h2>
             <img
+              className="city-2-image"
               data-cy="city-info-image"
               src={selectedCities[1].attributes.details.image_mobile_url}
             />
