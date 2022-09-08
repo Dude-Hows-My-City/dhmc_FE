@@ -19,7 +19,7 @@ const CityCard = ({
     if (favorites.length) {
       setFavoriteList(favorites.map((e) => e.attributes.name));
     }
-  }, []);
+  }, [favorites]);
 
   const handleDelete = (e) => {
     e.preventDefault();

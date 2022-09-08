@@ -26,9 +26,7 @@ const App = () => {
   const [query, setQuery] = useState("");
   const [favorites, setFavorites] = useState([]);
   const [checkedFav, setCheckedFav] = useState(false);
-  const [checkedCitiesId, setCheckedCitiesId] = useState([]);
   const [user, setUser] = useState("");
-  const [userName, setUserName] = useState("");
 
   useEffect(() => {
     if (user) {
@@ -47,7 +45,7 @@ const App = () => {
     } else {
       return;
     }
-  }, [city, filteredNames, selectedCities, updatedCities, checkedFav]);
+  }, [city, filteredNames, selectedCities, updatedCities, checkedFav, user]);
 
   const filterNames = (query) => {
     setQuery(query);
@@ -132,7 +130,7 @@ const App = () => {
     <>
       <Nav favorites={favorites} clearSelected={clearSelected} />
       {user === "" ? (
-        <Login setUser={setUser} user={user} setUserName={setUserName} />
+        <Login setUser={setUser} user={user} />
       ) : (
         <>
           <Route
@@ -177,7 +175,6 @@ const App = () => {
                 query={query}
                 removeFavorite={removeFavorite}
                 favorites={favorites}
-                checkedCitiesId={checkedCitiesId}
                 citiesAlways={citiesAlways}
               />
             )}
