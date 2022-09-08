@@ -1,5 +1,7 @@
 # Dude, How's My City?
 
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Dude-Hows-My-City/dhmc_FE/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Dude-Hows-My-City/dhmc_FE/tree/main)
+
 ## Deployed Link
 
 [Dude, How's My City?](https://courageous-rugelach-779af3.netlify.app/)
@@ -12,7 +14,7 @@
 - [Roadmap](#roadmap)
 - [Setup](#setup)
 - [Contributors](#contributors)
-- [Sources](#sources)
+- [Resources](#resources)
 
 ## Project Overview
 
@@ -77,6 +79,9 @@ Future features could include:
 * [LinkedIn](https://www.linkedin.com/in/nickolaio/)
 * [GitHub](https://github.com/orlov-n)
 
-## Sources
+## Resources
 
 * [Teleport-API](https://developers.teleport.org/)
+* [Wireframe-Figjam](https://www.figma.com/file/ibQoGwNADB8D2iJKMcuNUg/DHMC-Architecture?node-id=0%3A1)
+* [Wireframe-Figma](https://www.figma.com/file/0uABB67TuECie5YlRe57Af/city-vs-city?node-id=0%3A1)
+* [Excalidraw](https://excalidraw.com/#json=rGKFOpV2vuIfEXtVSlJbt,6w6ucAYVHLckeDPnVxTO5g)
