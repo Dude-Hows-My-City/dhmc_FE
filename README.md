@@ -6,6 +6,20 @@
 
 [Dude, How's My City?](https://courageous-rugelach-779af3.netlify.app/)
 
+## Contributors
+
+**Brandon Ainsworth**
+* [LinkedIn](https://www.linkedin.com/in/brandon-ainsworth-922164183/)
+* [GitHub](https://github.com/BrandonAinsworth)
+
+**Kendall McGree**
+* [LinkedIn](https://www.linkedin.com/in/kendall-mcgree/)
+* [GitHub](https://github.com/kendallm360)
+
+**Nickolai Orlov**
+* [LinkedIn](https://www.linkedin.com/in/nickolaio/)
+* [GitHub](https://github.com/orlov-n)
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Learning Goals](#learning-goals)
@@ -36,7 +50,6 @@ This project was built by a full-stack team of 4 back-end and 3 front-end develo
 * CircleCI
 * Cypress
 * NPM
-* Webpack
 
 ## Project Reflections
 
@@ -65,19 +78,6 @@ Future features could include:
 4. The server should direct you to http://localhost:3000, but if not, visit http://localhost:3000
 5. Use the app! 
 
-## Contributors
-
-**Brandon Ainsworth**
-* [LinkedIn](https://www.linkedin.com/in/brandon-ainsworth-922164183/)
-* [GitHub](https://github.com/BrandonAinsworth)
-
-**Kendall McGree**
-* [LinkedIn](https://www.linkedin.com/in/kendall-mcgree/)
-* [GitHub](https://github.com/kendallm360)
-
-**Nickolai Orlov**
-* [LinkedIn](https://www.linkedin.com/in/nickolaio/)
-* [GitHub](https://github.com/orlov-n)
 
 ## Resources
 
