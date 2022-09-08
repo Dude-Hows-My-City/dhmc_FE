@@ -1,68 +1,82 @@
-# Getting Started with Create React App
+# Dude, How's My City?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Deployed Link
 
-## Available Scripts
+[Dude, How's My City?](https://courageous-rugelach-779af3.netlify.app/)
 
-In the project directory, you can run:
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Learning Goals](#learning-goals)
+- [Technologies and Tools](#technologies-and-tools)
+- [Project Reflections](#project-reflections)
+- [Roadmap](#roadmap)
+- [Setup](#setup)
+- [Contributors](#contributors)
+- [Sources](#sources)
 
-### `npm start`
+## Project Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project was built by a full-stack team of 4 back-end and 3 front-end developers at the Turing School of Software and Design. Initially our plan was to make "Dude, How's My Car", a car maintenance tracker, but we discovered limitations early in the planning phase regarding the API's available to us and shifted to creating a cost-of-living comparison tool. In this application, a user can search through over 250 international cities, see dedicated information about that city such as housing, leisure, salaries and more, and compare it to another city side-by-side. The user also has the ability to favorite and unfavorite cities. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Learning Goals
 
-### `npm test`
+* Collaborate and coordinate with a full-stack team
+* Use an agile process to turn well defined requirements into deployed and production ready software
+* Explore and implement new concepts, patterns, or libraries
+* Practice an advanced, professional git workflow
+* Use continuous integration to build and automate the deployment of features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies and Tools
 
-### `npm run build`
+* React and React Libraries (Hooks, Bootstrap, Styled Components)
+* JavaScript
+* JSX
+* CircleCI
+* Cypress
+* NPM
+* Webpack
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Reflections
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Wins
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ * Successfully communicated between two teams to coordinate endpoints and delivery of data
+ * Adherence to agile methodology through daily stand-ups and retrospectives
+ * Learning and implementing new technologies such as CircleCI, new React Libraries and DjangoDB
+ * Implementation of mobile first design and reaching a high degree of responsiveness
+ * Conflict resolution
 
-### `npm run eject`
+## Roadmap
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Future features could include:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Improved display of progress bars
+* Ability to compare more than two cities at once
+* Implement more features of Progressive Web Applications such as the ability to download the application
+* Add more data to allow a user to more meaningfully interact with a certain city, such as job sites and housing portals
+* Moving the back-end server away from Heroku
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Setup
+1. Fork and clone down this repository
+2. Cd into the root directory and run `npm install`
+3. To run the server, run `npm start` in the terminal. To stop the local server, use command `Control + C`.
+4. The server should direct you to http://localhost:3000, but if not, visit http://localhost:3000
+5. Use the app! 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributors
 
-## Learn More
+**Brandon Ainsworth**
+* [LinkedIn](https://www.linkedin.com/in/brandon-ainsworth-922164183/)
+* [GitHub](https://github.com/BrandonAinsworth)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Kendall McGree**
+* [LinkedIn](https://www.linkedin.com/in/kendall-mcgree/)
+* [GitHub](https://github.com/kendallm360)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Nickolai Orlov**
+* [LinkedIn](https://www.linkedin.com/in/nickolaio/)
+* [GitHub](https://github.com/orlov-n)
 
-### Code Splitting
+## Sources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* [Teleport-API](https://developers.teleport.org/)
