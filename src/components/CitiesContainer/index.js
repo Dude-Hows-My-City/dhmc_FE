@@ -11,7 +11,6 @@ const CitiesContainer = ({
   findFavCity,
   removeFavorite,
   favorites,
-  checkedCitiesId,
   citiesAlways,
 }) => {
   useEffect(() => {}, []);
@@ -32,7 +31,6 @@ const CitiesContainer = ({
         key={city.id}
         findFavCity={findFavCity}
         removeFavorite={removeFavorite}
-        checkedCitiesId={checkedCitiesId}
         favorites={favorites}
         cities={cities}
         citiesAlways={citiesAlways}

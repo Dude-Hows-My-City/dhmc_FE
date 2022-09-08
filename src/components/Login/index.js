@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { postUser } from "../../apiCalls";
 import { StyledLogin } from "../styles/Login.styled";
-export const Login = ({ setUser, user, setUserName }) => {
+export const Login = ({ setUser, user }) => {
   const [value, setValue] = useState("");
 
   const log = (e) => {
@@ -9,7 +9,6 @@ export const Login = ({ setUser, user, setUserName }) => {
     postUser(value)
       .then((data) => {
         setUser(data.data.id);
-        setUserName(data.data.attributes.username);
       })
       .catch((error) => console.log(`Problem: ${error.message}`));
   };

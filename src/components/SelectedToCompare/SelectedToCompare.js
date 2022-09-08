@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { StyledSelectedToCompare } from "../styles/SelectedToCompare.styled";
 import CityCard from "../CityCard/CityCard";
 import { NavLink } from "react-router-dom";
