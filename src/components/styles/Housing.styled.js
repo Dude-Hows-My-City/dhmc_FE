@@ -32,16 +32,14 @@ export const StyledHousing = styled.section`
   }
 
   .apartments {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     width: 100%;
   }
 
   .small-apartment,
   .medium-apartment,
   .large-apartment,
-  .city-names {
+  .city-,
+  .apartments {
     display: flex;
     flex-direction: row;
     justify-content: space-between;

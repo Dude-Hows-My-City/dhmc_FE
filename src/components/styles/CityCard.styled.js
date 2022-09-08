@@ -10,14 +10,14 @@ export const StyledCityCard = styled.section`
 
   .favorite-button {
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
     z-index: 1;
   }
 
   .delete-button {
-    position: absolute;
     bottom: 0;
+    position: absolute;
     right: 4rem;
     z-index: -1;
   }
@@ -36,29 +36,29 @@ export const StyledCityCard = styled.section`
   }
 
   .city-card-container {
-    position: relative;
-    margin-top: 2vh;
     height: 15vh;
+    margin-top: 2vh;
+    position: relative;
     width: 100%;
   }
 
   img {
     border-radius: 1rem;
-    width: 100%;
     height: 100%;
     position: absolute;
+    width: 100%;
   }
 
   .checkbox {
     background-color: #d8dad7;
     border-radius: 0.5rem;
+    bottom: 0.2rem;
     color: limegreen;
     font-weight: 700;
     left: 0.2rem;
     padding-left: 0.3em;
     padding-right: 0.3em;
     position: absolute;
-    bottom: 0.2rem;
     z-index: 1;
   }
 

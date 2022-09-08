@@ -20,7 +20,6 @@ export const StyledSalary = styled.section`
     border-radius: 0.5em;
     color: limegreen;
     cursor: pointer;
-    /* margin-left: 1em; */
   }
 
   select {

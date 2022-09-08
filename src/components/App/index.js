@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
-import CitiesContainer from "../CitiesContainer/CitiesContainer";
-import SearchBar from "../Favorites/SearchBar/SearchBar";
+import CitiesContainer from "../CitiesContainer";
+import SearchBar from "../SearchBar/SearchBar";
 import { CityInfo } from "../CityInfo/CityInfo";
 import "./App.css";
 import { Route } from "react-router-dom";
 import Nav from "../Nav/Nav";
 import {
   getCities,
-  getCity,
   postCity,
   getFavorites,
   deleteFavorite,
@@ -32,13 +31,15 @@ const App = () => {
   const [userName, setUserName] = useState("");
 
   useEffect(() => {
-    if(user) {
-    getFavorites(user).then((data) => {
-        if(data.length > 0) {
-     setFavorites(data.data);
+    if (user) {
+      getFavorites(user).then((data) => {
+        if (data.length > 0) {
+          setFavorites(data.data);
         }
-    })
-    getFavorites(user).then((data) => console.log("favs data from UE", data.data));
+      });
+      getFavorites(user).then((data) =>
+        console.log("favs data from UE", data.data)
+      );
     }
     getCities().then((data) => setCitiesAlways(data.data));
     if (updatedCities.length < 1) {
@@ -46,9 +47,6 @@ const App = () => {
     } else {
       return;
     }
-    // checkOnRefresh()
-    console.log("checked cities id", checkedCitiesId);
-    // setCheckedCitiesId()
   }, [city, filteredNames, selectedCities, updatedCities, checkedFav]);
 
   const filterNames = (query) => {
@@ -109,53 +107,26 @@ const App = () => {
   };
 
   const clearSelected = () => {
-    console.log("selected cities before clear", selectedCities);
     if (selectedCities.length > 0) {
       setSelectedCities([]);
-      console.log("selected cities after clear", selectedCities);
     }
   };
 
   const removeFavorite = (id) => {
     let removedFavs = favorites.filter((a) => a.id !== id);
     setFavorites(removedFavs);
-    deleteFavorite(id)
-      .then((data) => {
-        console.log("Data from findFavCity in App", data);
-      })
-      .catch((error) => console.log("ERROR", error));
+    deleteFavorite(id).catch((error) => console.log("ERROR", error));
   };
 
   const findFavCity = (id) => {
     setCheckedFav(true);
     let foundFav = favorites.find((a) => a.id === id);
-    console.log('foundfav 128',foundFav)
     if (foundFav === undefined) {
-      console.log('undefined 129')
     }
-      console.log("foundfav", foundFav);
-      let fav = citiesAlways.find((ciity) => ciity.id === id);
-      console.log('fav 134',fav)
-      postCity(id)
-        // .then((data) => {
-        //   console.log("Data from findFavCity in App", data);
-        // })
-        .catch((error) => console.log("ERROR", error));
-      setFavorites([...favorites, fav]);
+    let fav = citiesAlways.find((ciity) => ciity.id === id);
+    postCity(id).catch((error) => console.log("ERROR", error));
+    setFavorites([...favorites, fav]);
   };
-
-  // const checkOnRefresh = () => {
-  //  if (favorites.length > 0 && citiesAlways.length > 0) {
-  //   let foundIds = favorites.map(fav => fav.id)
-  //   setCheckedCitiesId(foundIds)
-  //  }
-
-  // }
-
-  console.log("filteredNames App AR", filteredNames);
-  console.log("Favorites App AR", favorites);
-  console.log("query App AR", query);
-  // console.log('favorites App AR', query);
 
   return (
     <>
@@ -173,6 +144,7 @@ const App = () => {
               );
             }}
           />
+
           <Route exact path="/">
             <SearchBar filterNames={filterNames} cities={cities} />
             <SelectedToCompare
@@ -222,7 +194,6 @@ const App = () => {
               favorites={favorites}
               findFavCity={findFavCity}
               removeFavorite={removeFavorite}
-              // setFavorites={setFavorites()}
             />
           </Route>
         </>

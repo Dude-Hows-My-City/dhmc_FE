@@ -11,7 +11,6 @@ const CityCard = ({
   selectedCities,
   findFavCity,
   removeFavorite,
-  checkedCitiesId,
   favorites,
 }) => {
   const [checked, setChecked] = useState(false);
@@ -21,11 +20,6 @@ const CityCard = ({
       setFavoriteList(favorites.map((e) => e.attributes.name));
     }
   }, []);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    findFavCity(e.target.id);
-  };
 
   const handleDelete = (e) => {
     e.preventDefault();
@@ -54,7 +48,6 @@ const CityCard = ({
           {!favoriteList.includes(city.attributes.name) ? (
             <label>
               <input
-                // id={`favorite_${city.attributes.name}`}
                 id={city.id}
                 type="checkbox"
                 data-cy="favorite-button"

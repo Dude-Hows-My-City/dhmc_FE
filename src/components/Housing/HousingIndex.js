@@ -1,4 +1,3 @@
-import CityCard from "../CityCard/CityCard";
 import { StyledHousing } from "../styles/Housing.styled";
 
 const Housing = ({ city, selectedCities }) => {
